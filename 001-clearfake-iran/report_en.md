@@ -10,6 +10,9 @@
 
 This analysis documents an active **ClearFake** campaign (fake browser update lures) hosted on **35 compromised Iranian (.ir) domains** serving **58 malicious distribution URLs**, alongside indicators of a broader criminal infrastructure including an active **Cobalt Strike C2** on an Iranian domain and a compromised **UAE-based website** distributing the **Vidar** stealer. Notably, the abused Iranian infrastructure is entirely civilian (sports, health, and education websites), indicating a degraded defensive posture of Iranian civilian web assets amid the ongoing conflict and the country's extended internet shutdown.
 
+
+📡 Update (2026-07-24): Campaign remains active on the same infrastructure (59 active URLs), now with UUID tracking parameters (?ublib=) appended to links — likely per-victim tracking, confirming active campaign management.
+
 ---
 
 ## 2. Attribution
