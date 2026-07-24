@@ -41,3 +41,8 @@ Mijlad Al-Subaie (مجلاد السبيعي) - Cybersecurity Expert · CEH · CH
 All research is defensive in nature. Indicators are sourced from open threat feeds and first-party analysis. Samples are never executed.
 
 *جميع البحوث ذات طابع دفاعي. المؤشرات من feeds مفتوحة المصدر وتحليلات مباشرة.*
+
+----
+
+🔖 Keywords
+threat intelligence CTI OSINT malware analysis IOC QatarRAT Kikimora ClearFake FakeGit SmartLoader StealC Cobalt Strike Vidar Gulf cyber threats Saudi Arabia cybersecurity استخبارات التهديدات الأمن السيبراني تحليل برمجيات خبيثة مؤشرات الاختراق
