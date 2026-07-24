@@ -23,6 +23,10 @@
 | `show_`+platform | عرض مشروط حسب نظام الضحية | استهداف انتقائي (Windows/macOS) — يفسر المظهر النظيف للفاحصين (Cloaking) |
 | تعليقات المطوّر في الكود | `// server never saw Obf JS heartbeats` | الكود قيد تطوير نشط — بنية حية وليست بقايا قديمة |
 
+![Injected ClearFake loader](screenshots/injected_code.png)
+
+![Injected code part 2](screenshots/injected_code1.png)
+
 ### 3. لماذا بدت الصفحة نظيفة؟
 
 اللودر يطبّق **تمويهاً شرطياً (Cloaking)**: يفحص User-Agent وسلوك الزائر، ويقدّم الفخ (تحديث متصفح مزيف) للضحايا المطابقين فقط، بينما يرى الفاحص الأمني والزاحف صفحة تسويقية سليمة لمنتج "Admin By Request" الحقيقي — وهو اختيار متعمد: اسم المنتج يجعل طلب "الصق الأمر كمسؤول" يبدو منطقياً للضحية (تقنية ClickFix).
