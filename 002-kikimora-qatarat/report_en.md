@@ -1,7 +1,7 @@
-# Deep-Dive Investigation: Kikimora / QatarRAT Campaign — From Threat Feed to Operator Fingerprint
+# Deep-Dive Investigation: Kikimora / QatarRAT Campaign - From Threat Feed to Operator Fingerprint
 
 **Report date:** July 21, 2026
-**Analyst:** [Your name]
+**Analyst:** [Mijlad ALsubaie]
 **Status:** Defensive analysis — cleared for publication
 **Methodology:** OSINT monitoring + static malware analysis + platform intelligence (GitHub API, RDAP, CT Logs)
 
