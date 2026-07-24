@@ -3,8 +3,7 @@
 
 **التاريخ | Date:** 2026-07-24
 **المحلل | Analyst:** Mijlad Al-Subaie (مجلاد السبيعي) — [@Al7lhh223](https://x.com/Al7lhh223) · [github.com/screem500](https://github.com/screem500)
-**الحالة | Status:** أُبلغت الجهات المختصة | Reported to authorities
-
+الحالة | Status: تم الإبلاغ لـ aeCERT بتاريخ 2026-07-25 | Reported to aeCERT on 2026-07-25
 ---
 
 ## 🇸🇦 القسم العربي
