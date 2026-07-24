@@ -106,6 +106,9 @@ On the same monitoring day (2026-07-20), the pipeline captured **5,063 SmartLoad
 | Assessment | Trust impersonation attempt: copied certificate or post-signing modification — fools superficial checks, fails real verification |
 | Extracted strings | Algorithmic-style domains + token names (TokenDelta, TokenSolar, TokenChainFlow) |
 
+![GitHub release stats](screenshots/github_stats.png)
+
+![Tampered DigiCert signature](screenshots/fake_signature.png)
 ---
 
 ## 6. Tactics & Techniques (MITRE ATT&CK)
