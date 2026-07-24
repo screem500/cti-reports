@@ -1,0 +1,37 @@
+# IOCs — Investigation 002: Kikimora / QatarRAT Campaign
+# Compiled: 2026-07-21 | Analyst: Mijlad Al-Subaie (@Al7lhh223)
+# Defensive research purposes only.
+
+== Infrastructure ==
+github.com/Kikimora-arch/solid-doodle        (active — reported)
+github.com/Kikimora-arch/solid-pomoemy       (empty decoy)
+
+== Hashes (SHA256) ==
+fe566ca92d40914438c7ce3157a6a0936ac7be94e71e6c37b95ac84177511874  JavaChecker.exe (QatarRAT)
+08d5960457d9cb6d825598adaa46586f42d08fd402bb2b75df44a9d12591971f  kikikmoralibrary.exe (Token stealer)
+
+== Domains — extracted from JavaChecker.exe (algorithmic pattern) ==
+AspectUtilYotta.com
+BlockCore.com            (resolves: 76.223.54.146 / 13.248.169.48 — AWS GA)
+EngineFlex.com           (resolves: 76.223.54.146 / 13.248.169.48 — AWS GA)
+LogicIndexQuant.com
+ManagerStella.com
+SinkCoreYotta.com
+UnitDelta.com
+UnitSpanPolar.com
+
+== Domains — extracted from kikikmoralibrary.exe ==
+BaseUltra.com
+HelperTerra.com
+TokenKinet.com
+TokenMorph.com           (resolves: 74.208.236.232 — IONOS, active)
+ValueQuark.com
+
+== Gulf-related indicators (same-day monitoring) ==
+louvree.abudhabe.info                 (Cobalt Strike C2 — was on Etisalat network; dropped from registration)
+QA-HOST-01-REDACTED                       (PureLogsStealer distribution)
+QA-HOST-01-REDACTED/sonic.exe             (payload URL)
+QA-HOST-01-REDACTED/fallacy001.exe        (payload URL)
+omani-disputes.com                    (phishing lure domain)
+adminbyrequest.UAE-HOST-01.ae          (compromised UAE site — Vidar via ClickFix/EtherHiding)
+45.138.16.162:4321                    (AdaptixC2)

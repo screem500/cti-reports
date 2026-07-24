@@ -1,0 +1,33 @@
+# IOCs — FakeGit Campaign (SmartLoader / LuaJIT-loader) — independently captured sample
+# Source: own monitoring pipeline, URLhaus feed, 2026-07-20
+# Context: 5,063 SmartLoader URLs captured in a single day (~25% of the global feed)
+# Cross-referenced with Trend Micro disclosure (2026-07-21): 7,600+ malicious repos
+# Analyst: Mijlad Al-Subaie (@Al7lhh223) — defensive research only.
+
+== Sample of captured distribution repos (raw.githubusercontent.com) ==
+07bamse/Rikki-Userbot
+07saorabh/npvm
+090hn/fashion-ai-studio
+09sumitdas2/TinyML-Human-Activity-Recognition-on-Edge-Devices
+0klartKarlsson/ode-ComfyUI-WanVideoWrapper
+0Milovke0UwU0/transpatter
+0s-coder/DNS_automatic_traffic_splitting
+0xsdhzilqodizkahsqh/ozekqjsdhua
+1010kakq/SuperSocketUnity
+111ayba/headphones
+115th-discomfited211/Awesome-Harness-Engineering
+120th-westgermany829/agentic-ai-system-course
+12345678900273/SNU_2D_ProgrammingTools_IDE_GROMACS
+12JoelAlmeyda/Love-Calculator
+1342342342fsdfsdfsdfsd/accidenta-fullstack
+13ofbeaches/ai-resume-screening-system
+159zhx/Pet-Simulator-99
+15kElixs/GitHub-Insights
+1711-liv/Disk-Pulse-Ultimate-Enterprise-No-Trial
+195410211/audit-evidence-pack-assembler
+
+== Pattern notes ==
+- Mass-generated account names (random words/numbers)
+- Legitimate-looking project themes (AI tools, courses, games)
+- Payloads tagged: LuaJIT-loader, SmartLoader, SmartLoader-MaaS
+- Delivery chain: SmartLoader -> Lumma / StealC (per Trend Micro)
