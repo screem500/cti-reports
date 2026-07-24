@@ -106,6 +106,8 @@ AspectUtilYotta.com — BlockCore.com (نشط، AWS GA) — EngineFlex.com (نش
 | الدلالة | محاولة انتحال ثقة: شهادة منسوخة أو ملف معدّل بعد التوقيع — تخدع الفحص السطحي وتفشل أمام التحقق الفعلي |
 | النصوص المستخرجة | نطاقات توليدية النمط + رموز (TokenDelta, TokenSolar, TokenChainFlow) |
 
+![GitHub release stats](screenshots/github_stats.png)
+![Tampered DigiCert signature](screenshots/fake_signature.png)
 ---
 
 ## 6. التكتيكات والتقنيات (MITRE ATT&CK)
