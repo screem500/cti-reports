@@ -31,6 +31,11 @@ Deep-dive from a single feed indicator to a full distribution campaign: ~18,000 
 
 ---
 
+👤 عن المحلل | About the Analyst
+Mijlad Al-Subaie (مجلاد السبيعي) — Cybersecurity Expert · CEH · CHFI · AI Agent Security Researcher — Saudi Arabia
+•  X (Twitter): @Al7lhh223 https://x.com/Al7lhh223
+•  GitHub: @screem500 https://github.com/screem500
+
 ## ⚠️ Disclaimer
 
 All research is defensive in nature. Indicators are sourced from open threat feeds and first-party analysis. Samples are never executed.
