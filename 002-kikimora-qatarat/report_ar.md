@@ -1,7 +1,7 @@
 # تحقيق معمق: حملة Kikimora / QatarRAT — من فيد تهديدات إلى بصمة المشغل
 
 **تاريخ التقرير:** 21 يوليو 2026
-**المحلل:** [اسمك]
+**المحلل:** Mijlad Al-Subaie (مجلاد السبيعي) — CEH · CHFI | X: @Al7lhh223 https://x.com/Al7lhh223 · GitHub: screem500 https://github.com/screem500
 **الحالة:** تحليل دفاعي — للنشر
 **المنهجية:** رصد مفتوح المصدر + تحليل ساكن للعينة + استخبارات منصات (GitHub API, RDAP, CT Logs)
 

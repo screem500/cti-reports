@@ -1,7 +1,7 @@
 # Campaign Analysis: ClearFake on Compromised Iranian Infrastructure
 
 **Report date:** July 21, 2026
-**Analyst:** [Your name]
+**Analyst:** Mijlad Al-Subaie - CEH · CHFI | X: @Al7lhh223 https://x.com/Al7lhh223 · GitHub: screem500 https://github.com/screem500
 **Status:** Defensive analysis — cleared for publication
 
 ---
