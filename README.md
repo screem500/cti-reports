@@ -4,6 +4,14 @@ Independent cyber threat intelligence research with a focus on the Gulf and Midd
 
 بحوث مستقلة في استخبارات التهديدات السيبرانية بتركيز على الخليج والشرق الأوسط - مبنية على منظومة رصد يومية ذاتية وتحقيقات ميدانية.
 
+
+🔵 Investigation 004: Gulf-Themed Lures on Foreign Infrastructure (July 2026)
+Five campaigns abusing Gulf-themed naming (qatar/omani/gulf) as lures: PureLogsStealer, reverse-base64 loader, ClearFake-macOS, Potemkin, and live SmartLoader-MaaS on GitHub. All live indicators reported - GitHub T&S receipt confirmed.
+•  Arabic report | التقرير العربي 004-gulf-themed-lures/report_ar.md
+•  English report | التقرير الإنجليزي 004-gulf-themed-lures/report_en.md
+•  IOCs 004-gulf-themed-lures/iocs_gulf_lures.txt
+
+
 ---
 
 ## 📁 التقارير | Reports
