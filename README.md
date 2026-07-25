@@ -27,7 +27,7 @@ Deep-dive from a single feed indicator to a full distribution campaign: ~18,000 
 - Daily automated IOC collection and Gulf-focused filtering
 - Static malware analysis in isolated environments (no execution)
 - Platform intelligence: GitHub API, RDAP, CT logs, passive DNS
-- Attribution with explicit confidence levels — evidence over assumptions
+- Attribution with explicit confidence levels - evidence over assumptions
 
 ---
 
