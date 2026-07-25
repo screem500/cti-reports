@@ -1,8 +1,8 @@
 # Investigation 004: Gulf-Themed Lures — Regional Decoy Names on Foreign Infrastructure
 
 **Report date:** July 25, 2026
-**Analyst:** Mijlad Al-Subaie — CEH · CHFI | X: @Al7lhh223 https://x.com/Al7lhh223 · GitHub: screem500 https://github.com/screem500
-**Status:** Defensive analysis — cleared for publication
+**Analyst:** Mijlad Al-Subaie - CEH · CHFI | X: @Al7lhh223 https://x.com/Al7lhh223 · GitHub: screem500 https://github.com/screem500
+**Status:** Defensive analysis - cleared for publication
 **Reporting:** On 2026-07-25: both live SmartLoader-MaaS repositories reported to GitHub Trust & Safety (receipt confirmed), and the relevant authorities in Oman and Qatar notified of the indicators using their country-themed lures (omani-disputes.com / QA-HOST-01-REDACTED)
 **Methodology:** Open-source monitoring (URLhaus, ThreatFox) + platform intelligence (WHOIS/RDAP, GitHub API) — no sample execution
 **Related:** Investigation 001 (ClearFake-iran) · Investigation 002 (Kikimora/QatarRAT) · Investigation 003 (UAE ClearFake Live)
@@ -11,12 +11,12 @@
 
 ## 1. Executive Summary
 
-Daily pipeline monitoring surfaced five independent campaigns using **explicit Gulf-themed names** (qatar, omani, gulf) as lures in domains and distribution paths — while their actual infrastructure sits entirely outside the region (Germany, United States). The analysis distinguishes two patterns:
+Daily pipeline monitoring surfaced five independent campaigns using **explicit Gulf-themed names** (qatar, omani, gulf) as lures in domains and distribution paths - while their actual infrastructure sits entirely outside the region (Germany, United States). The analysis distinguishes two patterns:
 
-- **Compromised legitimate domains** with Gulf branding (`QA-HOST-01-REDACTED` — registered 2023)
+- **Compromised legitimate domains** with Gulf branding (`QA-HOST-01-REDACTED` - registered 2023)
 - **Purpose-registered campaign domains** (`omani-disputes.com` — registered 5 weeks before first observed use)
 
-Analytical takeaway: Gulf-themed naming is **not sufficient evidence of exclusive Gulf targeting** (as Investigation 002 demonstrated for QatarRAT), but in at least two cases it shows deliberate adoption of regional identity as a lure — warranting continuous monitoring and coordinated reporting.
+Analytical takeaway: Gulf-themed naming is **not sufficient evidence of exclusive Gulf targeting** (as Investigation 002 demonstrated for QatarRAT), but in at least two cases it shows deliberate adoption of regional identity as a lure - warranting continuous monitoring and coordinated reporting.
 
 ---
 
