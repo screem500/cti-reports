@@ -1,0 +1,33 @@
+# IOCs — Investigation 004: Gulf-Themed Lures
+# Date: 2026-07-25 | Analyst: Mijlad Al-Subaie (@Al7lhh223 / screem500)
+# Sources: URLhaus, ThreatFox, WHOIS/RDAP — defensive use only
+
+## Domains
+QA-HOST-01-REDACTED          | PureLogsStealer      | 5.9.143.30 (Hetzner DE) | registered 2023-09-19 | compromised (med conf)
+omani-disputes.com       | rev-base64 loader    | 3.144.33.123 (AWS US)   | registered 2026-05-29 | purpose-registered (high conf)
+gulfbreezervrentals.com  | ClearFake (macOS)    | -                       | -                     | ClearFake mac-0x68dc
+shaggulf-sold.xyz        | Potemkin Loader      | -                       | -                     | low confidence
+
+## URLs (defanged)
+hxxps://blueweqatar[.]com/sonic.exe                                    | PureLogsStealer | URLhaus #ID-REDACTED
+hxxps://blueweqatar[.]com/fallacy001.exe                               | PureLogsStealer | URLhaus #ID-REDACTED
+hxxps://omani-disputes[.]com/txt/adkbjdd.txt                           | rev-base64 loader | URLhaus #3881315
+hxxps://jnhygwu4[.]gulfbreezervrentals[.]com/?ublib=487e7990-...       | ClearFake macOS | URLhaus #3889248
+hxxp://shaggulf-sold[.]xyz/avast_update                                | Potemkin        | URLhaus #3890694
+
+## GitHub (LIVE at 2026-07-25)
+hxxps://raw.githubusercontent[.]com/rsaudio/second-brain/main/docs/second_brain_v3.7.zip
+    | SmartLoader-MaaS (LuaJIT-loader) | URLhaus #3871589 | ONLINE
+hxxps://raw.githubusercontent[.]com/Alpacareticulitermeslucifugus340/rockyou_uzb/main/egomaniac/uzb_rockyou_v2.9.zip
+    | SmartLoader-MaaS (LuaJIT-loader) | URLhaus #3873086 | ONLINE
+
+## IP Addresses
+5.9.143.30    | Hetzner fsn1-dc10 (DE) | QA-HOST-01-REDACTED hosting
+3.144.33.123  | Amazon Technologies (US) | omani-disputes.com hosting
+
+## Reporting contacts
+GitHub Trust & Safety : https://support.github.com/contact/report-abuse
+NiceNIC abuse         : abuse@nicenic.com
+PDR abuse             : abuse-contact@publicdomainregistry.com
+Oman mCERT            : https://www.ncsc.gov.om
+Qatar NCSA            : https://www.ncsa.gov.qa
