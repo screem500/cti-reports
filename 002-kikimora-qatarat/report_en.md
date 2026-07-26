@@ -1,3 +1,27 @@
+---
+Report ID:        CTI-2026-002
+Title:            Kikimora / QatarRAT Campaign
+Analyst:          Mijlad Al-Subaie (@screem500)
+Published:        2026-07-21
+Last Updated:     2026-07-26
+Classification:   TLP:CLEAR
+Confidence:       Moderate
+Status:           Published - GitHub reported
+Redactions:       QA-HOST-01 (compromised victim domain)
+---
+
+## MITRE ATT&CK Mapping
+
+| Tactic | Technique | ID | Observation |
+|--------|-----------|----|-------------|
+| Resource Development | Acquire Infrastructure: Web Services | T1583.006 | Burner GitHub account, payloads in releases |
+| Initial Access | Phishing: Spearphishing Link | T1566.002 | Cracked-software lures (FL Studio, SOLIDWORKS, Steam) |
+| Execution | User Execution: Malicious File | T1204.002 | Victims run trojanized installers |
+| Defense Evasion | Impair Defenses: Disable or Modify Tools | T1562.001 | AVKiller.exe component |
+| Command and Control | Web Protocols | T1071.001 | RAT client + algorithmic backup domains |
+
+---
+
 # Deep-Dive Investigation: Kikimora / QatarRAT Campaign - From Threat Feed to Operator Fingerprint
 
 **Report date:** July 21, 2026
