@@ -1,0 +1,111 @@
+{
+  "type": "bundle",
+  "id": "bundle--63e476bc-58fd-4f65-b675-4e71c4184e32",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--11111111-0000-4000-8000-000000000001",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-25T00:00:00.000Z",
+      "name": "Mijlad Al-Subaie (Independent CTI Researcher)",
+      "identity_class": "individual"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--Investigation 003: Live ClearFake Loader on Compromised UAE Website (Redacted)00000000-4000-8000-666708373883",
+      "created": "2026-07-24T00:00:00.000Z",
+      "modified": "2026-07-24T00:00:00.000Z",
+      "name": "Investigation 003: Live ClearFake Loader on Compromised UAE Website (Redacted)",
+      "published": "2026-07-24T00:00:00.000Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "created_by_ref": "identity--11111111-0000-4000-8000-000000000001",
+      "object_refs": [
+        "indicator--ClearFake _cf_verified cookie marker00000000-4000-8000-210060333966",
+        "indicator--ClearFake _wp_perf_ok cookie marker00000000-4000-8000-846972341697",
+        "indicator--ClearFake /beacon/ heartbeat exfiltration path00000000-4000-8000-139207197420",
+        "indicator--UAE-HOST-01 (redacted) compromised site - live ClearFake loader, reported to aeCERT00000000-4000-8000-958805689256"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake _cf_verified cookie marker00000000-4000-8000-210060333966",
+      "created": "2026-07-24T00:00:00.000Z",
+      "modified": "2026-07-24T00:00:00.000Z",
+      "name": "ClearFake _cf_verified cookie marker",
+      "pattern": "[artifact:mime_type = 'application/http-cookie' AND artifact:payload_bin MATCHES '_cf_verified']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-24T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "clearfake",
+        "detection-artifact"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake _wp_perf_ok cookie marker00000000-4000-8000-846972341697",
+      "created": "2026-07-24T00:00:00.000Z",
+      "modified": "2026-07-24T00:00:00.000Z",
+      "name": "ClearFake _wp_perf_ok cookie marker",
+      "pattern": "[artifact:mime_type = 'application/http-cookie' AND artifact:payload_bin MATCHES '_wp_perf_ok']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-24T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "clearfake",
+        "detection-artifact"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake /beacon/ heartbeat exfiltration path00000000-4000-8000-139207197420",
+      "created": "2026-07-24T00:00:00.000Z",
+      "modified": "2026-07-24T00:00:00.000Z",
+      "name": "ClearFake /beacon/ heartbeat exfiltration path",
+      "pattern": "[url:value MATCHES '/beacon/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-24T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 50,
+      "labels": [
+        "clearfake",
+        "exfiltration"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--UAE-HOST-01 (redacted) compromised site - live ClearFake loader, reported to aeCERT00000000-4000-8000-958805689256",
+      "created": "2026-07-24T00:00:00.000Z",
+      "modified": "2026-07-24T00:00:00.000Z",
+      "name": "UAE-HOST-01 (redacted) compromised site - live ClearFake loader, reported to aeCERT",
+      "pattern": "[domain-name:value = 'UAE-HOST-01']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-24T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "compromised-victim",
+        "redacted",
+        "clearfake"
+      ]
+    }
+  ]
+}
