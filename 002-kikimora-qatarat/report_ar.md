@@ -151,7 +151,7 @@ AspectUtilYotta.com — BlockCore.com (نشط، AWS GA) — EngineFlex.com (نش
 
 | المؤشر | الدولة | الحالة |
 |--------|--------|--------|
-| QA-HOST-01-REDACTED — PureLogsStealer | قطر | offline |
+| QA-HOST-01 (محجوب — ضحية مخترقة، بُلّغ CERT قطر) — PureLogsStealer | قطر | offline |
 | omani-disputes.com — نطاق تصيد | عُمان | offline |
 | louvree.abudhabe.info — Cobalt Strike C2 | الإمارات | ساقط من التسجيل (كان على شبكة اتصالات) |
 | adminbyrequest.UAE-HOST-01.ae — Vidar | الإمارات | مخترق |

@@ -152,7 +152,7 @@ On the same monitoring day (2026-07-20), the pipeline captured **5,063 SmartLoad
 
 | Indicator | Country | Status |
 |-----------|---------|--------|
-| QA-HOST-01-REDACTED — PureLogsStealer | Qatar | offline |
+| QA-HOST-01 (redacted — compromised victim, reported to Qatar CERT) — PureLogsStealer | Qatar | offline |
 | omani-disputes.com — phishing domain | Oman | offline |
 | louvree.abudhabe.info — Cobalt Strike C2 | UAE | dropped from registration (was hosted on Etisalat) |
 | adminbyrequest.UAE-HOST-01.ae — Vidar | UAE | compromised |
