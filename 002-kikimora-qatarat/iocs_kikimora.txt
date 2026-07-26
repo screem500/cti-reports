@@ -29,9 +29,9 @@ ValueQuark.com
 
 == Gulf-related indicators (same-day monitoring) ==
 louvree.abudhabe.info                 (Cobalt Strike C2 — was on Etisalat network; dropped from registration)
-QA-HOST-01-REDACTED                       (PureLogsStealer distribution)
-QA-HOST-01-REDACTED/sonic.exe             (payload URL)
-QA-HOST-01-REDACTED/fallacy001.exe        (payload URL)
+QA-HOST-01 [REDACTED] (compromised victim — PureLogsStealer)                       (PureLogsStealer distribution)
+QA-HOST-01 [REDACTED] (payload URL — reported)             (payload URL)
+QA-HOST-01 [REDACTED] (payload URL — reported to Qatar national CERT + PDR)        (payload URL)
 omani-disputes.com                    (phishing lure domain)
 adminbyrequest.UAE-HOST-01.ae          (compromised UAE site — Vidar via ClickFix/EtherHiding)
 45.138.16.162:4321                    (AdaptixC2)

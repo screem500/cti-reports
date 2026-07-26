@@ -1,0 +1,430 @@
+{
+  "type": "bundle",
+  "id": "bundle--90475e91-8a7b-4e25-bf26-09bb04444755",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--11111111-0000-4000-8000-000000000001",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-25T00:00:00.000Z",
+      "name": "Mijlad Al-Subaie (Independent CTI Researcher)",
+      "identity_class": "individual"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--Investigation 002: Kikimora / QatarRAT Campaign00000000-4000-8000-078886023584",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Investigation 002: Kikimora / QatarRAT Campaign",
+      "published": "2026-07-21T00:00:00.000Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "created_by_ref": "identity--11111111-0000-4000-8000-000000000001",
+      "object_refs": [
+        "indicator--GitHub repo Kikimora-arch/solid-doodle (QatarRAT distribution)00000000-4000-8000-286460650478",
+        "indicator--JavaChecker.exe (QatarRAT) SHA25600000000-4000-8000-087216346854",
+        "indicator--kikikmoralibrary.exe (Token stealer) SHA25600000000-4000-8000-084440370512",
+        "indicator--Kikimora algorithmic domain: AspectUtilYotta.com00000000-4000-8000-201431921980",
+        "indicator--Kikimora algorithmic domain: BlockCore.com00000000-4000-8000-725849823094",
+        "indicator--Kikimora algorithmic domain: EngineFlex.com00000000-4000-8000-291267016710",
+        "indicator--Kikimora algorithmic domain: LogicIndexQuant.com00000000-4000-8000-674528676144",
+        "indicator--Kikimora algorithmic domain: ManagerStella.com00000000-4000-8000-577999866837",
+        "indicator--Kikimora algorithmic domain: SinkCoreYotta.com00000000-4000-8000-982516029579",
+        "indicator--Kikimora algorithmic domain: UnitDelta.com00000000-4000-8000-812544683743",
+        "indicator--Kikimora algorithmic domain: UnitSpanPolar.com00000000-4000-8000-387188504403",
+        "indicator--Kikimora algorithmic domain: BaseUltra.com00000000-4000-8000-180983577453",
+        "indicator--Kikimora algorithmic domain: HelperTerra.com00000000-4000-8000-219385150053",
+        "indicator--Kikimora algorithmic domain: TokenKinet.com00000000-4000-8000-483375440662",
+        "indicator--Kikimora algorithmic domain: TokenMorph.com00000000-4000-8000-298658527641",
+        "indicator--Kikimora algorithmic domain: ValueQuark.com00000000-4000-8000-185015455862",
+        "indicator--Cobalt Strike C2 louvree.abudhabe.info00000000-4000-8000-093988613652",
+        "indicator--omani-disputes.com phishing lure00000000-4000-8000-400400905853",
+        "indicator--QA-HOST-01 (redacted) PureLogsStealer distribution - compromised victim, reported00000000-4000-8000-769781600767",
+        "indicator--AdaptixC2 45.138.16.162:432100000000-4000-8000-994010006471"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--GitHub repo Kikimora-arch/solid-doodle (QatarRAT distribution)00000000-4000-8000-286460650478",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "GitHub repo Kikimora-arch/solid-doodle (QatarRAT distribution)",
+      "pattern": "[url:value = 'https://github.com/Kikimora-arch/solid-doodle']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 95,
+      "labels": [
+        "qatarrat",
+        "github-abuse"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--JavaChecker.exe (QatarRAT) SHA25600000000-4000-8000-087216346854",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "JavaChecker.exe (QatarRAT) SHA256",
+      "pattern": "[file:hashes.'SHA-256' = 'fe566ca92d40914438c7ce3157a6a0936ac7be94e71e6c37b95ac84177511874']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 95,
+      "labels": [
+        "qatarrat"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--kikikmoralibrary.exe (Token stealer) SHA25600000000-4000-8000-084440370512",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "kikikmoralibrary.exe (Token stealer) SHA256",
+      "pattern": "[file:hashes.'SHA-256' = '08d5960457d9cb6d825598adaa46586f42d08fd402bb2b75df44a9d12591971f']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 95,
+      "labels": [
+        "stealer",
+        "kikimora"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: AspectUtilYotta.com00000000-4000-8000-201431921980",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: AspectUtilYotta.com",
+      "pattern": "[domain-name:value = 'aspectutilyotta.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: BlockCore.com00000000-4000-8000-725849823094",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: BlockCore.com",
+      "pattern": "[domain-name:value = 'blockcore.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: EngineFlex.com00000000-4000-8000-291267016710",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: EngineFlex.com",
+      "pattern": "[domain-name:value = 'engineflex.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: LogicIndexQuant.com00000000-4000-8000-674528676144",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: LogicIndexQuant.com",
+      "pattern": "[domain-name:value = 'logicindexquant.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: ManagerStella.com00000000-4000-8000-577999866837",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: ManagerStella.com",
+      "pattern": "[domain-name:value = 'managerstella.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: SinkCoreYotta.com00000000-4000-8000-982516029579",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: SinkCoreYotta.com",
+      "pattern": "[domain-name:value = 'sinkcoreyotta.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: UnitDelta.com00000000-4000-8000-812544683743",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: UnitDelta.com",
+      "pattern": "[domain-name:value = 'unitdelta.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: UnitSpanPolar.com00000000-4000-8000-387188504403",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: UnitSpanPolar.com",
+      "pattern": "[domain-name:value = 'unitspanpolar.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: BaseUltra.com00000000-4000-8000-180983577453",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: BaseUltra.com",
+      "pattern": "[domain-name:value = 'baseultra.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: HelperTerra.com00000000-4000-8000-219385150053",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: HelperTerra.com",
+      "pattern": "[domain-name:value = 'helperterra.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: TokenKinet.com00000000-4000-8000-483375440662",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: TokenKinet.com",
+      "pattern": "[domain-name:value = 'tokenkinet.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: TokenMorph.com00000000-4000-8000-298658527641",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: TokenMorph.com",
+      "pattern": "[domain-name:value = 'tokenmorph.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Kikimora algorithmic domain: ValueQuark.com00000000-4000-8000-185015455862",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Kikimora algorithmic domain: ValueQuark.com",
+      "pattern": "[domain-name:value = 'valuequark.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 60,
+      "labels": [
+        "kikimora",
+        "algorithmic-domain"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--Cobalt Strike C2 louvree.abudhabe.info00000000-4000-8000-093988613652",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Cobalt Strike C2 louvree.abudhabe.info",
+      "pattern": "[domain-name:value = 'louvree.abudhabe.info']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 90,
+      "labels": [
+        "cobalt-strike",
+        "c2"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--omani-disputes.com phishing lure00000000-4000-8000-400400905853",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "omani-disputes.com phishing lure",
+      "pattern": "[domain-name:value = 'omani-disputes.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 90,
+      "labels": [
+        "phishing",
+        "gulf-themed-lure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--QA-HOST-01 (redacted) PureLogsStealer distribution - compromised victim, reported00000000-4000-8000-769781600767",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "QA-HOST-01 (redacted) PureLogsStealer distribution - compromised victim, reported",
+      "pattern": "[domain-name:value = 'QA-HOST-01']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 70,
+      "labels": [
+        "compromised-victim",
+        "redacted",
+        "purelogsstealer"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--AdaptixC2 45.138.16.162:432100000000-4000-8000-994010006471",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "AdaptixC2 45.138.16.162:4321",
+      "pattern": "[ipv4-addr:value = '45.138.16.162']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "adaptixc2",
+        "c2"
+      ]
+    }
+  ]
+}
