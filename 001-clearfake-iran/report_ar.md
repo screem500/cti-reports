@@ -1,3 +1,27 @@
+---
+Report ID:        CTI-2026-001
+Title:            ClearFake on Compromised Iranian Infrastructure
+Analyst:          Mijlad Al-Subaie (@screem500)
+Published:        2026-07-20
+Last Updated:     2026-07-26
+Classification:   TLP:CLEAR
+Confidence:       High
+Status:           Published - infrastructure monitoring ongoing
+Redactions:       None (attacker infrastructure published in full)
+---
+
+## MITRE ATT&CK Mapping
+
+| Tactic | Technique | ID | Observation |
+|--------|-----------|----|-------------|
+| Initial Access | Drive-by Compromise | T1189 | 58 malicious URLs on 35 compromised .ir domains |
+| Execution | User Execution: Malicious File | T1204.002 | Fake update lure (ClickFix) |
+| Defense Evasion | Obfuscated Files or Information | T1027 | Obfuscated JS loader |
+| Command and Control | Web Protocols | T1071.001 | ClearFake C2 over HTTP(S) |
+| Command and Control | Remote Access Software | T1219 | Cobalt Strike C2 (separate finding) |
+
+---
+
 # تحليل حملة: ClearFake على بنية تحتية إيرانية مخترقة
 
 **تاريخ التقرير:** 21 يوليو 2026
