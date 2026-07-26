@@ -1,0 +1,1190 @@
+{
+  "type": "bundle",
+  "id": "bundle--846a47ab-b9d9-4e97-a5f8-2623bd39b969",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--11111111-0000-4000-8000-000000000001",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-25T00:00:00.000Z",
+      "name": "Mijlad Al-Subaie (Independent CTI Researcher)",
+      "identity_class": "individual"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--Investigation 001: ClearFake on Compromised Iranian Infrastructure00000000-4000-8000-543360310483",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "Investigation 001: ClearFake on Compromised Iranian Infrastructure",
+      "published": "2026-07-20T00:00:00.000Z",
+      "report_types": [
+        "threat-report"
+      ],
+      "created_by_ref": "identity--11111111-0000-4000-8000-000000000001",
+      "object_refs": [
+        "indicator--ClearFake URL on compromised .ir host: 20ntquqt.varzeshlife.ir00000000-4000-8000-245358051669",
+        "indicator--ClearFake URL on compromised .ir host: 22prf6xs.eduprof.ir00000000-4000-8000-277649139087",
+        "indicator--ClearFake URL on compromised .ir host: 3b213f9c.lionsport.ir00000000-4000-8000-579182012094",
+        "indicator--ClearFake URL on compromised .ir host: 3x6v81kc.varzeshlife.ir00000000-4000-8000-879803198174",
+        "indicator--ClearFake URL on compromised .ir host: 9nqbrnn7.farsibeenglish.ir00000000-4000-8000-138181690983",
+        "indicator--ClearFake URL on compromised .ir host: akvy.20sport.ir00000000-4000-8000-177776676611",
+        "indicator--ClearFake URL on compromised .ir host: bguhecd.beshnoinja.ir00000000-4000-8000-129784836976",
+        "indicator--ClearFake URL on compromised .ir host: bhmsnwx.sargarminovin.ir00000000-4000-8000-337875932980",
+        "indicator--ClearFake URL on compromised .ir host: blhs.20sport.ir00000000-4000-8000-284989453495",
+        "indicator--ClearFake URL on compromised .ir host: dumw.goaliran.ir00000000-4000-8000-930700589602",
+        "indicator--ClearFake URL on compromised .ir host: duqvs764.likesport.ir00000000-4000-8000-777007550172",
+        "indicator--ClearFake URL on compromised .ir host: efdnssea.honaribash.ir00000000-4000-8000-102915226935",
+        "indicator--ClearFake URL on compromised .ir host: eiuphpvo.fiorentini.ir00000000-4000-8000-463378065640",
+        "indicator--ClearFake URL on compromised .ir host: eznvrdxc.footbalpersian.ir00000000-4000-8000-776587710329",
+        "indicator--ClearFake URL on compromised .ir host: faqgkjb.testmobo.ir00000000-4000-8000-718633892705",
+        "indicator--ClearFake URL on compromised .ir host: fqsmqhyz.mosbatsms.ir00000000-4000-8000-111981224524",
+        "indicator--ClearFake URL on compromised .ir host: ftoa.healthvarzesh.ir00000000-4000-8000-613294161992",
+        "indicator--ClearFake URL on compromised .ir host: gclz.futboliran.ir00000000-4000-8000-632542172171",
+        "indicator--ClearFake URL on compromised .ir host: gexbskxk.beshnoinja.ir00000000-4000-8000-894452722938",
+        "indicator--ClearFake URL on compromised .ir host: h9qlti2y.marjaevakil.ir00000000-4000-8000-714769318314",
+        "indicator--ClearFake URL on compromised .ir host: hkfj.varzeshlife.ir00000000-4000-8000-121381679613",
+        "indicator--ClearFake URL on compromised .ir host: hljr.gamesport.ir00000000-4000-8000-928042947907",
+        "indicator--ClearFake URL on compromised .ir host: hrykp.varzeshlife.ir00000000-4000-8000-847587292981",
+        "indicator--ClearFake URL on compromised .ir host: ihnx.footbalpersian.ir00000000-4000-8000-996383366880",
+        "indicator--ClearFake URL on compromised .ir host: jgtl.novin-gps.ir00000000-4000-8000-563263650991",
+        "indicator--ClearFake URL on compromised .ir host: jnfj.elitesport.ir00000000-4000-8000-370305815104",
+        "indicator--ClearFake URL on compromised .ir host: jshreqm.arayeshkhas.ir00000000-4000-8000-625175969626",
+        "indicator--ClearFake URL on compromised .ir host: jwngvds.sargarminovin.ir00000000-4000-8000-197638611309",
+        "indicator--ClearFake URL on compromised .ir host: kjftest.beshnoinja.ir00000000-4000-8000-071592762485",
+        "indicator--ClearFake URL on compromised .ir host: kzqlbit.sargarminovin.ir00000000-4000-8000-040129682377",
+        "indicator--ClearFake URL on compromised .ir host: lddwegnb.ketabworld.ir00000000-4000-8000-393552275906",
+        "indicator--ClearFake URL on compromised .ir host: ll96bzym.salamatyari.ir00000000-4000-8000-379859419929",
+        "indicator--ClearFake URL on compromised .ir host: mbifcxdz.careeriran.ir00000000-4000-8000-910378226585",
+        "indicator--ClearFake URL on compromised .ir host: ncvhdwcq.medsalamat.ir00000000-4000-8000-344449075724",
+        "indicator--ClearFake URL on compromised .ir host: no3htbxq.varzeshlife.ir00000000-4000-8000-037252968462",
+        "indicator--ClearFake URL on compromised .ir host: ntegm9h9.varzeshlife.ir00000000-4000-8000-359579759219",
+        "indicator--ClearFake URL on compromised .ir host: ogiforjk.iranmotorplus.ir00000000-4000-8000-254089916266",
+        "indicator--ClearFake URL on compromised .ir host: oulkepos.nikansefile.ir00000000-4000-8000-930847981574",
+        "indicator--ClearFake URL on compromised .ir host: p8rzf42g.radmanwear.ir00000000-4000-8000-504954332607",
+        "indicator--ClearFake URL on compromised .ir host: pcue.elitesport.ir00000000-4000-8000-372101011296",
+        "indicator--ClearFake URL on compromised .ir host: qakm.fiorentini.ir00000000-4000-8000-807340641458",
+        "indicator--ClearFake URL on compromised .ir host: qkwgkjx.seoprof.ir00000000-4000-8000-274832627550",
+        "indicator--ClearFake URL on compromised .ir host: qnu58lbv.varzeshlife.ir00000000-4000-8000-892448266445",
+        "indicator--ClearFake URL on compromised .ir host: qowmn9c8.iranvibes.ir00000000-4000-8000-831247992368",
+        "indicator--ClearFake URL on compromised .ir host: rhgxzyok.fotoiran.ir00000000-4000-8000-378861660363",
+        "indicator--ClearFake URL on compromised .ir host: rugcfdaz.marjaevakil.ir00000000-4000-8000-450440474268",
+        "indicator--ClearFake URL on compromised .ir host: sjgejs29.itsport.ir00000000-4000-8000-746752631770",
+        "indicator--ClearFake URL on compromised .ir host: todahkuy.podcastshop.ir00000000-4000-8000-542944891989",
+        "indicator--ClearFake URL on compromised .ir host: trlcayaw.matalebeziba.ir00000000-4000-8000-363826293345",
+        "indicator--ClearFake URL on compromised .ir host: uk1nymxr.varzeshlife.ir00000000-4000-8000-589770335150",
+        "indicator--ClearFake URL on compromised .ir host: undh.ofoghchat.ir00000000-4000-8000-051464446234",
+        "indicator--ClearFake URL on compromised .ir host: vsdipcxs.persianeducation.ir00000000-4000-8000-743759687282",
+        "indicator--ClearFake URL on compromised .ir host: w8sxay63.varzeshlife.ir00000000-4000-8000-108185151070",
+        "indicator--ClearFake URL on compromised .ir host: wvew.elitesport.ir00000000-4000-8000-945570837780",
+        "indicator--ClearFake URL on compromised .ir host: x35w4q0s.varzeshlife.ir00000000-4000-8000-140142809131",
+        "indicator--ClearFake URL on compromised .ir host: ynzpk.varzeshlife.ir00000000-4000-8000-980476503890",
+        "indicator--ClearFake URL on compromised .ir host: yxjzgcji.proje-negar.ir00000000-4000-8000-830152166200",
+        "indicator--ClearFake URL on compromised .ir host: zvulhavn.elitesport.ir00000000-4000-8000-652847340714"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: 20ntquqt.varzeshlife.ir00000000-4000-8000-245358051669",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: 20ntquqt.varzeshlife.ir",
+      "pattern": "[url:value = 'https://20ntquqt.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: 22prf6xs.eduprof.ir00000000-4000-8000-277649139087",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: 22prf6xs.eduprof.ir",
+      "pattern": "[url:value = 'https://22prf6xs.eduprof.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: 3b213f9c.lionsport.ir00000000-4000-8000-579182012094",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: 3b213f9c.lionsport.ir",
+      "pattern": "[url:value = 'https://3b213f9c.lionsport.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: 3x6v81kc.varzeshlife.ir00000000-4000-8000-879803198174",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: 3x6v81kc.varzeshlife.ir",
+      "pattern": "[url:value = 'https://3x6v81kc.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: 9nqbrnn7.farsibeenglish.ir00000000-4000-8000-138181690983",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: 9nqbrnn7.farsibeenglish.ir",
+      "pattern": "[url:value = 'https://9nqbrnn7.farsibeenglish.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: akvy.20sport.ir00000000-4000-8000-177776676611",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: akvy.20sport.ir",
+      "pattern": "[url:value = 'https://akvy.20sport.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: bguhecd.beshnoinja.ir00000000-4000-8000-129784836976",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: bguhecd.beshnoinja.ir",
+      "pattern": "[url:value = 'https://bguhecd.beshnoinja.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: bhmsnwx.sargarminovin.ir00000000-4000-8000-337875932980",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: bhmsnwx.sargarminovin.ir",
+      "pattern": "[url:value = 'https://bhmsnwx.sargarminovin.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: blhs.20sport.ir00000000-4000-8000-284989453495",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: blhs.20sport.ir",
+      "pattern": "[url:value = 'https://blhs.20sport.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: dumw.goaliran.ir00000000-4000-8000-930700589602",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: dumw.goaliran.ir",
+      "pattern": "[url:value = 'https://dumw.goaliran.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: duqvs764.likesport.ir00000000-4000-8000-777007550172",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: duqvs764.likesport.ir",
+      "pattern": "[url:value = 'https://duqvs764.likesport.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: efdnssea.honaribash.ir00000000-4000-8000-102915226935",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: efdnssea.honaribash.ir",
+      "pattern": "[url:value = 'https://efdnssea.honaribash.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: eiuphpvo.fiorentini.ir00000000-4000-8000-463378065640",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: eiuphpvo.fiorentini.ir",
+      "pattern": "[url:value = 'https://eiuphpvo.fiorentini.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: eznvrdxc.footbalpersian.ir00000000-4000-8000-776587710329",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: eznvrdxc.footbalpersian.ir",
+      "pattern": "[url:value = 'https://eznvrdxc.footbalpersian.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: faqgkjb.testmobo.ir00000000-4000-8000-718633892705",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: faqgkjb.testmobo.ir",
+      "pattern": "[url:value = 'https://faqgkjb.testmobo.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: fqsmqhyz.mosbatsms.ir00000000-4000-8000-111981224524",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: fqsmqhyz.mosbatsms.ir",
+      "pattern": "[url:value = 'https://fqsmqhyz.mosbatsms.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: ftoa.healthvarzesh.ir00000000-4000-8000-613294161992",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: ftoa.healthvarzesh.ir",
+      "pattern": "[url:value = 'https://ftoa.healthvarzesh.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: gclz.futboliran.ir00000000-4000-8000-632542172171",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: gclz.futboliran.ir",
+      "pattern": "[url:value = 'https://gclz.futboliran.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: gexbskxk.beshnoinja.ir00000000-4000-8000-894452722938",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: gexbskxk.beshnoinja.ir",
+      "pattern": "[url:value = 'https://gexbskxk.beshnoinja.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: h9qlti2y.marjaevakil.ir00000000-4000-8000-714769318314",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: h9qlti2y.marjaevakil.ir",
+      "pattern": "[url:value = 'https://h9qlti2y.marjaevakil.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: hkfj.varzeshlife.ir00000000-4000-8000-121381679613",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: hkfj.varzeshlife.ir",
+      "pattern": "[url:value = 'https://hkfj.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: hljr.gamesport.ir00000000-4000-8000-928042947907",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: hljr.gamesport.ir",
+      "pattern": "[url:value = 'https://hljr.gamesport.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: hrykp.varzeshlife.ir00000000-4000-8000-847587292981",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: hrykp.varzeshlife.ir",
+      "pattern": "[url:value = 'https://hrykp.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: ihnx.footbalpersian.ir00000000-4000-8000-996383366880",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: ihnx.footbalpersian.ir",
+      "pattern": "[url:value = 'https://ihnx.footbalpersian.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: jgtl.novin-gps.ir00000000-4000-8000-563263650991",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: jgtl.novin-gps.ir",
+      "pattern": "[url:value = 'https://jgtl.novin-gps.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: jnfj.elitesport.ir00000000-4000-8000-370305815104",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: jnfj.elitesport.ir",
+      "pattern": "[url:value = 'https://jnfj.elitesport.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: jshreqm.arayeshkhas.ir00000000-4000-8000-625175969626",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: jshreqm.arayeshkhas.ir",
+      "pattern": "[url:value = 'https://jshreqm.arayeshkhas.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: jwngvds.sargarminovin.ir00000000-4000-8000-197638611309",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: jwngvds.sargarminovin.ir",
+      "pattern": "[url:value = 'https://jwngvds.sargarminovin.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: kjftest.beshnoinja.ir00000000-4000-8000-071592762485",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: kjftest.beshnoinja.ir",
+      "pattern": "[url:value = 'https://kjftest.beshnoinja.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: kzqlbit.sargarminovin.ir00000000-4000-8000-040129682377",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: kzqlbit.sargarminovin.ir",
+      "pattern": "[url:value = 'https://kzqlbit.sargarminovin.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: lddwegnb.ketabworld.ir00000000-4000-8000-393552275906",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: lddwegnb.ketabworld.ir",
+      "pattern": "[url:value = 'https://lddwegnb.ketabworld.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: ll96bzym.salamatyari.ir00000000-4000-8000-379859419929",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: ll96bzym.salamatyari.ir",
+      "pattern": "[url:value = 'https://ll96bzym.salamatyari.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: mbifcxdz.careeriran.ir00000000-4000-8000-910378226585",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: mbifcxdz.careeriran.ir",
+      "pattern": "[url:value = 'https://mbifcxdz.careeriran.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: ncvhdwcq.medsalamat.ir00000000-4000-8000-344449075724",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: ncvhdwcq.medsalamat.ir",
+      "pattern": "[url:value = 'https://ncvhdwcq.medsalamat.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: no3htbxq.varzeshlife.ir00000000-4000-8000-037252968462",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: no3htbxq.varzeshlife.ir",
+      "pattern": "[url:value = 'https://no3htbxq.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: ntegm9h9.varzeshlife.ir00000000-4000-8000-359579759219",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: ntegm9h9.varzeshlife.ir",
+      "pattern": "[url:value = 'https://ntegm9h9.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: ogiforjk.iranmotorplus.ir00000000-4000-8000-254089916266",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: ogiforjk.iranmotorplus.ir",
+      "pattern": "[url:value = 'https://ogiforjk.iranmotorplus.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: oulkepos.nikansefile.ir00000000-4000-8000-930847981574",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: oulkepos.nikansefile.ir",
+      "pattern": "[url:value = 'https://oulkepos.nikansefile.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: p8rzf42g.radmanwear.ir00000000-4000-8000-504954332607",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: p8rzf42g.radmanwear.ir",
+      "pattern": "[url:value = 'https://p8rzf42g.radmanwear.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: pcue.elitesport.ir00000000-4000-8000-372101011296",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: pcue.elitesport.ir",
+      "pattern": "[url:value = 'https://pcue.elitesport.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: qakm.fiorentini.ir00000000-4000-8000-807340641458",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: qakm.fiorentini.ir",
+      "pattern": "[url:value = 'https://qakm.fiorentini.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: qkwgkjx.seoprof.ir00000000-4000-8000-274832627550",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: qkwgkjx.seoprof.ir",
+      "pattern": "[url:value = 'https://qkwgkjx.seoprof.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: qnu58lbv.varzeshlife.ir00000000-4000-8000-892448266445",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: qnu58lbv.varzeshlife.ir",
+      "pattern": "[url:value = 'https://qnu58lbv.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: qowmn9c8.iranvibes.ir00000000-4000-8000-831247992368",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: qowmn9c8.iranvibes.ir",
+      "pattern": "[url:value = 'https://qowmn9c8.iranvibes.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: rhgxzyok.fotoiran.ir00000000-4000-8000-378861660363",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: rhgxzyok.fotoiran.ir",
+      "pattern": "[url:value = 'https://rhgxzyok.fotoiran.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: rugcfdaz.marjaevakil.ir00000000-4000-8000-450440474268",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: rugcfdaz.marjaevakil.ir",
+      "pattern": "[url:value = 'https://rugcfdaz.marjaevakil.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: sjgejs29.itsport.ir00000000-4000-8000-746752631770",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: sjgejs29.itsport.ir",
+      "pattern": "[url:value = 'https://sjgejs29.itsport.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: todahkuy.podcastshop.ir00000000-4000-8000-542944891989",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: todahkuy.podcastshop.ir",
+      "pattern": "[url:value = 'https://todahkuy.podcastshop.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: trlcayaw.matalebeziba.ir00000000-4000-8000-363826293345",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: trlcayaw.matalebeziba.ir",
+      "pattern": "[url:value = 'https://trlcayaw.matalebeziba.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: uk1nymxr.varzeshlife.ir00000000-4000-8000-589770335150",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: uk1nymxr.varzeshlife.ir",
+      "pattern": "[url:value = 'https://uk1nymxr.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: undh.ofoghchat.ir00000000-4000-8000-051464446234",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: undh.ofoghchat.ir",
+      "pattern": "[url:value = 'https://undh.ofoghchat.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: vsdipcxs.persianeducation.ir00000000-4000-8000-743759687282",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: vsdipcxs.persianeducation.ir",
+      "pattern": "[url:value = 'https://vsdipcxs.persianeducation.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: w8sxay63.varzeshlife.ir00000000-4000-8000-108185151070",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: w8sxay63.varzeshlife.ir",
+      "pattern": "[url:value = 'https://w8sxay63.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: wvew.elitesport.ir00000000-4000-8000-945570837780",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: wvew.elitesport.ir",
+      "pattern": "[url:value = 'https://wvew.elitesport.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: x35w4q0s.varzeshlife.ir00000000-4000-8000-140142809131",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: x35w4q0s.varzeshlife.ir",
+      "pattern": "[url:value = 'https://x35w4q0s.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: ynzpk.varzeshlife.ir00000000-4000-8000-980476503890",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: ynzpk.varzeshlife.ir",
+      "pattern": "[url:value = 'https://ynzpk.varzeshlife.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: yxjzgcji.proje-negar.ir00000000-4000-8000-830152166200",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: yxjzgcji.proje-negar.ir",
+      "pattern": "[url:value = 'https://yxjzgcji.proje-negar.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ClearFake URL on compromised .ir host: zvulhavn.elitesport.ir00000000-4000-8000-652847340714",
+      "created": "2026-07-20T00:00:00.000Z",
+      "modified": "2026-07-20T00:00:00.000Z",
+      "name": "ClearFake URL on compromised .ir host: zvulhavn.elitesport.ir",
+      "pattern": "[url:value = 'https://zvulhavn.elitesport.ir']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-20T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "confidence": 85,
+      "labels": [
+        "clearfake",
+        "compromised-ir-infrastructure"
+      ]
+    }
+  ]
+}
