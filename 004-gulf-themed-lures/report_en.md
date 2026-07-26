@@ -1,3 +1,15 @@
+---
+Report ID:        CTI-2026-004
+Title:            Gulf-Themed Lures on Foreign Infrastructure
+Analyst:          Mijlad Al-Subaie (@screem500)
+Published:        2026-07-25
+Last Updated:     2026-07-26
+Classification:   TLP:CLEAR
+Confidence:       Moderate
+Status:           Reported - GitHub T&S receipt confirmed; national CERTs notified
+Redactions:       QA-HOST-01 (compromised victim domain)
+---
+
 # Investigation 004: Gulf-Themed Lures — Regional Decoy Names on Foreign Infrastructure
 
 **Report date:** July 25, 2026
