@@ -1,0 +1,490 @@
+{
+  "type": "bundle",
+  "id": "bundle--f6a85303-69ed-5e72-a837-7003f35429c5",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "Mijlad Al-Subaie (@Al7lhh223) — defensive research only.",
+      "identity_class": "individual"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--eb07f465-6d85-5096-b9d5-216691444e41",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "07bamse/Rikki-Userbot",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/07bamse/Rikki-Userbot']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--929e04aa-831f-51f6-8f4e-e9f86084dba3",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "07saorabh/npvm",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/07saorabh/npvm']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--113b4ee7-064e-5446-907a-8b64e1f9b7ea",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "090hn/fashion-ai-studio",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/090hn/fashion-ai-studio']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--48a9398e-c9dd-5b80-a0d6-dfa0328387c6",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "09sumitdas2/TinyML-Human-Activity-Recognition-on-Edge-Devices",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/09sumitdas2/TinyML-Human-Activity-Recognition-on-Edge-Devices']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--561f3ed8-f577-5025-acd8-e59884cb4a21",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "0klartKarlsson/ode-ComfyUI-WanVideoWrapper",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/0klartKarlsson/ode-ComfyUI-WanVideoWrapper']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c880fbf2-7fc9-5497-9657-43cb09ba6370",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "0Milovke0UwU0/transpatter",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/0Milovke0UwU0/transpatter']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1c4208d2-6dce-5f8a-bdd5-eff650178c95",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "0s-coder/DNS_automatic_traffic_splitting",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/0s-coder/DNS_automatic_traffic_splitting']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--80fe9f83-0248-5009-8f10-34a2fc09162c",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "0xsdhzilqodizkahsqh/ozekqjsdhua",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/0xsdhzilqodizkahsqh/ozekqjsdhua']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--12350377-3c89-5310-8a48-a76fccbcc4ad",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "1010kakq/SuperSocketUnity",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/1010kakq/SuperSocketUnity']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f8086e85-b030-5383-9a08-67a234e7c00e",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "111ayba/headphones",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/111ayba/headphones']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--01f6b513-649d-5937-8591-7c5c9eed3af7",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "115th-discomfited211/Awesome-Harness-Engineering",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/115th-discomfited211/Awesome-Harness-Engineering']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8f6e6f7b-4664-5422-95b2-7a11ca1660c3",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "120th-westgermany829/agentic-ai-system-course",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/120th-westgermany829/agentic-ai-system-course']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--13493ad7-1868-5c1c-83d0-e280493b5236",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "12345678900273/SNU_2D_ProgrammingTools_IDE_GROMACS",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/12345678900273/SNU_2D_ProgrammingTools_IDE_GROMACS']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--31144238-ca48-5035-97e0-d5ffa3e11f02",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "12JoelAlmeyda/Love-Calculator",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/12JoelAlmeyda/Love-Calculator']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8fb1688b-3907-5946-97c8-4c6cf7b7e800",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "1342342342fsdfsdfsdfsd/accidenta-fullstack",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/1342342342fsdfsdfsdfsd/accidenta-fullstack']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--66dcb2d4-1369-53bf-9ae2-7f822ee22980",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "13ofbeaches/ai-resume-screening-system",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/13ofbeaches/ai-resume-screening-system']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4534969d-7aa2-5936-8136-9830b308f06d",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "159zhx/Pet-Simulator-99",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/159zhx/Pet-Simulator-99']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2e3b2ceb-bac7-516e-878a-96f64f3a7305",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "15kElixs/GitHub-Insights",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/15kElixs/GitHub-Insights']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e3cfcde6-4ad8-5ed9-b195-3ea88b3fac38",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "1711-liv/Disk-Pulse-Ultimate-Enterprise-No-Trial",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/1711-liv/Disk-Pulse-Ultimate-Enterprise-No-Trial']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a66f2476-9877-515c-ad05-ade4c21a5ee8",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "195410211/audit-evidence-pack-assembler",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/195410211/audit-evidence-pack-assembler']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "sample of captured distribution repos (raw.githubusercontent.com)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "grouping",
+      "spec_version": "2.1",
+      "id": "grouping--7b1bb1c6-ab84-544c-bc93-9a3480deba7d",
+      "created_by_ref": "identity--e5c4c08a-4bae-531b-b977-c3d3f157f078",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "FakeGit Campaign (SmartLoader / LuaJIT-loader) — independently captured sample",
+      "context": "suspicious-activity",
+      "object_refs": [
+        "indicator--eb07f465-6d85-5096-b9d5-216691444e41",
+        "indicator--929e04aa-831f-51f6-8f4e-e9f86084dba3",
+        "indicator--113b4ee7-064e-5446-907a-8b64e1f9b7ea",
+        "indicator--48a9398e-c9dd-5b80-a0d6-dfa0328387c6",
+        "indicator--561f3ed8-f577-5025-acd8-e59884cb4a21",
+        "indicator--c880fbf2-7fc9-5497-9657-43cb09ba6370",
+        "indicator--1c4208d2-6dce-5f8a-bdd5-eff650178c95",
+        "indicator--80fe9f83-0248-5009-8f10-34a2fc09162c",
+        "indicator--12350377-3c89-5310-8a48-a76fccbcc4ad",
+        "indicator--f8086e85-b030-5383-9a08-67a234e7c00e",
+        "indicator--01f6b513-649d-5937-8591-7c5c9eed3af7",
+        "indicator--8f6e6f7b-4664-5422-95b2-7a11ca1660c3",
+        "indicator--13493ad7-1868-5c1c-83d0-e280493b5236",
+        "indicator--31144238-ca48-5035-97e0-d5ffa3e11f02",
+        "indicator--8fb1688b-3907-5946-97c8-4c6cf7b7e800",
+        "indicator--66dcb2d4-1369-53bf-9ae2-7f822ee22980",
+        "indicator--4534969d-7aa2-5936-8136-9830b308f06d",
+        "indicator--2e3b2ceb-bac7-516e-878a-96f64f3a7305",
+        "indicator--e3cfcde6-4ad8-5ed9-b195-3ea88b3fac38",
+        "indicator--a66f2476-9877-515c-ad05-ade4c21a5ee8"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    }
+  ]
+}

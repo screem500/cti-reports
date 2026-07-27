@@ -1,0 +1,524 @@
+{
+  "type": "bundle",
+  "id": "bundle--c8d6534b-cccc-523a-85f4-40f0ddd4082c",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Mijlad Al-Subaie (@Al7lhh223)",
+      "identity_class": "individual"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--9333cfe4-d87a-5bb3-8465-9dd644e9dfb3",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "active — reported",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/Kikimora-arch/solid-doodle']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "infrastructure",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "active — reported"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--257a3a37-b659-5746-a6ca-9b594bc66897",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "empty decoy",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://github.com/Kikimora-arch/solid-pomoemy']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "infrastructure",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "empty decoy"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ed42ce5a-c40a-5016-bdb3-d695fdc22dc8",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "JavaChecker.exe (QatarRAT)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'fe566ca92d40914438c7ce3157a6a0936ac7be94e71e6c37b95ac84177511874']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "hashes (sha256)",
+        "file"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "JavaChecker.exe (QatarRAT)"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8f0c3fec-e04c-53c7-afd3-57ff76c576a1",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "kikikmoralibrary.exe (Token stealer)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '08d5960457d9cb6d825598adaa46586f42d08fd402bb2b75df44a9d12591971f']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "hashes (sha256)",
+        "file"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "kikikmoralibrary.exe (Token stealer)"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cba6164b-5ee9-5d64-a80b-69dc3c667ac4",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "AspectUtilYotta.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'aspectutilyotta.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from javachecker.exe (algorithmic pattern)",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e97cf8fb-90a0-5bc6-a9e6-ded91cc4ff0e",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "resolves: 76.223.54.146 / 13.248.169.48 — AWS GA",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'blockcore.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from javachecker.exe (algorithmic pattern)",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "resolves: 76.223.54.146 / 13.248.169.48 — AWS GA"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ad6b78b8-6ba9-5259-9721-5d71503a483c",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "resolves: 76.223.54.146 / 13.248.169.48 — AWS GA",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'engineflex.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from javachecker.exe (algorithmic pattern)",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "resolves: 76.223.54.146 / 13.248.169.48 — AWS GA"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1fc59489-fd27-5d00-9152-667f3cd2bb2e",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "LogicIndexQuant.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'logicindexquant.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from javachecker.exe (algorithmic pattern)",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c97c0eb9-5864-52d9-85d6-1260735c4c93",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "ManagerStella.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'managerstella.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from javachecker.exe (algorithmic pattern)",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ce070c6d-ce2a-57af-b036-37dd0427b68b",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "SinkCoreYotta.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'sinkcoreyotta.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from javachecker.exe (algorithmic pattern)",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c1230767-9999-533e-9b3c-7e900d32599a",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "UnitDelta.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'unitdelta.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from javachecker.exe (algorithmic pattern)",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d2ae54f8-cd36-5cc9-b51d-812f2181ad38",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "UnitSpanPolar.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'unitspanpolar.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from javachecker.exe (algorithmic pattern)",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b3e7ba41-082b-5334-b43e-3c2b5e39e4d0",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "BaseUltra.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'baseultra.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from kikikmoralibrary.exe",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5837b50c-49f2-539a-b387-cf059835ded4",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "HelperTerra.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'helperterra.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from kikikmoralibrary.exe",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4b03e502-84c6-5b77-9350-cca47ba7c46c",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "TokenKinet.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'tokenkinet.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from kikikmoralibrary.exe",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ddff2837-88ad-54c5-a1df-0b5b0e22c33c",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "resolves: 74.208.236.232 — IONOS, active",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'tokenmorph.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from kikikmoralibrary.exe",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "resolves: 74.208.236.232 — IONOS, active"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--66dba0d8-307b-5089-80e3-f9dc60e89efb",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "ValueQuark.com",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'valuequark.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "domains — extracted from kikikmoralibrary.exe",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--58ea768e-aa98-547e-b61a-91b62e8a4090",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Cobalt Strike C2 — was on Etisalat network; dropped from registration",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'louvree.abudhabe.info']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "gulf-related indicators (same-day monitoring)",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "Cobalt Strike C2 — was on Etisalat network; dropped from registration"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--66b31d8e-190e-527a-bc03-15c358864d0e",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "phishing lure domain",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[domain-name:value = 'omani-disputes.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "gulf-related indicators (same-day monitoring)",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "phishing lure domain"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a0303b16-c2d6-5a4f-93d2-7bf3e1269ca1",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "AdaptixC2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[network-traffic:dst_ref.type = 'ipv4-addr' AND network-traffic:dst_ref.value = '45.138.16.162' AND network-traffic:dst_port = 4321]",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "gulf-related indicators (same-day monitoring)",
+        "network-traffic"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "AdaptixC2"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--069666fb-b4d7-5eba-97ea-69f05708df5f",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "AdaptixC2",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[ipv4-addr:value = '45.138.16.162']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-21T00:00:00.000Z",
+      "labels": [
+        "gulf-related indicators (same-day monitoring)",
+        "ipv4-addr"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "AdaptixC2"
+    },
+    {
+      "type": "grouping",
+      "spec_version": "2.1",
+      "id": "grouping--cfe93b8e-b39e-5044-835a-0a85dafe9485",
+      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
+      "created": "2026-07-21T00:00:00.000Z",
+      "modified": "2026-07-21T00:00:00.000Z",
+      "name": "Investigation 002: Kikimora / QatarRAT Campaign",
+      "context": "suspicious-activity",
+      "object_refs": [
+        "indicator--9333cfe4-d87a-5bb3-8465-9dd644e9dfb3",
+        "indicator--257a3a37-b659-5746-a6ca-9b594bc66897",
+        "indicator--ed42ce5a-c40a-5016-bdb3-d695fdc22dc8",
+        "indicator--8f0c3fec-e04c-53c7-afd3-57ff76c576a1",
+        "indicator--cba6164b-5ee9-5d64-a80b-69dc3c667ac4",
+        "indicator--e97cf8fb-90a0-5bc6-a9e6-ded91cc4ff0e",
+        "indicator--ad6b78b8-6ba9-5259-9721-5d71503a483c",
+        "indicator--1fc59489-fd27-5d00-9152-667f3cd2bb2e",
+        "indicator--c97c0eb9-5864-52d9-85d6-1260735c4c93",
+        "indicator--ce070c6d-ce2a-57af-b036-37dd0427b68b",
+        "indicator--c1230767-9999-533e-9b3c-7e900d32599a",
+        "indicator--d2ae54f8-cd36-5cc9-b51d-812f2181ad38",
+        "indicator--b3e7ba41-082b-5334-b43e-3c2b5e39e4d0",
+        "indicator--5837b50c-49f2-539a-b387-cf059835ded4",
+        "indicator--4b03e502-84c6-5b77-9350-cca47ba7c46c",
+        "indicator--ddff2837-88ad-54c5-a1df-0b5b0e22c33c",
+        "indicator--66dba0d8-307b-5089-80e3-f9dc60e89efb",
+        "indicator--58ea768e-aa98-547e-b61a-91b62e8a4090",
+        "indicator--66b31d8e-190e-527a-bc03-15c358864d0e",
+        "indicator--a0303b16-c2d6-5a4f-93d2-7bf3e1269ca1",
+        "indicator--069666fb-b4d7-5eba-97ea-69f05708df5f"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    }
+  ]
+}

@@ -1,163 +1,270 @@
 {
   "type": "bundle",
-  "id": "bundle--a1b2c3d4-0040-4000-8000-000000000004",
+  "id": "bundle--bb5208ed-6f8d-55f9-af49-6bb52b0d21a0",
   "objects": [
     {
       "type": "identity",
       "spec_version": "2.1",
-      "id": "identity--11111111-0000-4000-8000-000000000001",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "Mijlad Al-Subaie (Independent CTI Researcher)",
+      "id": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "Mijlad Al-Subaie (@Al7lhh223 / screem500)",
       "identity_class": "individual"
     },
     {
-      "type": "report",
-      "spec_version": "2.1",
-      "id": "report--22222222-0000-4000-8000-000000000004",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "Investigation 004: Gulf-Themed Lures on Foreign Infrastructure",
-      "published": "2026-07-25T00:00:00.000Z",
-      "report_types": ["threat-report"],
-      "created_by_ref": "identity--11111111-0000-4000-8000-000000000001",
-      "object_refs": [
-        "indicator--33333333-0000-4000-8000-000000000001",
-        "indicator--33333333-0000-4000-8000-000000000002",
-        "indicator--33333333-0000-4000-8000-000000000003",
-        "indicator--33333333-0000-4000-8000-000000000004",
-        "indicator--33333333-0000-4000-8000-000000000005",
-        "indicator--33333333-0000-4000-8000-000000000006",
-        "indicator--33333333-0000-4000-8000-000000000007",
-        "indicator--33333333-0000-4000-8000-000000000008",
-        "indicator--33333333-0000-4000-8000-000000000009"
-      ]
-    },
-    {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--33333333-0000-4000-8000-000000000001",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "QA-HOST-01 [محجوب - REDACTED] - PureLogsStealer distribution (likely compromised)",
-      "pattern": "[domain-name:value = 'QA-HOST-01 [محجوب - REDACTED]']",
-      "pattern_type": "stix",
-      "valid_from": "2026-07-14T00:00:00.000Z",
-      "indicator_types": ["malicious-activity"],
-      "confidence": 70,
-      "labels": ["purelogsstealer", "gulf-themed-lure"]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--33333333-0000-4000-8000-000000000002",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "omani-disputes.com - reverse-base64 loader (purpose-registered)",
+      "id": "indicator--a83acf10-160f-53f2-a26a-6273fd7a368a",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "rev-base64 loader | 3.144.33.123 (AWS US) | registered 2026-05-29 | purpose-registered (high conf)",
+      "indicator_types": [
+        "malicious-activity"
+      ],
       "pattern": "[domain-name:value = 'omani-disputes.com']",
       "pattern_type": "stix",
-      "valid_from": "2026-07-05T00:00:00.000Z",
-      "indicator_types": ["malicious-activity"],
-      "confidence": 90,
-      "labels": ["loader", "gulf-themed-lure"]
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "domains",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "rev-base64 loader | 3.144.33.123 (AWS US) | registered 2026-05-29 | purpose-registered (high conf)"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--33333333-0000-4000-8000-000000000003",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "gulfbreezervrentals.com - ClearFake macOS variant",
+      "id": "indicator--7cdc2357-41c3-5289-8c10-c8cfa55ca90d",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "ClearFake (macOS) | - | - | ClearFake mac-0x68dc",
+      "indicator_types": [
+        "malicious-activity"
+      ],
       "pattern": "[domain-name:value = 'gulfbreezervrentals.com']",
       "pattern_type": "stix",
-      "valid_from": "2026-07-20T00:00:00.000Z",
-      "indicator_types": ["malicious-activity"],
-      "confidence": 85,
-      "labels": ["clearfake", "macos", "gulf-themed-lure"]
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "domains",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "ClearFake (macOS) | - | - | ClearFake mac-0x68dc"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--33333333-0000-4000-8000-000000000004",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "shaggulf-sold.xyz - Potemkin Loader",
+      "id": "indicator--64347f95-884b-578a-ac3c-b2b15c4a9ac4",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "Potemkin Loader | - | - | low confidence",
+      "indicator_types": [
+        "malicious-activity"
+      ],
       "pattern": "[domain-name:value = 'shaggulf-sold.xyz']",
       "pattern_type": "stix",
-      "valid_from": "2026-07-23T00:00:00.000Z",
-      "indicator_types": ["malicious-activity"],
-      "confidence": 50,
-      "labels": ["potemkin", "loader"]
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "domains",
+        "domain-name"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "Potemkin Loader | - | - | low confidence"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--33333333-0000-4000-8000-000000000005",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "SmartLoader-MaaS ZIP via GitHub (rsaudio/second-brain)",
+      "id": "indicator--22cf3bc1-568e-5544-b23c-f02225259d62",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "rev-base64 loader | URLhaus #3881315",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://omani-disputes.com/txt/adkbjdd.txt']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "urls (defanged)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "rev-base64 loader | URLhaus #3881315"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5533d4cf-c06c-589a-8223-2b0a58b47383",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "ClearFake macOS | URLhaus #3889248",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://jnhygwu4.gulfbreezervrentals.com/?ublib=487e7990-...']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "urls (defanged)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "ClearFake macOS | URLhaus #3889248"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--47f478bb-8b82-5017-9376-3b834bab7b4e",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "Potemkin | URLhaus #3890694",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'http://shaggulf-sold.xyz/avast_update']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "urls (defanged)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "Potemkin | URLhaus #3890694"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7bbf871d-b630-595e-b785-3e0585a53460",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "SmartLoader-MaaS (LuaJIT-loader) | URLhaus #3871589 | ONLINE",
+      "indicator_types": [
+        "malicious-activity"
+      ],
       "pattern": "[url:value = 'https://raw.githubusercontent.com/rsaudio/second-brain/main/docs/second_brain_v3.7.zip']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T00:00:00.000Z",
-      "indicator_types": ["malicious-activity"],
-      "confidence": 95,
-      "labels": ["smartloader", "maas", "github-abuse"]
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "github (live at 2026-07-25)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "SmartLoader-MaaS (LuaJIT-loader) | URLhaus #3871589 | ONLINE"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--33333333-0000-4000-8000-000000000006",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "SmartLoader-MaaS ZIP via GitHub (rockyou_uzb)",
+      "id": "indicator--9aeb2bd6-089b-5b58-82f1-67f620c51021",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "SmartLoader-MaaS (LuaJIT-loader) | URLhaus #3873086 | ONLINE",
+      "indicator_types": [
+        "malicious-activity"
+      ],
       "pattern": "[url:value = 'https://raw.githubusercontent.com/Alpacareticulitermeslucifugus340/rockyou_uzb/main/egomaniac/uzb_rockyou_v2.9.zip']",
       "pattern_type": "stix",
-      "valid_from": "2026-06-22T00:00:00.000Z",
-      "indicator_types": ["malicious-activity"],
-      "confidence": 95,
-      "labels": ["smartloader", "maas", "github-abuse"]
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "github (live at 2026-07-25)",
+        "url"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "SmartLoader-MaaS (LuaJIT-loader) | URLhaus #3873086 | ONLINE"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--33333333-0000-4000-8000-000000000007",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "QA-HOST-01 [محجوب - REDACTED] hosting IP (Hetzner)",
+      "id": "indicator--adf86a2d-c318-51f5-b533-a5b58efe617d",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "Hetzner fsn1-dc10 (DE) | QA-HOST-01 hosting",
+      "indicator_types": [
+        "malicious-activity"
+      ],
       "pattern": "[ipv4-addr:value = '5.9.143.30']",
       "pattern_type": "stix",
-      "valid_from": "2026-07-14T00:00:00.000Z",
-      "indicator_types": ["malicious-activity"],
-      "confidence": 60,
-      "labels": ["hosting-infrastructure"]
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "ip addresses",
+        "ipv4-addr"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "Hetzner fsn1-dc10 (DE) | QA-HOST-01 hosting"
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--33333333-0000-4000-8000-000000000008",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "omani-disputes.com hosting IP (AWS)",
+      "id": "indicator--8d7ce076-ff5a-5063-83fa-d24d9fae72c9",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "Amazon Technologies (US) | omani-disputes.com hosting",
+      "indicator_types": [
+        "malicious-activity"
+      ],
       "pattern": "[ipv4-addr:value = '3.144.33.123']",
       "pattern_type": "stix",
-      "valid_from": "2026-07-05T00:00:00.000Z",
-      "indicator_types": ["malicious-activity"],
-      "confidence": 75,
-      "labels": ["hosting-infrastructure"]
+      "valid_from": "2026-07-27T19:06:22.000Z",
+      "labels": [
+        "ip addresses",
+        "ipv4-addr"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "description": "Amazon Technologies (US) | omani-disputes.com hosting"
     },
     {
-      "type": "indicator",
+      "type": "grouping",
       "spec_version": "2.1",
-      "id": "indicator--33333333-0000-4000-8000-000000000009",
-      "created": "2026-07-25T00:00:00.000Z",
-      "modified": "2026-07-25T00:00:00.000Z",
-      "name": "QA-HOST-01 [محجوب - REDACTED] PureLogsStealer payload URL",
-      "pattern": "[url:value = 'https://QA-HOST-01 [محجوب - REDACTED]/sonic.exe']",
-      "pattern_type": "stix",
-      "valid_from": "2026-07-14T00:00:00.000Z",
-      "indicator_types": ["malicious-activity"],
-      "confidence": 80,
-      "labels": ["purelogsstealer", "payload-url"]
+      "id": "grouping--09d12bfe-cabb-5011-8d3c-819068f1969c",
+      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
+      "created": "2026-07-27T19:06:22.000Z",
+      "modified": "2026-07-27T19:06:22.000Z",
+      "name": "Investigation 004: Gulf-Themed Lures",
+      "context": "suspicious-activity",
+      "object_refs": [
+        "indicator--a83acf10-160f-53f2-a26a-6273fd7a368a",
+        "indicator--7cdc2357-41c3-5289-8c10-c8cfa55ca90d",
+        "indicator--64347f95-884b-578a-ac3c-b2b15c4a9ac4",
+        "indicator--22cf3bc1-568e-5544-b23c-f02225259d62",
+        "indicator--5533d4cf-c06c-589a-8223-2b0a58b47383",
+        "indicator--47f478bb-8b82-5017-9376-3b834bab7b4e",
+        "indicator--7bbf871d-b630-595e-b785-3e0585a53460",
+        "indicator--9aeb2bd6-089b-5b58-82f1-67f620c51021",
+        "indicator--adf86a2d-c318-51f5-b533-a5b58efe617d",
+        "indicator--8d7ce076-ff5a-5063-83fa-d24d9fae72c9"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
     }
   ]
 }
