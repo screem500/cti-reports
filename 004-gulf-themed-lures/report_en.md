@@ -117,7 +117,7 @@ Two repositories distributing malicious ZIP archives via `raw.githubusercontent.
 
 ## 7. IOC Appendix
 
-See the attached `iocs_gulf_lures.txt` — includes domains, full URLs, IP addresses, and URLhaus references for each indicator.
+See the attached `iocs_004_gulf_lures.txt` — includes domains, full URLs, IP addresses, and URLhaus references for each indicator.
 
 ---
 

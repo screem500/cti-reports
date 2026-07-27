@@ -117,7 +117,7 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 
 ## 7. ملاحق IOCs
 
-انظر ملف `iocs_gulf_lures.txt` المرفق — يشمل النطاقات، الروابط الكاملة، العناوين IP، ومراجع URLhaus لكل مؤشر.
+انظر ملف `iocs_004_gulf_lures.txt` المرفق — يشمل النطاقات، الروابط الكاملة، العناوين IP، ومراجع URLhaus لكل مؤشر.
 
 ---
 
