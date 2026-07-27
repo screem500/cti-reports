@@ -68,7 +68,7 @@ Redactions:       None (attacker infrastructure published in full)
   - صحة: medsalamat, salamatyari, healthvarzesh
   - تعليم: eduprof, persianeducation, farsibeenglish, ketabworld
   - خدمات وتجارة: novin-gps, podcastshop, radmanwear, iranmotorplus وغيرها
-- **الامتداد الخليجي:** adminbyrequest.UAE-HOST-01.ae (الإمارات) — توزيع Vidar عبر ClickFix.
+- **الامتداد الخليجي:** UAE-HOST-01 (الإمارات) — توزيع Vidar عبر ClickFix.
 
 ---
 
@@ -109,7 +109,7 @@ Redactions:       None (attacker infrastructure published in full)
 | المؤشر | النوع | الوصف | الحالة |
 |--------|-------|-------|--------|
 | ns1.newchatsits.ir | domain | Cobalt Strike C2 | نشط (آخر رصد 2026-07-21) |
-| adminbyrequest.UAE-HOST-01.ae | URL | توزيع Vidar (ClickFix/EtherHiding) | مخترق |
+| UAE-HOST-01 | URL | توزيع Vidar (ClickFix/EtherHiding) | مخترق |
 | *.varzeshlife.ir (عشوائية) | domain | توزيع ClearFake | متجددة |
 | 45.138.16.162:4321 | ip:port | AdaptixC2 | نشط |
 
