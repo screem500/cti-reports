@@ -14,7 +14,7 @@
     {
       "type": "report",
       "spec_version": "2.1",
-      "id": "report--Investigation 003: Live ClearFake Loader on Compromised UAE Website (Redacted)00000000-4000-8000-666708373883",
+      "id": "report--a9db1954-43de-5d81-8b3b-01743a549716",
       "created": "2026-07-24T00:00:00.000Z",
       "modified": "2026-07-24T00:00:00.000Z",
       "name": "Investigation 003: Live ClearFake Loader on Compromised UAE Website (Redacted)",
@@ -24,16 +24,15 @@
       ],
       "created_by_ref": "identity--11111111-0000-4000-8000-000000000001",
       "object_refs": [
-        "indicator--ClearFake _cf_verified cookie marker00000000-4000-8000-210060333966",
-        "indicator--ClearFake _wp_perf_ok cookie marker00000000-4000-8000-846972341697",
-        "indicator--ClearFake /beacon/ heartbeat exfiltration path00000000-4000-8000-139207197420",
-        "indicator--UAE-HOST-01 (redacted) compromised site - live ClearFake loader, reported to aeCERT00000000-4000-8000-958805689256"
+        "indicator--9a21c69f-e048-51f4-ab1c-6b9302733432",
+        "indicator--86b24028-07bb-54fe-98e4-cab00c2d4c9d",
+        "indicator--c5caa8d5-b8bd-5477-8a17-1be4627b5548"
       ]
     },
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ClearFake _cf_verified cookie marker00000000-4000-8000-210060333966",
+      "id": "indicator--9a21c69f-e048-51f4-ab1c-6b9302733432",
       "created": "2026-07-24T00:00:00.000Z",
       "modified": "2026-07-24T00:00:00.000Z",
       "name": "ClearFake _cf_verified cookie marker",
@@ -52,7 +51,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ClearFake _wp_perf_ok cookie marker00000000-4000-8000-846972341697",
+      "id": "indicator--86b24028-07bb-54fe-98e4-cab00c2d4c9d",
       "created": "2026-07-24T00:00:00.000Z",
       "modified": "2026-07-24T00:00:00.000Z",
       "name": "ClearFake _wp_perf_ok cookie marker",
@@ -71,7 +70,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ClearFake /beacon/ heartbeat exfiltration path00000000-4000-8000-139207197420",
+      "id": "indicator--c5caa8d5-b8bd-5477-8a17-1be4627b5548",
       "created": "2026-07-24T00:00:00.000Z",
       "modified": "2026-07-24T00:00:00.000Z",
       "name": "ClearFake /beacon/ heartbeat exfiltration path",
@@ -85,26 +84,6 @@
       "labels": [
         "clearfake",
         "exfiltration"
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--UAE-HOST-01 (redacted) compromised site - live ClearFake loader, reported to aeCERT00000000-4000-8000-958805689256",
-      "created": "2026-07-24T00:00:00.000Z",
-      "modified": "2026-07-24T00:00:00.000Z",
-      "name": "UAE-HOST-01 (redacted) compromised site - live ClearFake loader, reported to aeCERT",
-      "pattern": "[domain-name:value = 'UAE-HOST-01']",
-      "pattern_type": "stix",
-      "valid_from": "2026-07-24T00:00:00.000Z",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "confidence": 85,
-      "labels": [
-        "compromised-victim",
-        "redacted",
-        "clearfake"
       ]
     }
   ]
