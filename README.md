@@ -40,8 +40,8 @@ Deep-dive from a single feed indicator to a full distribution campaign: ~18,000 
 - Static malware analysis in isolated environments (no execution)
 - Platform intelligence: GitHub API, RDAP, CT logs, passive DNS
 - Attribution with explicit confidence levels - evidence over assumptions
-- IOCs published in both human-readable (TXT) and machine-readable (STIX 2.1) formats
-
+- IOCs published in both human-readable (TXT) and machine-readable (STIX 2.1) formats. Bundles are generated from the text sources with `ioc2stix.py`, so both formats stay in sync and every bundle is spec-valid.
+- Redacted victim identifiers are never emitted into machine-readable output — the converter drops them by design.
 ---
 
 👤 عن المحلل | About the Analyst
