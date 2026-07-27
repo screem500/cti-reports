@@ -29,7 +29,7 @@
 "3869643","2026-06-22 14:03:04","https://raw.githubusercontent.com/romansaqib/gitpal/main/raillery/Software-v3.4.zip","online","2026-07-20 18:28:47","malware_download","LuaJIT-loader,SmartLoader,SmartLoader-MaaS","https://urlhaus.abuse.ch/url/3869643/","anonymous"
 
 --- [2] Gulf indicators (ThreatFox) ---
-"2026-07-20 12:15:04", "1854367", "https://adminbyrequest.UAE-HOST-01.ae/", "url", "payload_delivery", "win.vidar", "None", "Vidar", "", "75", "True", "None", "ClickFix,compromised,EtherHiding,Polygon,Vidar,WordPress", "1", "anonymous"
+"2026-07-20 12:15:04", "1854367", "https://UAE-HOST-01/", "url", "payload_delivery", "win.vidar", "None", "Vidar", "", "75", "True", "None", "ClickFix,compromised,EtherHiding,Polygon,Vidar,WordPress", "1", "anonymous"
 "2023-03-28 15:52:23", "1094484", "louvree.abudhabe.info", "domain", "botnet_cc", "win.cobalt_strike", "Agentemis,BEACON,CobaltStrike,cobeacon", "Cobalt Strike", "2026-07-21 00:42:51", "100", "False", "None", "CobaltStrike,cs-watermark-1826426664,EMIRATES-INTERNET Emirates Internet", "0", "drb_ra"
 
 --- [3] Related malware samples (MalwareBazaar) ---

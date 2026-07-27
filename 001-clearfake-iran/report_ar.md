@@ -7,7 +7,7 @@ Last Updated:     2026-07-26
 Classification:   TLP:CLEAR
 Confidence:       High
 Status:           Published - infrastructure monitoring ongoing
-Redactions:       None (attacker infrastructure published in full)
+Redactions:       UAE-HOST-01 (compromised third-party site) redacted pending remediation; attacker infrastructure published in full
 ---
 
 ## MITRE ATT&CK Mapping

@@ -22,7 +22,7 @@ Redactions:       UAE-HOST-01 (victim identity withheld per Responsible Disclosu
 
 ### 1. الملخص التنفيذي
 
-أثناء متابعة دورية لمؤشر مرصود في ThreatFox (`adminbyrequest.UAE-HOST-01` — موسوم كمخترق يوزع Vidar عبر ClickFix)، تبيّن أن الصفحة تعرض محتوى نظيفاً ظاهرياً. الفحص الأعمق كشف **كود JavaScript خبيثاً مزروعاً في ذيل الصفحة** — لودر نشط من عائلة ClearFake يعمل لحظة التحليل. تم الإبلاغ لـ aeCERT بالدليل الخام الكامل بتاريخ 2026-07-25.
+أثناء متابعة دورية لمؤشر مرصود في ThreatFox (`UAE-HOST-01` — موسوم كمخترق يوزع Vidar عبر ClickFix)، تبيّن أن الصفحة تعرض محتوى نظيفاً ظاهرياً. الفحص الأعمق كشف **كود JavaScript خبيثاً مزروعاً في ذيل الصفحة** — لودر نشط من عائلة ClearFake يعمل لحظة التحليل. تم الإبلاغ لـ aeCERT بالدليل الخام الكامل بتاريخ 2026-07-25.
 
 ### 2. الأحكام الرئيسية | Key Judgments
 
@@ -72,7 +72,7 @@ Redactions:       UAE-HOST-01 (victim identity withheld per Responsible Disclosu
 
 ### 1. Executive Summary
 
-During routine monitoring of a ThreatFox indicator (`adminbyrequest.UAE-HOST-01` — tagged compromised, distributing Vidar via ClickFix), the page appeared superficially clean. Deeper inspection revealed a **malicious JavaScript loader injected at the page tail** — an active ClearFake-family loader, live at analysis time. Full raw evidence was reported to aeCERT on 2026-07-25.
+During routine monitoring of a ThreatFox indicator (`UAE-HOST-01` — tagged compromised, distributing Vidar via ClickFix), the page appeared superficially clean. Deeper inspection revealed a **malicious JavaScript loader injected at the page tail** — an active ClearFake-family loader, live at analysis time. Full raw evidence was reported to aeCERT on 2026-07-25.
 
 ### 2. Injected Code Analysis
 
@@ -102,7 +102,7 @@ The loader applies **conditional cloaking**: it inspects the visitor's User-Agen
 > The victim-identifying full indicator is withheld per policy — shared with official bodies only.
 
 ```
-adminbyrequest.UAE-HOST-01      (compromised — live ClearFake loader, cloaked) [REDACTED]
+UAE-HOST-01      (compromised — live ClearFake loader, cloaked) [REDACTED]
 /beacon/ endpoint               (heartbeat exfiltration path)
 cookies: _cf_verified, _wp_perf_ok
 ```

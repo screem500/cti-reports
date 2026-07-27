@@ -7,7 +7,7 @@ Last Updated:     2026-07-26
 Classification:   TLP:CLEAR
 Confidence:       Moderate
 Status:           Published - GitHub reported
-Redactions:       QA-HOST-01 (compromised victim domain)
+Redactions:       QA-HOST-01, UAE-HOST-01 (compromised victim domains)
 ---
 
 ## MITRE ATT&CK Mapping
@@ -154,7 +154,7 @@ AspectUtilYotta.com — BlockCore.com (نشط، AWS GA) — EngineFlex.com (نش
 | QA-HOST-01 (محجوب — ضحية مخترقة، بُلّغ CERT قطر) — PureLogsStealer | قطر | offline |
 | omani-disputes.com — نطاق تصيد | عُمان | offline |
 | louvree.abudhabe.info — Cobalt Strike C2 | الإمارات | ساقط من التسجيل (كان على شبكة اتصالات) |
-| adminbyrequest.UAE-HOST-01.ae — Vidar | الإمارات | مخترق |
+| UAE-HOST-01 — Vidar | الإمارات | مخترق |
 | QatarRAT عبر GitHub | تسمية قطرية | **نشط** |
 
 ---
