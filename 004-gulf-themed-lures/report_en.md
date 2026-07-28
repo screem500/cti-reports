@@ -15,7 +15,7 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 **Report date:** July 25, 2026
 **Analyst:** Mijlad Al-Subaie — CEH · CHFI | X: @Al7lhh223 https://x.com/Al7lhh223 · GitHub: screem500 https://github.com/screem500
 **Status:** Defensive analysis — cleared for publication
-**Reporting:** On 2026-07-25: both live SmartLoader-MaaS repositories reported to GitHub Trust & Safety (receipt confirmed), and the relevant authorities in Oman and Qatar notified of the indicators using their country-themed lures (omani-disputes.com / QA-HOST-01 [محجوب - REDACTED])
+**Reporting:** On 2026-07-25: both live SmartLoader-MaaS repositories reported to GitHub Trust & Safety (receipt confirmed), and the relevant authorities in Oman and Qatar notified of the indicators using their country-themed lures (omani-disputes.com / QA-HOST-01 [REDACTED])
 **Methodology:** Open-source monitoring (URLhaus, ThreatFox) + platform intelligence (WHOIS/RDAP, GitHub API) — no sample execution
 **Related:** Investigation 001 (ClearFake-iran) · Investigation 002 (Kikimora/QatarRAT) · Investigation 003 (UAE ClearFake Live)
 **Redaction:** QA-HOST-01 is a likely-compromised victim domain — identity withheld per the Responsible Disclosure Policy; reported to Qatar's national CERT and the registrar (PDR) on 2026-07-25
@@ -26,7 +26,7 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 
 Daily pipeline monitoring surfaced five independent campaigns using **explicit Gulf-themed names** (qatar, omani, gulf) as lures in domains and distribution paths — while their actual infrastructure sits entirely outside the region (Germany, United States). The analysis distinguishes two patterns:
 
-- **Compromised legitimate domains** with Gulf branding (`QA-HOST-01 [محجوب - REDACTED]` — registered 2023)
+- **Compromised legitimate domains** with Gulf branding (`QA-HOST-01 [REDACTED]` — registered 2023)
 - **Purpose-registered campaign domains** (`omani-disputes.com` — registered 5 weeks before first observed use)
 
 Analytical takeaway: Gulf-themed naming is **not sufficient evidence of exclusive Gulf targeting** (as Investigation 002 demonstrated for QatarRAT), but in at least two cases it shows deliberate adoption of regional identity as a lure — warranting continuous monitoring and coordinated reporting.
@@ -37,7 +37,7 @@ Analytical takeaway: Gulf-themed naming is **not sufficient evidence of exclusiv
 
 | # | Indicator | Malware | Gulf Theme | Status at Observation |
 |---|-----------|---------|-----------|----------------------|
-| 1 | `QA-HOST-01 [محجوب - REDACTED]/sonic.exe` + `/fallacy001.exe` | PureLogsStealer | Qatar | offline |
+| 1 | `QA-HOST-01 [REDACTED]/sonic.exe` + `/fallacy001.exe` | PureLogsStealer | Qatar | offline |
 | 2 | `omani-disputes.com/txt/adkbjdd.txt` | reverse base64 loader | Oman | offline |
 | 3 | `jnhygwu4.gulfbreezervrentals.com` | ClearFake (macOS) | Gulf-wide | offline |
 | 4 | `shaggulf-sold.xyz/avast_update` | Potemkin Loader | Gulf-wide | offline |
@@ -47,7 +47,7 @@ Analytical takeaway: Gulf-themed naming is **not sufficient evidence of exclusiv
 
 ## 3. Infrastructure Analysis
 
-### 3.1 QA-HOST-01 [محجوب - REDACTED] — Compromised Legitimate Domain (medium confidence)
+### 3.1 QA-HOST-01 [REDACTED] — Compromised Legitimate Domain (medium confidence)
 
 | Field | Value |
 |-------|-------|
@@ -91,7 +91,7 @@ Two repositories distributing malicious ZIP archives via `raw.githubusercontent.
 | 2026-05-29 | omani-disputes.com registered (NiceNIC) |
 | 2026-06-22 | Two SmartLoader-MaaS payloads uploaded to GitHub |
 | 2026-07-05 | omani-disputes.com serves loader (first sighting) |
-| 2026-07-14 | QA-HOST-01 [محجوب - REDACTED] serves PureLogsStealer (two paths, 7 minutes apart) |
+| 2026-07-14 | QA-HOST-01 [REDACTED] serves PureLogsStealer (two paths, 7 minutes apart) |
 | 2026-07-20 | gulfbreezervrentals.com serves ClearFake-macOS |
 | 2026-07-23 | shaggulf-sold.xyz serves Potemkin |
 | 2026-07-25 | Both SmartLoader-MaaS indicators still online |
@@ -160,7 +160,7 @@ Low — Single source or circumstantial; stated as hypothesis only.
 |--------|-----------|----------|
 | Report SmartLoader-MaaS repositories | GitHub Trust & Safety | 🔴 Urgent |
 | Report omani-disputes.com | Oman National CERT (mCERT) + NiceNIC abuse | 🟠 High |
-| Report QA-HOST-01 [محجوب - REDACTED] | Qatar National Cyber Security Agency + PDR abuse | 🟠 High |
+| Report QA-HOST-01 [REDACTED] | Qatar National Cyber Security Agency + PDR abuse | 🟠 High |
 | Add indicators to local detection rules | Gulf SOC teams | 🟡 Follow-up |
 
 ---
