@@ -5,7 +5,7 @@ Analyst:          Mijlad Al-Subaie (@screem500)
 Published:        2026-07-25
 Last Updated:     2026-07-26
 Classification:   TLP:CLEAR
-Confidence:       Moderate
+Confidence:       Moderate overall; see Key Judgments for per-judgment confidence
 Status:           Reported - GitHub T&S receipt confirmed; national CERTs notified
 Redactions:       QA-HOST-01 (compromised victim domain)
 ---
@@ -98,13 +98,33 @@ Two repositories distributing malicious ZIP archives via `raw.githubusercontent.
 
 ---
 
-## 5. Analytical Judgment
+## 5. Tactics & Techniques (MITRE ATT&CK)
+
+Techniques observed across the five indicators. Not every technique applies to
+every case; the Evidence column names the case.
+
+| Tactic | Technique | ID | Evidence |
+|--------|-----------|-----|----------|
+| Resource Development | Acquire Infrastructure: Domains | T1583.001 | omani-disputes.com registered 5 weeks before first use |
+| Resource Development | Compromise Infrastructure: Domains | T1584.001 | QA-HOST-01 — legitimate domain registered 2023, later abused |
+| Resource Development | Acquire Infrastructure: Web Services | T1583.006 | Two burner GitHub accounts hosting SmartLoader-MaaS |
+| Initial Access | Drive-by Compromise | T1189 | ClearFake (macOS) on jnhygwu4.gulfbreezervrentals.com |
+| Execution | User Execution: Malicious File | T1204.002 | Victims run sonic.exe / fallacy001.exe / avast_update |
+| Defense Evasion | Masquerading: Match Legitimate Name or Location | T1036.005 | Potemkin Loader delivered as "avast_update" |
+| Defense Evasion | Obfuscated Files or Information | T1027 | Reverse-base64 loader at omani-disputes.com/txt/ |
+| Defense Evasion | Deobfuscate/Decode Files or Information | T1140 | Loader decodes its payload at runtime |
+| Command and Control | Ingress Tool Transfer | T1105 | Second-stage payloads pulled from GitHub releases |
+| Credential Access | Credentials from Password Stores | T1555 | PureLogsStealer collection stage |
+
+---
+
+## 6. Analytical Judgment
 
 1. **Not a single campaign** — malware families differ (Stealer, Loader, ClearFake, MaaS) and infrastructure is distributed. The correct framing is a *phenomenon*, not a *campaign*.
 2. **Gulf naming is a lure, not targeting proof** — consistent with the analytical correction in Investigation 002. However, its recurrence (5 cases in 6 weeks) merits tracking as an early-warning indicator.
 3. **Action priority:** the two live SmartLoader-MaaS indicators — immediate report to GitHub Trust & Safety.
 
-## 6. Recommendations
+## 7. Recommendations
 
 | Action | Recipient | Priority |
 |--------|-----------|----------|
@@ -115,7 +135,7 @@ Two repositories distributing malicious ZIP archives via `raw.githubusercontent.
 
 ---
 
-## 7. IOC Appendix
+## 8. IOC Appendix
 
 See the attached `iocs_004_gulf_lures.txt` — includes domains, full URLs, IP addresses, and URLhaus references for each indicator.
 
