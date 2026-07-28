@@ -5,22 +5,49 @@ Analyst:          Mijlad Al-Subaie (@screem500)
 Published:        2026-07-21
 Last Updated:     2026-07-26
 Classification:   TLP:CLEAR
-Confidence:       Moderate
+Confidence:       Moderate overall; see Key Judgments for per-judgment confidence
 Status:           Published - GitHub reported
 Redactions:       QA-HOST-01, UAE-HOST-01 (compromised victim domains)
 ---
 
-## MITRE ATT&CK Mapping
+## Key Judgments
 
-| Tactic | Technique | ID | Observation |
-|--------|-----------|----|-------------|
-| Resource Development | Acquire Infrastructure: Web Services | T1583.006 | Burner GitHub account, payloads in releases |
-| Initial Access | Phishing: Spearphishing Link | T1566.002 | Cracked-software lures (FL Studio, SOLIDWORKS, Steam) |
-| Execution | User Execution: Malicious File | T1204.002 | Victims run trojanized installers |
-| Defense Evasion | Impair Defenses: Disable or Modify Tools | T1562.001 | AVKiller.exe component |
-| Command and Control | Web Protocols | T1071.001 | RAT client + algorithmic backup domains |
+- A distribution campaign has operated since February 2026 through a burner
+  GitHub account (Kikimora-arch), accumulating roughly 18,000 downloads via
+  cracked-software lures.
+  Confidence: **High**. Basis: direct GitHub API observation of account
+  creation, repository timeline, and release download counts.
+
+- The delivered binaries carry a tampered digital signature impersonating a
+  DigiCert certificate, and include a dedicated AVKiller component.
+  Confidence: **High**. Basis: first-party static analysis of the samples.
+
+- The "QatarRAT" label in threat feeds does not imply Qatar-exclusive
+  targeting. The evidence supports a broad crimeware campaign that reached
+  Gulf victims among others.
+  Confidence: **Moderate to High**. Basis: lure themes are generic software
+  cracks with no Gulf-specific content; feed labels commonly derive from the
+  first observed victim rather than from operator intent.
+
+- The operator is most likely Russian-speaking.
+  Confidence: **Moderate**. Basis: handle drawn from East Slavic folklore,
+  repository name transliterating a Russian phrase, informal English in
+  descriptions. Linguistic markers can be deliberately planted (false flag),
+  and no independent corroboration was obtained.
+
+- Algorithmically-styled standby domains indicate the operator planned for
+  infrastructure takedown.
+  Confidence: **Moderate**. Basis: domain-naming pattern only; the standby
+  domains were not observed serving content.
+
+### Confidence Scale
+
+High — Multiple independent sources, or direct first-party observation.
+Moderate — Consistent evidence, plausible alternatives not fully excluded.
+Low — Single source or circumstantial; stated as hypothesis only.
 
 ---
+
 
 # Deep-Dive Investigation: Kikimora / QatarRAT Campaign - From Threat Feed to Operator Fingerprint
 
@@ -137,14 +164,16 @@ On the same monitoring day (2026-07-20), the pipeline captured **5,063 SmartLoad
 
 ## 6. Tactics & Techniques (MITRE ATT&CK)
 
-| Tactic | Technique | ID |
-|--------|-----------|-----|
-| Initial Access | Cracked-software lures (User Execution) | T1204.002 |
-| Delivery | Abuse of legitimate platform (GitHub Releases) | T1105 / T1567 |
-| Defense Evasion | Tampered signature (Subvert Trust Controls) | T1553 |
-| Defense Evasion | AVKiller — impair defenses | T1562.001 |
-| Execution | .NET assembly | T1059 |
-| C2 (possible) | Algorithmic-style domains | T1568 |
+| Tactic | Technique | ID | Evidence |
+|--------|-----------|-----|----------|
+| Resource Development | Acquire Infrastructure: Web Services | T1583.006 | Burner GitHub account; payloads hosted in releases |
+| Initial Access | Phishing: Spearphishing Link | T1566.002 | Cracked-software lures (FL Studio, SOLIDWORKS, Steam) |
+| Execution | User Execution: Malicious File | T1204.002 | Victims run trojanized .NET installers |
+| Defense Evasion | Subvert Trust Controls: Code Signing | T1553.002 | Tampered signature impersonating a DigiCert certificate |
+| Defense Evasion | Impair Defenses: Disable or Modify Tools | T1562.001 | AVKiller.exe component |
+| Command and Control | Application Layer Protocol: Web Protocols | T1071.001 | RAT client beaconing |
+| Command and Control | Dynamic Resolution: DGA | T1568.002 | Algorithmically-styled standby domains |
+| Exfiltration | Exfiltration Over Web Service | T1567 | Data staged out via the abused platform |
 
 ---
 

@@ -1,0 +1,89 @@
+[1mdiff --git a/002-kikimora-qatarat/report_en.md b/002-kikimora-qatarat/report_en.md[m
+[1mindex 8cf65fc..f9d9620 100644[m
+[1m--- a/002-kikimora-qatarat/report_en.md[m
+[1m+++ b/002-kikimora-qatarat/report_en.md[m
+[36m@@ -5,23 +5,50 @@[m [mAnalyst:          Mijlad Al-Subaie (@screem500)[m
+ Published:        2026-07-21[m
+ Last Updated:     2026-07-26[m
+ Classification:   TLP:CLEAR[m
+[31m-Confidence:       Moderate[m
+[32m+[m[32mConfidence:       Moderate overall; see Key Judgments for per-judgment confidence[m
+ Status:           Published - GitHub reported[m
+ Redactions:       QA-HOST-01, UAE-HOST-01 (compromised victim domains)[m
+ ---[m
+ [m
+[31m-## MITRE ATT&CK Mapping[m
+[32m+[m[32m## Key Judgments[m
+ [m
+[31m-| Tactic | Technique | ID | Observation |[m
+[31m-|--------|-----------|----|-------------|[m
+[31m-| Resource Development | Acquire Infrastructure: Web Services | T1583.006 | Burner GitHub account, payloads in releases |[m
+[31m-| Initial Access | Phishing: Spearphishing Link | T1566.002 | Cracked-software lures (FL Studio, SOLIDWORKS, Steam) |[m
+[31m-| Execution | User Execution: Malicious File | T1204.002 | Victims run trojanized installers |[m
+[31m-| Defense Evasion | Impair Defenses: Disable or Modify Tools | T1562.001 | AVKiller.exe component |[m
+[31m-| Command and Control | Web Protocols | T1071.001 | RAT client + algorithmic backup domains |[m
+[32m+[m[32m- A distribution campaign has operated since February 2026 through a burner[m
+[32m+[m[32m  GitHub account (Kikimora-arch), accumulating roughly 18,000 downloads via[m
+[32m+[m[32m  cracked-software lures.[m
+[32m+[m[32m  Confidence: **High**. Basis: direct GitHub API observation of account[m
+[32m+[m[32m  creation, repository timeline, and release download counts.[m
+[32m+[m
+[32m+[m[32m- The delivered binaries carry a tampered digital signature impersonating a[m
+[32m+[m[32m  DigiCert certificate, and include a dedicated AVKiller component.[m
+[32m+[m[32m  Confidence: **High**. Basis: first-party static analysis of the samples.[m
+[32m+[m
+[32m+[m[32m- The "QatarRAT" label in threat feeds does not imply Qatar-exclusive[m
+[32m+[m[32m  targeting. The evidence supports a broad crimeware campaign that reached[m
+[32m+[m[32m  Gulf victims among others.[m
+[32m+[m[32m  Confidence: **Moderate to High**. Basis: lure themes are generic software[m
+[32m+[m[32m  cracks with no Gulf-specific content; feed labels commonly derive from the[m
+[32m+[m[32m  first observed victim rather than from operator intent.[m
+[32m+[m
+[32m+[m[32m- The operator is most likely Russian-speaking.[m
+[32m+[m[32m  Confidence: **Moderate**. Basis: handle drawn from East Slavic folklore,[m
+[32m+[m[32m  repository name transliterating a Russian phrase, informal English in[m
+[32m+[m[32m  descriptions. Linguistic markers can be deliberately planted (false flag),[m
+[32m+[m[32m  and no independent corroboration was obtained.[m
+[32m+[m
+[32m+[m[32m- Algorithmically-styled standby domains indicate the operator planned for[m
+[32m+[m[32m  infrastructure takedown.[m
+[32m+[m[32m  Confidence: **Moderate**. Basis: domain-naming pattern only; the standby[m
+[32m+[m[32m  domains were not observed serving content.[m
+[32m+[m
+[32m+[m[32m### Confidence Scale[m
+[32m+[m
+[32m+[m[32mHigh — Multiple independent sources, or direct first-party observation.[m
+[32m+[m[32mModerate — Consistent evidence, plausible alternatives not fully excluded.[m
+[32m+[m[32mLow — Single source or circumstantial; stated as hypothesis only.[m
+ [m
+ ---[m
+ [m
+[32m+[m
+ # Deep-Dive Investigation: Kikimora / QatarRAT Campaign - From Threat Feed to Operator Fingerprint[m
+ [m
+ **Report date:** July 21, 2026[m
+[36m@@ -137,14 +164,16 @@[m [mOn the same monitoring day (2026-07-20), the pipeline captured **5,063 SmartLoad[m
+ [m
+ ## 6. Tactics & Techniques (MITRE ATT&CK)[m
+ [m
+[31m-| Tactic | Technique | ID |[m
+[31m-|--------|-----------|-----|[m
+[31m-| Initial Access | Cracked-software lures (User Execution) | T1204.002 |[m
+[31m-| Delivery | Abuse of legitimate platform (GitHub Releases) | T1105 / T1567 |[m
+[31m-| Defense Evasion | Tampered signature (Subvert Trust Controls) | T1553 |[m
+[31m-| Defense Evasion | AVKiller — impair defenses | T1562.001 |[m
+[31m-| Execution | .NET assembly | T1059 |[m
+[31m-| C2 (possible) | Algorithmic-style domains | T1568 |[m
+[32m+[m[32m| Tactic | Technique | ID | Evidence |[m
+[32m+[m[32m|--------|-----------|-----|----------|[m
+[32m+[m[32m| Resource Development | Acquire Infrastructure: Web Services | T1583.006 | Burner GitHub account; payloads hosted in releases |[m
+[32m+[m[32m| Initial Access | Phishing: Spearphishing Link | T1566.002 | Cracked-software lures (FL Studio, SOLIDWORKS, Steam) |[m
+[32m+[m[32m| Execution | User Execution: Malicious File | T1204.002 | Victims run trojanized .NET installers |[m
+[32m+[m[32m| Defense Evasion | Subvert Trust Controls: Code Signing | T1553.002 | Tampered signature impersonating a DigiCert certificate |[m
+[32m+[m[32m| Defense Evasion | Impair Defenses: Disable or Modify Tools | T1562.001 | AVKiller.exe component |[m
+[32m+[m[32m| Command and Control | Application Layer Protocol: Web Protocols | T1071.001 | RAT client beaconing |[m
+[32m+[m[32m| Command and Control | Dynamic Resolution: DGA | T1568.002 | Algorithmically-styled standby domains |[m
+[32m+[m[32m| Exfiltration | Exfiltration Over Web Service | T1567 | Data staged out via the abused platform |[m
+ [m
+ ---[m
+ [m
