@@ -5,22 +5,45 @@ Analyst:          Mijlad Al-Subaie (@screem500)
 Published:        2026-07-21
 Last Updated:     2026-07-26
 Classification:   TLP:CLEAR
-Confidence:       Moderate
+Confidence:       Moderate overall; see Key Judgments for per-judgment confidence
 Status:           Published - GitHub reported
 Redactions:       QA-HOST-01, UAE-HOST-01 (compromised victim domains)
 ---
 
-## MITRE ATT&CK Mapping
+## الاستنتاجات الرئيسية | Key Judgments
 
-| Tactic | Technique | ID | Observation |
-|--------|-----------|----|-------------|
-| Resource Development | Acquire Infrastructure: Web Services | T1583.006 | Burner GitHub account, payloads in releases |
-| Initial Access | Phishing: Spearphishing Link | T1566.002 | Cracked-software lures (FL Studio, SOLIDWORKS, Steam) |
-| Execution | User Execution: Malicious File | T1204.002 | Victims run trojanized installers |
-| Defense Evasion | Impair Defenses: Disable or Modify Tools | T1562.001 | AVKiller.exe component |
-| Command and Control | Web Protocols | T1071.001 | RAT client + algorithmic backup domains |
+- حملة توزيع نشطة منذ فبراير 2026 عبر حساب GitHub مؤقت (Kikimora-arch)،
+  بلغت نحو 18,000 عملية تنزيل باستخدام طعوم برامج مقرصنة.
+  الثقة: **عالية**. الأساس: رصد مباشر عبر GitHub API لتاريخ إنشاء الحساب
+  والمستودعات وعدادات التنزيل.
+
+- الملفات الموزَّعة تحمل توقيعاً رقمياً متلاعباً به ينتحل شهادة DigiCert،
+  وتتضمن مكوّناً مخصصاً لتعطيل الحماية (AVKiller).
+  الثقة: **عالية**. الأساس: تحليل ساكن مباشر للعينات.
+
+- تسمية "QatarRAT" في فيدات التهديدات لا تعني استهدافاً حصرياً لقطر. الأدلة
+  تدعم حملة إجرامية واسعة طالت ضحايا في الخليج ضمن غيرهم.
+  الثقة: **متوسطة إلى عالية**. الأساس: الطعوم برامج مقرصنة عامة بلا محتوى
+  خليجي مخصص، وتسميات الفيدات تُشتق عادةً من أول ضحية مرصودة لا من نية
+  المشغل.
+
+- المشغل على الأرجح ناطق بالروسية.
+  الثقة: **متوسطة**. الأساس: الكنية مأخوذة من الفولكلور السلافي الشرقي،
+  واسم المستودع نقحرة لعبارة روسية، وأسلوب الوصف إنجليزية غير رسمية.
+  المؤشرات اللغوية قابلة للزرع المتعمد (علم كاذب)، ولم يُحصَّل إسناد مستقل.
+
+- النطاقات ذات النمط التوليدي تشير إلى استعداد المشغل لسيناريو إسقاط البنية.
+  الثقة: **متوسطة**. الأساس: نمط التسمية فقط؛ لم تُرصد هذه النطاقات وهي
+  تقدّم محتوى.
+
+### مقياس الثقة | Confidence Scale
+
+عالية — مصادر مستقلة متعددة، أو رصد مباشر من الباحث.
+متوسطة — أدلة متسقة، مع بدائل محتملة لم تُستبعد بالكامل.
+منخفضة — مصدر واحد أو قرائن ظرفية؛ تُذكر كفرضية لا كنتيجة.
 
 ---
+
 
 # تحقيق معمق: حملة Kikimora / QatarRAT — من فيد تهديدات إلى بصمة المشغل
 
@@ -136,14 +159,16 @@ AspectUtilYotta.com — BlockCore.com (نشط، AWS GA) — EngineFlex.com (نش
 
 ## 6. التكتيكات والتقنيات (MITRE ATT&CK)
 
-| التكتيك | التقنية | المعرف |
-|---------|---------|--------|
-| Initial Access | طعوم برامج مقرصنة (User Execution) | T1204.002 |
-| Delivery | Abuse of legitimate platform (GitHub Releases) | T1105 / T1567 |
-| Defense Evasion | توقيع تالف منتحل (Subvert Trust Controls) | T1553 |
-| Defense Evasion | AVKiller — تعطيل الحماية (Impair Defenses) | T1562.001 |
-| Execution | .NET assembly | T1059 |
-| C2 (محتمل) | نطاقات توليدية النمط | T1568 |
+| التكتيك | التقنية | المعرف | الدليل |
+|---------|---------|--------|--------|
+| Resource Development | Acquire Infrastructure: Web Services | T1583.006 | حساب GitHub مؤقت والحمولات في الإصدارات |
+| Initial Access | Phishing: Spearphishing Link | T1566.002 | طعوم برامج مقرصنة (FL Studio, SOLIDWORKS, Steam) |
+| Execution | User Execution: Malicious File | T1204.002 | تشغيل الضحية لمثبّتات .NET مزروعة |
+| Defense Evasion | Subvert Trust Controls: Code Signing | T1553.002 | توقيع متلاعب به ينتحل شهادة DigiCert |
+| Defense Evasion | Impair Defenses: Disable or Modify Tools | T1562.001 | مكوّن AVKiller.exe |
+| Command and Control | Application Layer Protocol: Web Protocols | T1071.001 | اتصال عميل RAT بالقيادة والتحكم |
+| Command and Control | Dynamic Resolution: DGA | T1568.002 | نطاقات احتياطية ذات نمط توليدي |
+| Exfiltration | Exfiltration Over Web Service | T1567 | إخراج البيانات عبر المنصة المُساء استخدامها |
 
 ---
 

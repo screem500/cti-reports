@@ -68,9 +68,20 @@ def all_files():
 def readable(path):
     if os.path.basename(path) == REDACTIONS_FILE:
         return False
-    if os.path.splitext(path)[1].lower() not in TEXT_EXT:
+    ext = os.path.splitext(path)[1].lower()
+    if ext and ext not in TEXT_EXT:
         return False
-    return os.path.isfile(path)
+    if not os.path.isfile(path):
+        return False
+    # extensionless: only scan if it looks like text
+    if not ext:
+        try:
+            with open(path, 'rb') as fh:
+                if b'\0' in fh.read(4096):
+                    return False
+        except OSError:
+            return False
+    return True
 
 
 def check_forbidden(paths, forbidden):
