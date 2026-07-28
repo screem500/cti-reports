@@ -18,8 +18,8 @@ Five campaigns abusing Gulf-themed naming (qatar/omani/gulf) as lures: PureLogsS
 ### 🟣 Investigation 003: Live ClearFake Loader on Compromised UAE Website (July 2026)
 Active ClearFake loader discovered in-the-wild on a compromised UAE site, using conditional cloaking and live visitor beacons - raw evidence preserved. Reported to aeCERT on 2026-07-25.
 
-- [Evidence report | تقرير الدليل](003-uae-clearfake-live/report_en.md)
-
+- [Arabic report | التقرير العربي](003-uae-clearfake-live/report_ar.md)
+- [English report | التقرير الإنجليزي](003-uae-clearfake-live/report_en.md)
 - [IOCs (STIX 2.1)](003-uae-clearfake-live/iocs_003_uae_clearfake_stix.json)
 
 ### 🔴 Investigation 002: Kikimora / QatarRAT Campaign (July 2026)
