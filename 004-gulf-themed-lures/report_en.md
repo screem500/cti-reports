@@ -118,11 +118,41 @@ every case; the Evidence column names the case.
 
 ---
 
-## 6. Analytical Judgment
+## 6. Key Judgments
 
-1. **Not a single campaign** — malware families differ (Stealer, Loader, ClearFake, MaaS) and infrastructure is distributed. The correct framing is a *phenomenon*, not a *campaign*.
-2. **Gulf naming is a lure, not targeting proof** — consistent with the analytical correction in Investigation 002. However, its recurrence (5 cases in 6 weeks) merits tracking as an early-warning indicator.
-3. **Action priority:** the two live SmartLoader-MaaS indicators — immediate report to GitHub Trust & Safety.
+- These five indicators are not one campaign. Malware families differ
+  (stealer, loader, ClearFake, MaaS) and the infrastructure is distributed.
+  The correct framing is a *phenomenon*, not a *campaign*.
+  Confidence: **High**. Basis: distinct families and unrelated hosting across
+  all five cases; no shared operator artifact was found.
+
+- Gulf-themed naming is a lure, not proof of exclusive Gulf targeting —
+  consistent with the analytical correction in Investigation 002.
+  Confidence: Moderate to High. Basis: the actual infrastructure sits in
+  Germany and the United States; no Gulf-specific payload content was
+  observed.
+
+- The recurrence of the pattern (five cases in six weeks) is frequent enough
+  to warrant tracking as an early-warning indicator.
+  Confidence: Moderate. Basis: short observation window drawn from a
+  single pipeline; the rate may reflect collection bias rather than a real
+  increase.
+
+- The two SmartLoader-MaaS repositories were live at analysis time.
+  Confidence: High. Basis: direct first-party retrieval; reported to
+  GitHub Trust & Safety with receipt confirmed.
+
+- QA-HOST-01 is a compromised legitimate domain rather than an
+  attacker-registered one.
+  Confidence: Moderate. Basis: 2023 registration date and unrelated
+  legitimate content; no server-side artifact confirms the compromise vector.
+
+### Confidence Scale
+
+High — Multiple independent sources, or direct first-party observation.
+Moderate — Consistent evidence, plausible alternatives not fully excluded.
+Low — Single source or circumstantial; stated as hypothesis only.
+
 
 ## 7. Recommendations
 
