@@ -5,7 +5,7 @@ Analyst:          Mijlad Al-Subaie (@screem500)
 Published:        2026-07-25
 Last Updated:     2026-07-26
 Classification:   TLP:CLEAR
-Confidence:       Moderate
+Confidence:       Moderate overall; see Key Judgments for per-judgment confidence
 Status:           Reported - GitHub T&S receipt confirmed; national CERTs notified
 Redactions:       QA-HOST-01 (compromised victim domain)
 ---
@@ -98,13 +98,62 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 
 ---
 
-## 5. الحكم التحليلي
+## 5. التكتيكات والتقنيات (MITRE ATT&CK)
 
-1. **ليست حملة واحدة** — العائلات مختلفة (Stealer, Loader, ClearFake, MaaS) والبنية موزعة. الصحيح وصفها بـ "ظاهرة" لا "حملة".
-2. **التسمية الخليجية طُعم لا دليل استهداف** — يتسق مع التصحيح التحليلي في التحقيق 002. لكن تكرارها (5 حالات في 6 أسابيع) يستحق الرصد كمؤشر إنذار مبكر.
-3. **أولوية الإجراء:** مؤشرا SmartLoader-MaaS النشطان — يستوجبان إبلاغ GitHub Trust & Safety فوراً.
+التقنيات المرصودة عبر المؤشرات الخمسة. لا تنطبق كل تقنية على كل حالة؛ عمود
+الدليل يحدد الحالة المعنية.
 
-## 6. التوصيات
+| التكتيك | التقنية | المعرف | الدليل |
+|---------|---------|--------|--------|
+| Resource Development | Acquire Infrastructure: Domains | T1583.001 | omani-disputes.com مسجّل قبل 5 أسابيع من أول استخدام مرصود |
+| Resource Development | Compromise Infrastructure: Domains | T1584.001 | QA-HOST-01 — نطاق شرعي مسجّل 2023 ثم أُسيء استخدامه |
+| Resource Development | Acquire Infrastructure: Web Services | T1583.006 | حسابا GitHub مؤقتان يستضيفان SmartLoader-MaaS |
+| Initial Access | Drive-by Compromise | T1189 | ClearFake (macOS) على jnhygwu4.gulfbreezervrentals.com |
+| Execution | User Execution: Malicious File | T1204.002 | تشغيل الضحية لـ sonic.exe / fallacy001.exe / avast_update |
+| Defense Evasion | Masquerading: Match Legitimate Name or Location | T1036.005 | Potemkin Loader يُسلَّم باسم "avast_update" |
+| Defense Evasion | Obfuscated Files or Information | T1027 | لودر reverse-base64 على omani-disputes.com/txt/ |
+| Defense Evasion | Deobfuscate/Decode Files or Information | T1140 | اللودر يفك تشفير حمولته وقت التشغيل |
+| Command and Control | Ingress Tool Transfer | T1105 | حمولات المرحلة الثانية تُسحب من إصدارات GitHub |
+| Credential Access | Credentials from Password Stores | T1555 | مرحلة الجمع في PureLogsStealer |
+
+---
+
+## 6. الاستنتاجات الرئيسية | Key Judgments
+
+- المؤشرات الخمسة ليست حملة واحدة. عائلات البرمجيات مختلفة (سارق، لودر،
+  ClearFake، MaaS) والبنية التحتية موزّعة. التأطير الصحيح أنها **ظاهرة** لا
+  **حملة**.
+  الثقة: **عالية**. الأساس: عائلات متمايزة واستضافة غير مترابطة في الحالات
+  الخمس، ولم يُعثر على أثر مشترك يعود لمشغل واحد.
+
+- التسمية الخليجية طُعم لا دليل استهداف حصري للخليج — اتساقاً مع التصحيح
+  التحليلي في التحقيق 002.
+  الثقة: **متوسطة إلى عالية**. الأساس: البنية التحتية الفعلية في ألمانيا
+  والولايات المتحدة، ولم يُرصد محتوى حمولة مخصص للخليج. وفي حالتين على الأقل
+  يبدو تبنّي الهوية الإقليمية متعمداً كطُعم.
+
+- تكرار النمط (خمس حالات في ستة أسابيع) يبلغ وتيرة تستحق التتبع كمؤشر إنذار
+  مبكر.
+  الثقة: **متوسطة**. الأساس: نافذة رصد قصيرة ومصدرها منظومة جمع واحدة، وقد
+  تعكس الوتيرة انحياز الجمع لا زيادة فعلية.
+
+- مستودعا SmartLoader-MaaS كانا نشطين لحظة التحليل.
+  الثقة: **عالية**. الأساس: سحب مباشر من الباحث، وبُلّغ GitHub Trust & Safety
+  مع تأكيد استلام.
+
+- QA-HOST-01 نطاق شرعي مخترق لا نطاق سجّله المهاجم.
+  الثقة: **متوسطة**. الأساس: تاريخ تسجيل 2023 ومحتوى شرعي غير ذي صلة، ولم
+  يُحصَّل أثر من جانب الخادم يؤكد مسار الاختراق.
+
+### مقياس الثقة | Confidence Scale
+
+عالية — مصادر مستقلة متعددة، أو رصد مباشر من الباحث.
+متوسطة — أدلة متسقة، مع بدائل محتملة لم تُستبعد بالكامل.
+منخفضة — مصدر واحد أو قرائن ظرفية؛ تُذكر كفرضية لا كنتيجة.
+
+---
+
+## 7. التوصيات
 
 | الإجراء | الجهة | الأولوية |
 |---------|-------|----------|
@@ -115,7 +164,7 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 
 ---
 
-## 7. ملاحق IOCs
+## 8. ملاحق IOCs
 
 انظر ملف `iocs_004_gulf_lures.txt` المرفق — يشمل النطاقات، الروابط الكاملة، العناوين IP، ومراجع URLhaus لكل مؤشر.
 
