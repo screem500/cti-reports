@@ -1,57 +1,39 @@
 ---
-Report ID:        CTI-2026-003
-Title:            Live ClearFake Loader on a Compromised UAE Website (Redacted)
+Report ID:        CTI-2026-001
+Title:            ClearFake on Compromised Iranian Infrastructure
 Analyst:          Mijlad Al-Subaie (@screem500)
-Published:        2026-07-24
-Last Updated:     2026-07-26
+Published:        2026-07-21
+Last Updated:     2026-08-01 (v1.1 — figure consistency corrections)
 Classification:   TLP:CLEAR
-Confidence:       High overall; see Key Judgments for per-judgment confidence
-Status:           Reported to aeCERT - awaiting remediation
-Redactions:       UAE-HOST-01 (victim identity withheld per Responsible Disclosure Policy)
+Confidence:       High on the ClearFake attribution; see Key Judgments for per-judgment confidence
+Status:           Published - infrastructure monitoring ongoing
+Redactions:       UAE-HOST-01 (compromised third-party site) redacted pending remediation; attacker infrastructure published in full
 ---
 
-# Investigation 003: Active ClearFake Loader on a Compromised UAE Website
+# Campaign Analysis: ClearFake on Compromised Iranian Infrastructure
 
-> **Disclosure Note:** The victim identity (UAE-HOST-01) is withheld per the
-> [Responsible Disclosure Policy](../RESPONSIBLE_DISCLOSURE.md) — released upon
-> confirmed remediation or 90 days from notification (2026-07-25), whichever
-> comes first. Full raw evidence is kept off public release, available to
-> official bodies on request.
-
-Arabic version: [report_ar.md](report_ar.md)
+Report date: 2026-07-21
+Analyst: Mijlad Al-Subaie - CEH · CHFI | X: [@Al7lhh223](https://x.com/Al7lhh223) · GitHub: [screem500](https://github.com/screem500)
+Status: Defensive analysis — cleared for publication
 
 ---
 
-## 1. Executive Summary
+## Key Judgments
 
-During routine monitoring of a ThreatFox indicator (UAE-HOST-01 — tagged as
-compromised and distributing Vidar via ClickFix), the page appeared
-superficially clean. Deeper inspection revealed a malicious JavaScript loader
-injected at the page tail — an active ClearFake-family loader, live at analysis
-time. Full raw evidence was reported to aeCERT on 2026-07-25.
+- An active ClearFake campaign is distributing fake browser-update lures from 37 compromised Iranian (.ir) domains serving 58 malicious URLs.
+  Confidence: **High**. Basis: ThreatFox classification at 100% confidence, corroborated by URLhaus feed data.
 
----
+- The Iranian domains are compromised victims, not willing participants.
+  Confidence: **High**. Basis: all are legitimate civilian sites (sports, health, education) with unrelated primary content.
 
-## 2. Key Judgments
+- The compromise pattern is automated mass exploitation, most likely of outdated WordPress installations.
+  Confidence: **Moderate**. Basis: long-tail distribution (29 domains with a single URL each) and subdomain-generation pattern; no server-side artifacts were obtained to confirm the entry vector.
 
-- The compromise was live and active at analysis time, with a beacon
-  collecting visitor data in real time.
-  Confidence: **High**. Basis: direct first-party observation of the injected
-  code and its live behavior.
+- The degraded defensive posture of Iranian civilian web assets is linked to current conflict conditions and the extended internet shutdown.
+  Confidence: **Low to Moderate**. Basis: circumstantial timing only; stated as a hypothesis, not a finding.
 
-- The loader applies conditional cloaking that hides the lure from security
-  scanners.
-  Confidence: **High**. Basis: the conditional display logic is present in the
-  injected code itself.
-
-- The owning organization was most likely unaware of the compromise.
-  Confidence: **Moderate**. Basis: the legitimate service continued operating
-  alongside the injected code; no direct contact with the owner was made
-  before notification.
-
-- The injected code is under active development rather than a legacy remnant.
-  Confidence: **Moderate**. Basis: developer comments referencing untested
-  behavior remain in the deployed script; no version history was obtainable.
+- The Cobalt Strike C2 and the Vidar distribution on UAE-HOST-01 belong to the same broader crimeware ecosystem but are separate findings, not confirmed to be the same operator.
+  Confidence: **Low** on operator linkage. Basis: feed co-occurrence only.
 
 ### Confidence Scale
 
@@ -61,98 +43,145 @@ Low — Single source or circumstantial; stated as hypothesis only.
 
 ---
 
-## 3. Injected Code Analysis
+## 1. Executive Summary
 
-| Element | Function | Significance |
-|---------|----------|--------------|
-| `_cf_verified` cookie | "Verified" marker on the victim device | ClearFake (cf) signature — the lure is shown only once |
-| `_wp_perf_ok` cookie | Secondary disguised cookie | Impersonates a legitimate WordPress performance plugin |
-| Heartbeat beacon | Sends domain + userAgent + path to `/beacon/` | Live visitor surveillance — data reaches the operator instantly |
-| `show_` + platform | Conditional per-OS display | Selective targeting (Windows/macOS) — explains the clean appearance to scanners |
-| Developer comments | `// server never saw Obf JS heartbeats` | Actively developed code — live infrastructure, not legacy remnants |
+This analysis documents an active ClearFake campaign (fake browser update lures) hosted on 37 compromised Iranian (.ir) domains serving 58 malicious distribution URLs, alongside indicators of a broader criminal infrastructure including an active Cobalt Strike C2 on an Iranian domain and a compromised UAE-based website distributing the Vidar stealer. Notably, the abused Iranian infrastructure is entirely civilian (sports, health, and education websites), indicating a degraded defensive posture of Iranian civilian web assets amid the ongoing conflict and the country's extended internet shutdown.
 
-![Injected ClearFake loader](screenshots/injected_code.png)
-
-![Injected code part 2](screenshots/injected_code1.png)
+**Update (2026-07-24):** Campaign remains active on the same infrastructure (59 active URLs), now with UUID tracking parameters (`?ublib=`) appended to links — likely per-victim tracking, confirming active campaign management.
 
 ---
 
-## 4. Why Did the Page Look Clean?
+## 2. Attribution
 
-The loader applies conditional cloaking: it inspects the visitor's User-Agent
-and behavior, serving the lure (a fake browser update) only to matching
-victims, while security scanners and crawlers see a legitimate landing page for
-the real "Admin By Request" product.
-
-That choice is deliberate. The product's name makes the "paste this command as
-administrator" step (ClickFix) appear logical to the victim.
+- **Malware family:** ClearFake — a JavaScript-based infection chain presenting fake "browser update" prompts to trick victims into downloading a payload.
+- **Operator profile:** Crimeware ecosystem, not a state actor.
+- **Key point:** The Iranian domains are compromised victims, not willing participants — legitimate civilian sites abused as distribution platforms.
+- **Confidence:** High on ClearFake attribution (confirmed in ThreatFox with 100% confidence); moderate on linking the degraded defensive posture to current conflict conditions. See Key Judgments above.
 
 ---
 
-## 5. Timeline (UTC)
+## 3. Timeline
 
-| Date | Event |
-|------|-------|
-| 2026-07-24 | Indicator surfaced in ThreatFox; live code analysed; raw evidence preserved |
-| 2026-07-25 | Reported to aeCERT with full evidence |
-| 2026-07-26 | Published in redacted form per the Responsible Disclosure Policy |
+| Date | Event | Source |
+|------|-------|--------|
+| 2026-06-05 | Cobalt Strike C2 observed at ns1.newchatsits.ir | ThreatFox |
+| 2026-07-10 | Ongoing ClearFake activity on varzeshlife.ir | ThreatFox |
+| 2026-07-17/18 | Peak of distribution URLs on Iranian domains | URLhaus |
+| 2026-07-19/20 | Additional infections; compromised UAE site (Vidar) | URLhaus / ThreatFox |
+| 2026-07-21 | Cobalt Strike C2 still active (last seen) | ThreatFox |
+| 2026-07-24 | Campaign still active; UUID tracking parameters observed | URLhaus |
 
 ---
 
-## 6. Tactics & Techniques (MITRE ATT&CK)
+## 4. Targeting
+
+- **End victims:** Ordinary users on both Windows and macOS (note tags `win-0x4679` and `mac-0x68dc`).
+- **Abused platforms — Iranian civilian sites by category:**
+  - Sports: varzeshlife, 20sport, goaliran, futboliran, gamesport, elitesport, likesport, lionsport, itsport, footbalpersian
+  - Health: medsalamat, salamatyari, healthvarzesh
+  - Education: eduprof, persianeducation, farsibeenglish, ketabworld
+  - Services & commerce: novin-gps, podcastshop, radmanwear, iranmotorplus, others
+- **Gulf extension:** UAE-HOST-01 (UAE) — Vidar distribution via ClickFix + EtherHiding. Identifier redacted pending remediation; see Redactions in the header.
+
+---
+
+## 5. Tactics & Techniques (MITRE ATT&CK)
 
 | Tactic | Technique | ID | Evidence |
 |--------|-----------|-----|----------|
-| Reconnaissance | Gather Victim Host Information | T1592 | Beacon collects userAgent, platform and path per visitor |
-| Resource Development | Compromise Infrastructure: Domains | T1584.001 | Legitimate UAE site abused as the delivery platform |
-| Initial Access | Drive-by Compromise | T1189 | Loader injected into a legitimate web page |
-| Execution | User Execution: Malicious File | T1204.002 | Fake update lure (ClickFix) pushes the victim to run a command |
-| Execution | Command and Scripting Interpreter: PowerShell | T1059.001 | ClickFix instructs the victim to paste a command as administrator |
-| Defense Evasion | Obfuscated Files or Information | T1027 | Obfuscated script plus conditional cloaking |
-| Defense Evasion | Impersonation | T1656 | Fake browser-update prompt |
-| Command and Control | Application Layer Protocol: Web Protocols | T1071.001 | Heartbeat beacon over HTTP(S) |
-| Exfiltration | Exfiltration Over Web Service | T1567 | Visitor data sent to the `/beacon/` path |
+| Resource Development | Compromise Infrastructure | T1584 | Legitimate sites abused for distribution |
+| Initial Access | Drive-by Compromise | T1189 | Infection of compromised-site visitors |
+| Execution | User Execution: Malicious File | T1204.002 | Victim lured into downloading "browser update" |
+| Execution | Command and Scripting Interpreter: JavaScript | T1059.007 | `js.clearfake` loader |
+| Execution | Command and Scripting Interpreter: PowerShell | T1059.001 | ClickFix — victim pastes command (Gulf case) |
+| Defense Evasion | Impersonation | T1656 | Fake browser update pages |
+| Defense Evasion | Obfuscated Files or Information | T1027 | Obfuscated JS loader; EtherHiding payload concealment |
+| Command and Control | Application Layer Protocol: Web Protocols | T1071.001 | ClearFake C2 over HTTP(S); Cobalt Strike beacon at ns1.newchatsits.ir |
 
 ---
 
-## 7. Conclusion and Action
+## 6. Indicators of Compromise (IOCs)
 
-- The compromise was live and active at analysis time (2026-07-24), still
-  harvesting visitor data.
-- The owning organization (UAE-HOST-01) was likely unaware — notified via
-  aeCERT on 2026-07-25.
-- Monitoring of the site's status continues; identity release is pending
-  confirmation of remediation.
+Machine-readable indicators: [`iocs_001_clearfake_iran_stix.json`](iocs_001_clearfake_iran_stix.json) (STIX 2.1)
+Human-readable list: [`iocs_001_clearfake_iran.txt`](iocs_001_clearfake_iran.txt)
+
+Attacker-controlled infrastructure is published in full. Compromised third-party hosts outside the Iranian set are redacted per the repository disclosure policy.
+
+### 6.1 Compromised Iranian domains
+
+Distribution by parent domain (37 domains total, 58 URLs):
+
+| Domain | Malicious subdomains | Category |
+|--------|---------------------|----------|
+| varzeshlife.ir | 11 | Sports — most abused |
+| elitesport.ir | 4 | Sports |
+| sargarminovin.ir | 3 | General |
+| beshnoinja.ir | 3 | Sports/fitness |
+| marjaevakil.ir | 2 | Services |
+| footbalpersian.ir | 2 | Sports |
+| fiorentini.ir | 2 | General |
+| 20sport.ir | 2 | Sports |
+| 29 other domains | 1 each | Mixed (health, education, commerce) |
+
+**Analytic note:** 19% of URLs concentrate on a single domain (varzeshlife.ir), suggesting deep compromise with broad access, while the long tail (29 domains with a single hit) reflects automated mass exploitation — most likely via outdated WordPress plugins.
+
+### 6.2 High-value indicators
+
+| Indicator | Type | Description | Status |
+|-----------|------|-------------|--------|
+| ns1.newchatsits.ir | domain | Cobalt Strike C2 | Active (last seen 2026-07-21) |
+| UAE-HOST-01 | domain | Vidar distribution (ClickFix/EtherHiding) | Compromised — REDACTED pending remediation |
+| `*.<random>.varzeshlife.ir` | domain | ClearFake distribution | Rotating |
+
+### 6.3 Contemporaneous feed observations (MalwareBazaar — no established link)
+
+- AgentTesla as `Purchase Order No. MP.S.006025-08524.js` (business phishing)
+- RemcosRAT as `Invoice_details_for_confirmation_scan_0715202600.vbe`
+- Multi-architecture Mirai samples (mips, sh4, i686, m68k, x86_64) — active IoT botnet
 
 ---
 
-## 8. Indicators of Compromise
+## 7. Tooling & Malware
 
-> The victim-identifying full indicator is withheld per policy — shared with
-> official bodies only.
-
-Machine-readable indicators:
-[`iocs_003_uae_clearfake_stix.json`](iocs_003_uae_clearfake_stix.json) (STIX 2.1)
-
-These indicators are behavioural patterns rather than fixed values, which is
-why no plain-text IOC list accompanies this report.
-
-| Indicator | Type | Note |
-|-----------|------|------|
-| UAE-HOST-01 | host | Compromised — live ClearFake loader, cloaked. REDACTED |
-| `/beacon/` endpoint | url pattern | Heartbeat exfiltration path |
-| `_cf_verified` | cookie | ClearFake verification marker |
-| `_wp_perf_ok` | cookie | Disguised secondary marker |
+| Tool | Role |
+|------|------|
+| ClearFake (JS) | Initial infection chain via fake updates |
+| Vidar | Information stealer (passwords, wallets, sessions) |
+| Cobalt Strike | Post-compromise C2 |
+| ClickFix | Social-engineering lure (paste-it-yourself command) |
+| EtherHiding | Payload concealment in blockchain smart contracts |
 
 ---
 
-## 9. Notification and Reporting
+## 8. Defensive Recommendations
 
-| Recipient | Date | Status |
-|-----------|------|--------|
-| aeCERT (UAE) | 2026-07-25 | Submitted — awaiting remediation |
+**For end users:**
+- No legitimate browser update ever arrives via a webpage — updates happen inside the browser only
+- Never paste a command into PowerShell or Terminal at a website's request (ClickFix)
+
+**For defenders (SOC):**
+- Block listed IOCs at DNS/proxy level
+- Monitor for random-pattern subdomain creation on managed domains (compromise indicator)
+- Alert on the listed indicators (see §6), and on random-pattern subdomain creation on managed domains
+- Include macOS endpoints in scope — this campaign is not Windows-only
+
+**For website owners (lessons learned):**
+- Dominant pattern: outdated WordPress → compromise → ClearFake injection
+- Mandatory plugin updates + WAF + file-integrity monitoring
+
+**Reporting & takedown:**
+- Affected domains resolve behind Cloudflare — report the malicious URLs via cloudflare.com/abuse
+- Report the most-abused domains (varzeshlife.ir, elitesport.ir) to IRNIC via whois.nic.ir
 
 ---
 
-*Defensive research analysis. Indicators are drawn from open threat feeds and
-first-party analysis. Samples are never executed. TLP:CLEAR*
+## 9. Sources
+
+1. URLhaus (abuse.ch) — malicious URL feed, 2026-07-20
+2. ThreatFox (abuse.ch) — ClearFake / Cobalt Strike / Vidar indicators, 2026-07-20/21
+3. MalwareBazaar (abuse.ch) — malware samples
+4. CISA Known Exploited Vulnerabilities Catalog
+
+---
+
+*Disclaimer: This analysis is for defensive and research purposes. Indicators are drawn from open-source threat feeds and first-party analysis. Samples are never executed.*

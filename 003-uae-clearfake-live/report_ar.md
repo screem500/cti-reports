@@ -2,8 +2,8 @@
 Report ID:        CTI-2026-003
 Title:            Live ClearFake Loader on a Compromised UAE Website (Redacted)
 Analyst:          Mijlad Al-Subaie (@screem500)
-Published:        2026-07-24
-Last Updated:     2026-07-26
+Published:        2026-07-26
+Last Updated:     2026-08-01 (v1.1 — إصلاح تسريب لقطة + تصحيح تحليلي)
 Classification:   TLP:CLEAR
 Confidence:       High overall; see Key Judgments for per-judgment confidence
 Status:           Reported to aeCERT - awaiting remediation
@@ -59,11 +59,13 @@ Vidar عبر ClickFix)، تبيّن أن الصفحة تعرض محتوى نظي
 
 | العنصر | الوظيفة | الدلالة |
 |--------|---------|---------|
-| كوكي `_cf_verified` | علامة "تم التحقق" في جهاز الضحية | توقيع ClearFake (cf) — لا يُعرض الفخ مرتين |
+| كوكي `_cf_verified` | علامة "تم التحقق" في جهاز الضحية | انتحال مظهر Cloudflare (cf) مع محاكاة تدفق CAPTCHA — لا يُعرض الفخ مرتين |
 | كوكي `_wp_perf_ok` | كوكي ثانٍ متخفٍّ | انتحال مظهر إضافة أداء WordPress شرعية |
 | Heartbeat beacon | يرسل domain + userAgent + المسار لخادم `/beacon/` | تجسس حي على كل زائر — بياناته تصل للمشغل فوراً |
 | `show_` + platform | عرض مشروط حسب نظام الضحية | استهداف انتقائي (Windows/macOS) — يفسر المظهر النظيف للفاحصين |
 | تعليقات المطوّر في الكود | `// server never saw Obf JS heartbeats` | الكود قيد تطوير نشط — بنية حية وليست بقايا قديمة |
+
+> **تصحيح تحليلي (2026-08-01):** الـ `cf` في `_cf_verified` ليست اختصاراً لـ ClearFake، بل انتحال لبادئة Cloudflare مع محاكاة تدفق CAPTCHA (`cf-captcha-verified`). الكوكيان معاً نمط انتحال واحد متسق: واحد لـ Cloudflare والثاني لإضافة WordPress. **تنبيه للمدافعين:** لا تُنذر على مجرد وجود كوكيز ببادئة `_cf` — كوكيز Cloudflare الشرعية تشارك هذا النمط؛ طابِق على القيمة الكاملة والسلوك.
 
 ![اللودر المزروع](screenshots/injected_code.png)
 
@@ -75,10 +77,10 @@ Vidar عبر ClickFix)، تبيّن أن الصفحة تعرض محتوى نظي
 
 اللودر يطبّق تمويهاً شرطياً (Cloaking): يفحص User-Agent وسلوك الزائر، ويقدّم
 الفخ (تحديث متصفح مزيف) للضحايا المطابقين فقط، بينما يرى الفاحص الأمني والزاحف
-صفحة تسويقية سليمة لمنتج "Admin By Request" الحقيقي.
+صفحة هبوط سليمة لمنتج إدارة صلاحيات تجاري حقيقي.
 
-وهذا اختيار متعمد: اسم المنتج يجعل طلب "الصق الأمر كمسؤول" يبدو منطقياً للضحية
-(تقنية ClickFix).
+وهذا اختيار متعمد: طبيعة المنتج (إدارة الصلاحيات) تجعل طلب "الصق الأمر كمسؤول"
+يبدو منطقياً للضحية (تقنية ClickFix).
 
 ---
 
@@ -130,7 +132,7 @@ Vidar عبر ClickFix)، تبيّن أن الصفحة تعرض محتوى نظي
 |--------|-------|--------|
 | UAE-HOST-01 | مضيف | مخترق — لودر ClearFake حي مع تمويه. محجوب |
 | مسار `/beacon/` | نمط رابط | مسار إخراج بيانات النبضات |
-| `_cf_verified` | كوكي | علامة تحقق ClearFake |
+| `_cf_verified` | كوكي | انتحال Cloudflare + محاكاة CAPTCHA |
 | `_wp_perf_ok` | كوكي | علامة ثانوية متخفية |
 
 ---
