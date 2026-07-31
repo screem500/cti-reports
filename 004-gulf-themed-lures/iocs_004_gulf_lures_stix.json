@@ -41,7 +41,7 @@
       "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
       "created": "2026-07-27T19:06:22.000Z",
       "modified": "2026-07-27T19:06:22.000Z",
-      "name": "ClearFake (macOS) | - | - | ClearFake mac-0x68dc",
+      "name": "ClearFake (macOS) | likely compromised US site (Gulf Breeze, FL) — not Gulf-themed | ClearFake mac-0x68dc",
       "indicator_types": [
         "malicious-activity"
       ],
@@ -55,7 +55,7 @@
       "object_marking_refs": [
         "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
       ],
-      "description": "ClearFake (macOS) | - | - | ClearFake mac-0x68dc"
+      "description": "ClearFake (macOS) | likely compromised US site (Gulf Breeze, FL) — not Gulf-themed | ClearFake mac-0x68dc"
     },
     {
       "type": "indicator",
@@ -64,7 +64,7 @@
       "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
       "created": "2026-07-27T19:06:22.000Z",
       "modified": "2026-07-27T19:06:22.000Z",
-      "name": "Potemkin Loader | - | - | low confidence",
+      "name": "Potemkin Loader | - | - | low confidence — substring match only; Gulf naming not confirmed",
       "indicator_types": [
         "malicious-activity"
       ],
@@ -78,7 +78,7 @@
       "object_marking_refs": [
         "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
       ],
-      "description": "Potemkin Loader | - | - | low confidence"
+      "description": "Potemkin Loader | - | - | low confidence — substring match only; Gulf naming not confirmed"
     },
     {
       "type": "indicator",
@@ -198,29 +198,6 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--adf86a2d-c318-51f5-b533-a5b58efe617d",
-      "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
-      "created": "2026-07-27T19:06:22.000Z",
-      "modified": "2026-07-27T19:06:22.000Z",
-      "name": "Hetzner fsn1-dc10 (DE) | QA-HOST-01 hosting",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[ipv4-addr:value = '5.9.143.30']",
-      "pattern_type": "stix",
-      "valid_from": "2026-07-27T19:06:22.000Z",
-      "labels": [
-        "ip addresses",
-        "ipv4-addr"
-      ],
-      "object_marking_refs": [
-        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
-      ],
-      "description": "Hetzner fsn1-dc10 (DE) | QA-HOST-01 hosting"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
       "id": "indicator--8d7ce076-ff5a-5063-83fa-d24d9fae72c9",
       "created_by_ref": "identity--03471f07-6ab4-59f0-b923-06e77a1e2f20",
       "created": "2026-07-27T19:06:22.000Z",
@@ -259,7 +236,6 @@
         "indicator--47f478bb-8b82-5017-9376-3b834bab7b4e",
         "indicator--7bbf871d-b630-595e-b785-3e0585a53460",
         "indicator--9aeb2bd6-089b-5b58-82f1-67f620c51021",
-        "indicator--adf86a2d-c318-51f5-b533-a5b58efe617d",
         "indicator--8d7ce076-ff5a-5063-83fa-d24d9fae72c9"
       ],
       "object_marking_refs": [

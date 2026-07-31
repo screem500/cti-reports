@@ -3,7 +3,7 @@ Report ID:        CTI-2026-004
 Title:            Gulf-Themed Lures on Foreign Infrastructure
 Analyst:          Mijlad Al-Subaie (@screem500)
 Published:        2026-07-25
-Last Updated:     2026-07-26
+Last Updated:     2026-08-01 (v1.1 — تصحيحات تحليلية وإصلاح حجب)
 Classification:   TLP:CLEAR
 Confidence:       Moderate overall; see Key Judgments for per-judgment confidence
 Status:           Reported - GitHub T&S receipt confirmed; national CERTs notified
@@ -24,12 +24,12 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 
 ## 1. الملخص التنفيذي
 
-رصدت منظومة المتابعة اليومية خمس حملات مستقلة تستخدم **أسماء خليجية صريحة** (qatar, omani, gulf) كطعوم في نطاقات ومسارات توزيع، بينما تقع بنيتها التحتية الفعلية كلها خارج المنطقة (ألمانيا، الولايات المتحدة). التحليل يفرّق بين نمطين:
+رصدت منظومة المتابعة اليومية **خمسة مؤشرات مستقلة** خلال ستة أسابيع، منها **اثنان فقط يحملان تسمية خليجية صريحة** (قطر، عُمان)، وثالث بتطابق لفظي منخفض الثقة (shaggulf-sold.xyz)، بينما أظهر التحليل أن الرابع (gulfbreezervrentals.com) اسم شركة أمريكية من مدينة Gulf Breeze في فلوريدا ولا صلة له بالخليج. تقع البنية التحتية الفعلية كلها خارج المنطقة (ألمانيا، الولايات المتحدة). التحليل يفرّق بين نمطين:
 
 - **نطاقات شرعية مخترقة** ذات تسمية خليجية (`QA-HOST-01 [محجوب - REDACTED]` — مسجل منذ 2023)
 - **نطاقات مسجلة خصيصاً للحملة** (`omani-disputes.com` — سُجل قبل 5 أسابيع من استخدامه)
 
-الخلاصة التحليلية: التسمية الخليجية **ليس دليلاً كافياً على استهداف حصري للخليج** (كما أثبت التحقيق 002 في حالة QatarRAT)، لكنها في حالتين على الأقل تُظهر اختياراً متعمداً لهوية إقليمية كطُعم — وهو ما يستدعي الرصد المستمر والإبلاغ المنسق.
+الخلاصة التحليلية: التسمية الخليجية **ليس دليلاً كافياً على استهداف حصري للخليج** (كما أثبت التحقيق 002 في حالة QatarRAT)، لكنها في الحالتين المؤكدتين (قطر، عُمان) تُظهر اختياراً متعمداً لهوية إقليمية كطُعم — وهو ما يستدعي الرصد المستمر والإبلاغ المنسق.
 
 ---
 
@@ -39,8 +39,8 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 |---|--------|----------|------------------|-------------------|
 | 1 | `QA-HOST-01 [محجوب - REDACTED]/sonic.exe` + `/fallacy001.exe` | PureLogsStealer | قطر | offline |
 | 2 | `omani-disputes.com/txt/adkbjdd.txt` | reverse base64 loader | عُمان | offline |
-| 3 | `jnhygwu4.gulfbreezervrentals.com` | ClearFake (macOS) | الخليج عامة | offline |
-| 4 | `shaggulf-sold.xyz/avast_update` | Potemkin Loader | الخليج عامة | offline |
+| 3 | `jnhygwu4.gulfbreezervrentals.com` | ClearFake (macOS) | لا ينطبق — اسم شركة من Gulf Breeze فلوريدا (موقع أمريكي مخترق على الأرجح) | offline |
+| 4 | `shaggulf-sold.xyz/avast_update` | Potemkin Loader | الخليج عامة؟ (ثقة منخفضة — تطابق لفظي لا دليل تسمية مقصودة) | offline |
 | 5 | حسابا GitHub (`rsaudio`, `Alpacareticulitermeslucifugus340`) | SmartLoader-MaaS | — | **online** |
 
 ---
@@ -51,9 +51,9 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 
 | البند | القيمة |
 |-------|--------|
-| تاريخ التسجيل | 2023-09-19 (قبل الحملة بسنتين ونصف) |
+| تاريخ التسجيل | 2023 (قبل الحملة بنحو سنتين ونصف) |
 | Registrar | PDR Ltd. (PublicDomainRegistry) |
-| الاستضافة | 5.9.143.30 — Hetzner، Falkenstein، ألمانيا |
+| الاستضافة | Hetzner، ألمانيا (عنوان IP محجوب — كان نشره يبطل حجب النطاق) |
 | DNSSEC | غير موقّع |
 
 **الاستدلال:** نطاق عمره يتجاوز الحملة بكثير + استضافة ألمانية رخيصة + توزيع Stealer من مسارين بأسماء عشوائية (`sonic.exe`, `fallacy001.exe`) = نمط موقع مخترق استُغل كمنصة توزيع، لا نطاقاً مسجلاً للهجوم.
@@ -71,7 +71,9 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 
 ### 3.3 gulfbreezervrentals.com — حلقة وصل مع التحقيق 003
 
-المؤشر موسوم في URLhaus بـ `ClearFake,mac-0x68dc,macOS` — تأكيد إضافي على ما وثقه التحقيق 003 ميدانياً: **ClearFake لم تعد حملة Windows فقط**، بل توسعت لاستهداف macOS بطعوم تحديث مزيفة. النطاق مسجل بنمط "تأجير مركبات خليجية" — تمويه تجاري إقليمي.
+المؤشر موسوم في URLhaus بـ `ClearFake,mac-0x68dc,macOS` — تأكيد إضافي على ما وثقه التحقيق 003 ميدانياً: **ClearFake لم تعد حملة Windows فقط**، بل توسعت لاستهداف macOS بطعوم تحديث مزيفة.
+
+**تصحيح (2026-08-01):** اسم النطاق لا يشير إلى الخليج العربي. قراءته الصحيحة «Gulf Breeze RV Rentals» — وGulf Breeze مدينة في فلوريدا على خليج المكسيك، وRV rentals تأجير بيوت متنقلة. الأرجح أنه موقع شركة أمريكية صغيرة **مخترق**، ويدعم ذلك النطاق الفرعي العشوائي (`jnhygwu4`) المطابق لنمط ClearFake المعروف في استغلال مواقع شرعية مخترقة. لذلك استُبعد من عدّ «التسمية الخليجية»، وبقي احتسابه دليلاً على توسع ClearFake نحو macOS فقط.
 
 ### 3.4 SmartLoader-MaaS عبر GitHub — نشط وقت النشر
 
@@ -113,7 +115,7 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 | Defense Evasion | Masquerading: Match Legitimate Name or Location | T1036.005 | Potemkin Loader يُسلَّم باسم "avast_update" |
 | Defense Evasion | Obfuscated Files or Information | T1027 | لودر reverse-base64 على omani-disputes.com/txt/ |
 | Defense Evasion | Deobfuscate/Decode Files or Information | T1140 | اللودر يفك تشفير حمولته وقت التشغيل |
-| Command and Control | Ingress Tool Transfer | T1105 | حمولات المرحلة الثانية تُسحب من إصدارات GitHub |
+| Command and Control | Ingress Tool Transfer | T1105 | أرشيفات SmartLoader-MaaS تُسحب من raw.githubusercontent.com |
 | Credential Access | Credentials from Password Stores | T1555 | مرحلة الجمع في PureLogsStealer |
 
 ---
@@ -129,10 +131,10 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 - التسمية الخليجية طُعم لا دليل استهداف حصري للخليج — اتساقاً مع التصحيح
   التحليلي في التحقيق 002.
   الثقة: **متوسطة إلى عالية**. الأساس: البنية التحتية الفعلية في ألمانيا
-  والولايات المتحدة، ولم يُرصد محتوى حمولة مخصص للخليج. وفي حالتين على الأقل
-  يبدو تبنّي الهوية الإقليمية متعمداً كطُعم.
+  والولايات المتحدة، ولم يُرصد محتوى حمولة مخصص للخليج. وفي الحالتين المؤكدتين
+  (قطر، عُمان) يبدو تبنّي الهوية الإقليمية متعمداً كطُعم.
 
-- تكرار النمط (خمس حالات في ستة أسابيع) يبلغ وتيرة تستحق التتبع كمؤشر إنذار
+- تكرار النمط (خمسة مؤشرات في ستة أسابيع، منها اثنان بتسمية خليجية مؤكدة) يبلغ وتيرة تستحق التتبع كمؤشر إنذار
   مبكر.
   الثقة: **متوسطة**. الأساس: نافذة رصد قصيرة ومصدرها منظومة جمع واحدة، وقد
   تعكس الوتيرة انحياز الجمع لا زيادة فعلية.
@@ -167,6 +169,15 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 ## 8. ملاحق IOCs
 
 انظر ملف `iocs_004_gulf_lures.txt` المرفق — يشمل النطاقات، الروابط الكاملة، العناوين IP، ومراجع URLhaus لكل مؤشر.
+
+---
+
+## 📋 سجل التصحيحات (2026-08-01 — v1.1)
+
+- إعادة تصنيف `gulfbreezervrentals.com`: الاسم يعود لشركة تأجير بيوت متنقلة في مدينة Gulf Breeze بولاية فلوريدا الأمريكية، لا إلى الخليج العربي؛ استُبعد من عدّ التسمية الخليجية.
+- حجب عنوان IP ومعرّفي URLhaus الخاصين بـ QA-HOST-01 — كان نشرها مع الحجب يجعل كشف هوية النطاق ممكناً، فأُزيلت التزاماً بسياسة الإفصاح المسؤول.
+- توحيد موقف `shaggulf-sold.xyz` على الثقة المنخفضة في الجدول والملخص (تطابق لفظي لا دليل تسمية).
+- تصحيح صف T1105: السحب من raw.githubusercontent.com لا من إصدارات GitHub (الإصدارات تخص التحقيق 002).
 
 ---
 

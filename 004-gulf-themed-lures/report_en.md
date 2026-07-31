@@ -3,7 +3,7 @@ Report ID:        CTI-2026-004
 Title:            Gulf-Themed Lures on Foreign Infrastructure
 Analyst:          Mijlad Al-Subaie (@screem500)
 Published:        2026-07-25
-Last Updated:     2026-07-26
+Last Updated:     2026-08-01 (v1.1 — analytical corrections and redaction fix)
 Classification:   TLP:CLEAR
 Confidence:       Moderate overall; see Key Judgments for per-judgment confidence
 Status:           Reported - GitHub T&S receipt confirmed; national CERTs notified
@@ -24,12 +24,12 @@ Redactions:       QA-HOST-01 (compromised victim domain)
 
 ## 1. Executive Summary
 
-Daily pipeline monitoring surfaced five independent campaigns using **explicit Gulf-themed names** (qatar, omani, gulf) as lures in domains and distribution paths — while their actual infrastructure sits entirely outside the region (Germany, United States). The analysis distinguishes two patterns:
+Daily pipeline monitoring surfaced **five independent indicators** over six weeks, of which **only two carry explicit Gulf naming** (Qatar, Oman), a third is a low-confidence substring match (shaggulf-sold.xyz), while analysis showed the fourth (gulfbreezervrentals.com) is named after a business in Gulf Breeze, Florida, and is unrelated to the Gulf region. All actual infrastructure sits outside the region (Germany, United States). The analysis distinguishes two patterns:
 
 - **Compromised legitimate domains** with Gulf branding (`QA-HOST-01 [REDACTED]` — registered 2023)
 - **Purpose-registered campaign domains** (`omani-disputes.com` — registered 5 weeks before first observed use)
 
-Analytical takeaway: Gulf-themed naming is **not sufficient evidence of exclusive Gulf targeting** (as Investigation 002 demonstrated for QatarRAT), but in at least two cases it shows deliberate adoption of regional identity as a lure — warranting continuous monitoring and coordinated reporting.
+Analytical takeaway: Gulf-themed naming is **not sufficient evidence of exclusive Gulf targeting** (as Investigation 002 demonstrated for QatarRAT), but in the two confirmed cases (Qatar, Oman) it shows deliberate adoption of regional identity as a lure — warranting continuous monitoring and coordinated reporting.
 
 ---
 
@@ -39,8 +39,8 @@ Analytical takeaway: Gulf-themed naming is **not sufficient evidence of exclusiv
 |---|-----------|---------|-----------|----------------------|
 | 1 | `QA-HOST-01 [REDACTED]/sonic.exe` + `/fallacy001.exe` | PureLogsStealer | Qatar | offline |
 | 2 | `omani-disputes.com/txt/adkbjdd.txt` | reverse base64 loader | Oman | offline |
-| 3 | `jnhygwu4.gulfbreezervrentals.com` | ClearFake (macOS) | Gulf-wide | offline |
-| 4 | `shaggulf-sold.xyz/avast_update` | Potemkin Loader | Gulf-wide | offline |
+| 3 | `jnhygwu4.gulfbreezervrentals.com` | ClearFake (macOS) | N/A — named after Gulf Breeze, Florida (likely compromised US site) | offline |
+| 4 | `shaggulf-sold.xyz/avast_update` | Potemkin Loader | Gulf-wide? (low confidence — substring match only) | offline |
 | 5 | Two GitHub accounts (`rsaudio`, `Alpacareticulitermeslucifugus340`) | SmartLoader-MaaS | — | **online** |
 
 ---
@@ -51,9 +51,9 @@ Analytical takeaway: Gulf-themed naming is **not sufficient evidence of exclusiv
 
 | Field | Value |
 |-------|-------|
-| Registered | 2023-09-19 (2.5 years before the campaign) |
+| Registered | 2023 (~2.5 years before the campaign) |
 | Registrar | PDR Ltd. (PublicDomainRegistry) |
-| Hosting | 5.9.143.30 — Hetzner, Falkenstein, Germany |
+| Hosting | Hetzner, Germany (IP withheld — publishing it defeated the domain redaction) |
 | DNSSEC | unsigned |
 
 **Reasoning:** Domain age far predates the campaign + cheap German hosting + stealer distribution via randomly-named paths (`sonic.exe`, `fallacy001.exe`) = pattern of a compromised site abused as a distribution platform, not an attack-registered domain.
@@ -71,7 +71,9 @@ Analytical takeaway: Gulf-themed naming is **not sufficient evidence of exclusiv
 
 ### 3.3 gulfbreezervrentals.com — Link to Investigation 003
 
-Tagged in URLhaus as `ClearFake,mac-0x68dc,macOS` — additional confirmation of what Investigation 003 documented in the field: **ClearFake is no longer Windows-only** and has expanded to macOS via fake update lures. The domain follows a "Gulf vehicle rentals" pattern — regional commercial camouflage.
+Tagged in URLhaus as `ClearFake,mac-0x68dc,macOS` — additional confirmation of what Investigation 003 documented in the field: **ClearFake is no longer Windows-only** and has expanded to macOS via fake update lures.
+
+**Correction (2026-08-01):** The domain name does not refer to the Arabian Gulf. It reads "Gulf Breeze RV Rentals" — Gulf Breeze is a city in Florida on the Gulf of Mexico, and "RV rentals" is recreational-vehicle rental. The site is most likely a **compromised** US small business, consistent with the random subdomain (`jnhygwu4`) and ClearFake's known use of compromised legitimate sites. It is therefore excluded from the Gulf-naming count and retained only as evidence of ClearFake's macOS expansion.
 
 ### 3.4 SmartLoader-MaaS via GitHub — Live at Publication Time
 
@@ -113,7 +115,7 @@ every case; the Evidence column names the case.
 | Defense Evasion | Masquerading: Match Legitimate Name or Location | T1036.005 | Potemkin Loader delivered as "avast_update" |
 | Defense Evasion | Obfuscated Files or Information | T1027 | Reverse-base64 loader at omani-disputes.com/txt/ |
 | Defense Evasion | Deobfuscate/Decode Files or Information | T1140 | Loader decodes its payload at runtime |
-| Command and Control | Ingress Tool Transfer | T1105 | Second-stage payloads pulled from GitHub releases |
+| Command and Control | Ingress Tool Transfer | T1105 | SmartLoader-MaaS archives pulled from raw.githubusercontent.com |
 | Credential Access | Credentials from Password Stores | T1555 | PureLogsStealer collection stage |
 
 ---
@@ -130,9 +132,11 @@ every case; the Evidence column names the case.
   consistent with the analytical correction in Investigation 002.
   Confidence: Moderate to High. Basis: the actual infrastructure sits in
   Germany and the United States; no Gulf-specific payload content was
-  observed.
+  observed. One initially-counted indicator (gulfbreezervrentals.com) was
+  excluded on re-analysis: it is named after Gulf Breeze, Florida, not the
+  Arabian Gulf.
 
-- The recurrence of the pattern (five cases in six weeks) is frequent enough
+- The recurrence of the pattern (five indicators in six weeks, two with confirmed Gulf naming) is frequent enough
   to warrant tracking as an early-warning indicator.
   Confidence: Moderate. Basis: short observation window drawn from a
   single pipeline; the rate may reflect collection bias rather than a real
@@ -168,6 +172,15 @@ Low — Single source or circumstantial; stated as hypothesis only.
 ## 8. IOC Appendix
 
 See the attached `iocs_004_gulf_lures.txt` — includes domains, full URLs, IP addresses, and URLhaus references for each indicator.
+
+---
+
+## 📋 Correction Log (2026-08-01 — v1.1)
+
+- Reclassified `gulfbreezervrentals.com`: the name belongs to an RV-rental business in Gulf Breeze, Florida — not the Arabian Gulf; removed from the Gulf-naming count.
+- Withheld QA-HOST-01's IP address and URLhaus IDs — publishing them alongside the redaction made the domain identifiable; removed per the Responsible Disclosure Policy.
+- Aligned `shaggulf-sold.xyz` to low confidence across the table and summary (substring match only).
+- Corrected the T1105 row: retrieval from raw.githubusercontent.com, not GitHub releases (releases relate to Investigation 002).
 
 ---
 
