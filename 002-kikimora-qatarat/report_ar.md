@@ -3,7 +3,7 @@ Report ID:        CTI-2026-002
 Title:            Kikimora / QatarRAT Campaign
 Analyst:          Mijlad Al-Subaie (@screem500)
 Published:        2026-07-21
-Last Updated:     2026-07-26
+Last Updated:     2026-08-01 (v1.1 — توحيد التحليل الساكن وتصحيح الأرقام)
 Classification:   TLP:CLEAR
 Confidence:       Moderate overall; see Key Judgments for per-judgment confidence
 Status:           Published - GitHub reported
@@ -13,13 +13,16 @@ Redactions:       QA-HOST-01, UAE-HOST-01 (compromised victim domains)
 ## الاستنتاجات الرئيسية | Key Judgments
 
 - حملة توزيع نشطة منذ فبراير 2026 عبر حساب GitHub مؤقت (Kikimora-arch)،
-  بلغت نحو 18,000 عملية تنزيل باستخدام طعوم برامج مقرصنة.
+  بلغت 18,067 عملية تنزيل حتى 2026-07-21 باستخدام طعوم برامج مقرصنة.
   الثقة: **عالية**. الأساس: رصد مباشر عبر GitHub API لتاريخ إنشاء الحساب
   والمستودعات وعدادات التنزيل.
 
-- الملفات الموزَّعة تحمل توقيعاً رقمياً متلاعباً به ينتحل شهادة DigiCert،
-  وتتضمن مكوّناً مخصصاً لتعطيل الحماية (AVKiller).
-  الثقة: **عالية**. الأساس: تحليل ساكن مباشر للعينات.
+- الملفان الرئيسيان يحملان توقيعات Authenticode غير صالحة — كتل توقيع منقولة
+  على الأرجح من ثنائيات موقّعة شرعياً (انظر تحليل ما بعد النشر)، وتتضمن
+  الحمولات مكوّناً يُرجَّح أنه لتعطيل الحماية (AVKiller — الدور مستنتج من
+  الاسم، لم يُحلل).
+  الثقة: **عالية** على فشل التوقيع (تحليل ساكن مباشر للعينتين)؛ **متوسطة**
+  على أن الكتل منقولة.
 
 - تسمية "QatarRAT" في فيدات التهديدات لا تعني استهدافاً حصرياً لقطر. الأدلة
   تدعم حملة إجرامية واسعة طالت ضحايا في الخليج ضمن غيرهم.
@@ -56,7 +59,7 @@ Redactions:       QA-HOST-01, UAE-HOST-01 (compromised victim domains)
 
 ## 1. الملخص التنفيذي
 
-انطلق هذا التحقيق من مؤشر واحد في فيد URLhaus ("QatarRAT")، وانتهى بكشف حملة توزيع متكاملة تعمل منذ فبراير 2026 عبر حساب GitHub حارق (Kikimora-arch)، حققت ما يقارب **18 ألف تحميل** عبر طعوم برامج مقرصنة (FL Studio، SOLIDWORKS، Steam)، وتضم مكونات متخصصة بينها **AVKiller** لتعطيل الحمايات وعميل RAT. التحليل الساكن كشف توقيعاً رقمياً تالفاً منتحلاً لشهادة DigiCert، ونطاقات احتياطية توليدية النمط، وبصمات لغوية تشير إلى **مشغل ناطق بالروسية** — ما يضعف فرضية "الاستهداف القطري الحصري" ويرجّح حملة إجرامية واسعة طالت الخليج ضمن أهداف أخرى.
+انطلق هذا التحقيق من مؤشر واحد في فيد URLhaus ("QatarRAT")، وانتهى بكشف حملة توزيع متكاملة تعمل منذ فبراير 2026 عبر حساب GitHub حارق (Kikimora-arch)، حققت **18,067 تحميلاً حتى 2026-07-21** عبر طعوم برامج مقرصنة (FL Studio، SOLIDWORKS، Steam)، وتضم مكونات متخصصة بينها **AVKiller** (دور مستنتج من الاسم) لتعطيل الحمايات وعميل RAT. التحليل الساكن كشف توقيعات Authenticode غير صالحة منقولة على الأرجح من ثنائيات شرعية، ونطاقات احتياطية توليدية النمط، وبصمات لغوية تشير إلى **مشغل ناطق بالروسية** — ما يضعف فرضية "الاستهداف القطري الحصري" ويرجّح حملة إجرامية واسعة طالت الخليج ضمن أهداف أخرى.
 
 ---
 
@@ -81,11 +84,11 @@ Redactions:       QA-HOST-01, UAE-HOST-01 (compromised victim domains)
 | 2026-02-24 16:02 | إنشاء حساب Kikimora-arch | GitHub API |
 | 2026-02-24 16:03 | إنشاء المستودع الأول solid-pomoemy (فارغ — طُعم) | GitHub API |
 | 2026-02-24 16:18 | إنشاء المستودع الثاني solid-doodle | GitHub API |
-| 2026-02-24 16:24 | نشر الإصدار v1.00.2 بعشرة ملفات خبيثة | GitHub API |
+| 2026-02-24 16:24 | إنشاء الإصدار v1.00.2 (فارغاً — أُضيفت الملفات على دفعات بين 2026-03-11 و2026-06-23) | GitHub API |
 | 2026-06-27 | رصد JavaChecker.exe في فيدات التهديدات (QatarRAT) | URLhaus |
 | 2026-07-21 | الملف ما زال متاحاً للتحميل (online) | URLhaus |
 
-**ملاحظة:** إنشاء الحساب والمستودعين ونشر الحمولات خلال 22 دقيقة = حساب "حارق" مُعد مسبقاً لحملة واحدة.
+**ملاحظة:** إنشاء الحساب والمستودعين والإصدار (فارغاً) خلال 22 دقيقة = حساب "حارق" مُعد مسبقاً لحملة واحدة؛ الحمولات أُضيفت لاحقاً على دفعات (انظر تحليل ما بعد النشر).
 
 ---
 
@@ -98,8 +101,8 @@ Redactions:       QA-HOST-01, UAE-HOST-01 (compromised victim domains)
 | github.com/Kikimora-arch/solid-pomoemy | مستودع | طُعم فارغ |
 | fe566ca92d40914438c7ce3157a6a0936ac7be94e71e6c37b95ac84177511874 | SHA256 | JavaChecker.exe |
 
-### 4.2 حمولات الإصدار v1.00.2 (10 ملفات)
-| الملف | الحجم | التحميلات | الدور المفترض |
+### 4.2 حمولات الإصدار v1.00.2 (10 ملفات — الأرقام بتاريخ 2026-07-21)
+| الملف | الحجم | التحميلات | الدور المفترض (من الاسم — لم يُحلل) |
 |-------|-------|-----------|----------------|
 | kikikmoralibrary.exe | 1.4MB | **11,984** | الحمولة الأوسع انتشاراً |
 | JavaChecker.exe | 2.9MB | **4,515** | QatarRAT (عينة هذا التحليل) |
@@ -109,10 +112,10 @@ Redactions:       QA-HOST-01, UAE-HOST-01 (compromised victim domains)
 | SOLIDWORKS.Design.exe | 55MB | 21 | طُعم برنامج مقرصن |
 | AVKiller.exe | 60KB | 9 | **تعطيل برامج الحماية** |
 | Client.exe | 30KB | 16 | عميل RAT |
-| Kikimoraarch.exe | 30KB | 3 | مطابق لـ Client.exe (نفس الحجم) |
+| Kikimoraarch.exe | 30KB | 3 | يحتمل مطابقته لـ Client.exe (تطابق حجم فقط — الحسم بـ sha256sum على الملفين) |
 | SteamSetup.exe | 571KB | 3 | طُعم للاعبين |
 
-**إجمالي التحميلات المرصودة: ~18,077**
+**إجمالي التحميلات المرصودة: ~18,067 (بتاريخ 2026-07-21)**
 
 ### 4.3 النطاقات المستخرجة من العينة (نمط توليدي)
 AspectUtilYotta.com — BlockCore.com (نشط، AWS GA) — EngineFlex.com (نشط، نفس البنية) — LogicIndexQuant.com — ManagerStella.com — SinkCoreYotta.com — UnitDelta.com — UnitSpanPolar.com
@@ -127,12 +130,12 @@ AspectUtilYotta.com — BlockCore.com (نشط، AWS GA) — EngineFlex.com (نش
 |-------|--------|
 | SHA256 | 08d5960457d9cb6d825598adaa46586f42d08fd402bb2b75df44a9d12591971f |
 | النوع | PE32 .NET — نفس قالب JavaChecker (builder واحد) |
-| الوظيفة | **سارق توكنات** (Discord وجلسات المتصفح) — كثافة عالية من رموز Token في النصوص |
+| الوظيفة | غير محسومة — كثافة عالية من سلاسل Token في النصوص (استدلال من strings لا من سلوك مرصود؛ لا تصنيف infostealer مؤكداً) |
 | VirusTotal | 53/70 — تسمية بارزة: MSIL.Trojan-Stealer.Penetrk.A (GData)، CrowdStrike ثقة 100% |
 | وسوم VT | invalid-signature (مطابق لنتيجة التحليل المستقل)، cryp (مشفّر)، detect-debug-environment (مقاومة تحليل) |
 | نطاقات مستخرجة | BaseUltra.com, HelperTerra.com, TokenKinet.com, **TokenMorph.com (نشط: 74.208.236.232 — IONOS)**, ValueQuark.com |
 
-**ملاحظة منهجية:** نتائج التحليل الساكن المستقل (توقيع غير صالح، .NET، سارق) طابقت وسوم VirusTotal الرسمية قبل الاطلاع عليها — ما يؤكد صلاحية المنهجية المتبعة.
+**ملاحظة منهجية:** نتائج التحليل الساكن المستقل (توقيع غير صالح، .NET) طابقت وسوم VirusTotal الرسمية قبل الاطلاع عليها — ما يؤكد صلاحية المنهجية المتبعة.
 
 ---
 
@@ -149,12 +152,12 @@ AspectUtilYotta.com — BlockCore.com (نشط، AWS GA) — EngineFlex.com (نش
 | الفحص | النتيجة |
 |-------|---------|
 | النوع | PE32 — .NET assembly (متوافق مع عائلة Stealc) |
-| التوقيع الرقمي | **يحمل توقيع DigiCert تالفاً** — فشل التحقق (Message digest MISMATCH) + PE checksum غير صالح |
-| الدلالة | محاولة انتحال ثقة: شهادة منسوخة أو ملف معدّل بعد التوقيع — تخدع الفحص السطحي وتفشل أمام التحقق الفعلي |
+| التوقيع الرقمي | **توقيع Authenticode غير صالح** — فشل التحقق (Message digest MISMATCH) + PE checksum غير صالح؛ هوية المُصدِر لم تُتحقق |
+| الدلالة | كتلة توقيع منقولة على الأرجح من ثنائية موقّعة شرعياً — تخدع الفحص السطحي وتفشل أمام التحقق الفعلي |
 | النصوص المستخرجة | نطاقات توليدية النمط + رموز (TokenDelta, TokenSolar, TokenChainFlow) |
 
 ![GitHub release stats](screenshots/github_stats.png)
-![Tampered DigiCert signature](screenshots/fake_signature.png)
+![Invalid Authenticode signature (MISMATCH)](screenshots/fake_signature.png)
 ---
 
 ## 6. التكتيكات والتقنيات (MITRE ATT&CK)
@@ -164,7 +167,7 @@ AspectUtilYotta.com — BlockCore.com (نشط، AWS GA) — EngineFlex.com (نش
 | Resource Development | Acquire Infrastructure: Web Services | T1583.006 | حساب GitHub مؤقت والحمولات في الإصدارات |
 | Initial Access | Phishing: Spearphishing Link | T1566.002 | طعوم برامج مقرصنة (FL Studio, SOLIDWORKS, Steam) |
 | Execution | User Execution: Malicious File | T1204.002 | تشغيل الضحية لمثبّتات .NET مزروعة |
-| Defense Evasion | Subvert Trust Controls: Code Signing | T1553.002 | توقيع متلاعب به ينتحل شهادة DigiCert |
+| Defense Evasion | Subvert Trust Controls: Code Signing | T1553.002 | توقيع Authenticode غير صالح (كتلة منقولة على الأرجح) |
 | Defense Evasion | Impair Defenses: Disable or Modify Tools | T1562.001 | مكوّن AVKiller.exe |
 | Command and Control | Application Layer Protocol: Web Protocols | T1071.001 | اتصال عميل RAT بالقيادة والتحكم |
 | Command and Control | Dynamic Resolution: DGA | T1568.002 | نطاقات احتياطية ذات نمط توليدي |
@@ -172,7 +175,9 @@ AspectUtilYotta.com — BlockCore.com (نشط، AWS GA) — EngineFlex.com (نش
 
 ---
 
-## 7. السياق الخليجي
+## 7. السياق الخليجي (حوادث منفصلة — لا صلة مثبتة بحملة Kikimora)
+
+> هذه الحوادث تخص التحقيقين 003 و004 وأُدرجت للسياق الإقليمي العام فقط — لا تدل التسمية القطرية على استهداف حصري (انظر الحكم الرئيسي).
 
 | المؤشر | الدولة | الحالة |
 |--------|--------|--------|
@@ -186,7 +191,7 @@ AspectUtilYotta.com — BlockCore.com (نشط، AWS GA) — EngineFlex.com (نش
 
 ## 8. التوصيات الدفاعية
 
-- **حجب فوري:** الهاش والنطاقات الثمانية في أنظمة الحماية
+- **حجب فوري:** هاشا العينتين (SHA256) في أنظمة الحماية. **مراقبة فقط دون حجب:** النطاقات الـ13 المستخرجة (ثقة منخفضة — 6 خاملة وأسماؤها تجارية عامة قد تعود لجهات شرعية)
 - **سياسة مؤسسية:** منع تحميل الملفات التنفيذية من GitHub Releases غير الموثوقة — البرامج المقرصنة قناة العدوى الأولى
 - **كشف:** تنبيه على أي عملية تنهي خدمات الحماية (سلوك AVKiller)
 - **التحقق من التوقيعات:** لا يكفي "وجود" توقيع — يجب التحقق من صلاحيته

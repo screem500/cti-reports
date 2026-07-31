@@ -87,7 +87,7 @@
       "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
       "created": "2026-07-21T00:00:00.000Z",
       "modified": "2026-07-21T00:00:00.000Z",
-      "name": "kikikmoralibrary.exe (Token stealer)",
+      "name": "kikikmoralibrary.exe (function undetermined — Token-prefixed strings; no confirmed infostealer classification)",
       "indicator_types": [
         "malicious-activity"
       ],
@@ -101,7 +101,7 @@
       "object_marking_refs": [
         "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
       ],
-      "description": "kikikmoralibrary.exe (Token stealer)"
+      "description": "kikikmoralibrary.exe (function undetermined — Token-prefixed strings; no confirmed infostealer classification)"
     },
     {
       "type": "indicator",

@@ -3,7 +3,7 @@ Report ID:        CTI-2026-002
 Title:            Kikimora / QatarRAT Campaign
 Analyst:          Mijlad Al-Subaie (@screem500)
 Published:        2026-07-21
-Last Updated:     2026-07-26
+Last Updated:     2026-08-01 (v1.1 — static-analysis consistency and figure corrections)
 Classification:   TLP:CLEAR
 Confidence:       Moderate overall; see Key Judgments for per-judgment confidence
 Status:           Published - GitHub reported
@@ -13,14 +13,17 @@ Redactions:       QA-HOST-01, UAE-HOST-01 (compromised victim domains)
 ## Key Judgments
 
 - A distribution campaign has operated since February 2026 through a burner
-  GitHub account (Kikimora-arch), accumulating roughly 18,000 downloads via
-  cracked-software lures.
+  GitHub account (Kikimora-arch), accumulating 18,067 downloads as of
+  2026-07-21 via cracked-software lures.
   Confidence: **High**. Basis: direct GitHub API observation of account
   creation, repository timeline, and release download counts.
 
-- The delivered binaries carry a tampered digital signature impersonating a
-  DigiCert certificate, and include a dedicated AVKiller component.
-  Confidence: **High**. Basis: first-party static analysis of the samples.
+- The two main binaries carry invalid Authenticode signatures — signature
+  blocks likely transplanted from legitimately signed binaries (see
+  Post-Publication Analysis) — and the payload set includes a likely
+  AV-disabling component (AVKiller; role inferred from filename, not analyzed).
+  Confidence: **High** on signature invalidity (first-party static analysis
+  of both samples); **Moderate** on the transplanted-block origin.
 
 - The "QatarRAT" label in threat feeds does not imply Qatar-exclusive
   targeting. The evidence supports a broad crimeware campaign that reached
@@ -60,7 +63,7 @@ Low — Single source or circumstantial; stated as hypothesis only.
 
 ## 1. Executive Summary
 
-This investigation began with a single URLhaus indicator ("QatarRAT") and evolved into the full exposure of a distribution campaign active since February 2026 through a burner GitHub account (Kikimora-arch), accumulating roughly **18,000 downloads** via cracked-software lures (FL Studio, SOLIDWORKS, Steam), with specialized components including an **AVKiller** module and a RAT client. Static analysis revealed a tampered digital signature impersonating a DigiCert certificate, algorithmically-styled standby domains, and linguistic fingerprints pointing to a **Russian-speaking operator** — weakening the "Qatar-exclusive targeting" hypothesis and supporting a broad crimeware campaign that hit the Gulf among other targets.
+This investigation began with a single URLhaus indicator ("QatarRAT") and evolved into the full exposure of a distribution campaign active since February 2026 through a burner GitHub account (Kikimora-arch), accumulating **18,067 downloads as of 2026-07-21** via cracked-software lures (FL Studio, SOLIDWORKS, Steam), with specialized components including an **AVKiller** module (role inferred from filename) and a RAT client. Static analysis revealed invalid Authenticode signatures likely transplanted from legitimately signed binaries, algorithmically-styled standby domains, and linguistic fingerprints pointing to a **Russian-speaking operator** — weakening the "Qatar-exclusive targeting" hypothesis and supporting a broad crimeware campaign that hit the Gulf among other targets.
 
 ---
 
@@ -85,11 +88,11 @@ This investigation began with a single URLhaus indicator ("QatarRAT") and evolve
 | 2026-02-24 16:02 | Kikimora-arch account created | GitHub API |
 | 2026-02-24 16:03 | First repo solid-pomoemy created (empty decoy) | GitHub API |
 | 2026-02-24 16:18 | Second repo solid-doodle created | GitHub API |
-| 2026-02-24 16:24 | Release v1.00.2 published with 10 malicious files | GitHub API |
+| 2026-02-24 16:24 | Release v1.00.2 created (empty — files added in stages between 2026-03-11 and 2026-06-23) | GitHub API |
 | 2026-06-27 | JavaChecker.exe flagged in threat feeds (QatarRAT) | URLhaus |
 | 2026-07-21 | File still downloadable (online) | URLhaus |
 
-**Note:** Account, two repos, and payload release within 22 minutes = pre-staged single-purpose burner account.
+**Note:** Account, two repos, and the (empty) release within 22 minutes = pre-staged single-purpose burner account; payloads were added later in stages (see Post-Publication Analysis).
 
 ---
 
@@ -102,8 +105,8 @@ This investigation began with a single URLhaus indicator ("QatarRAT") and evolve
 | github.com/Kikimora-arch/solid-pomoemy | repo | Empty decoy |
 | fe566ca92d40914438c7ce3157a6a0936ac7be94e71e6c37b95ac84177511874 | SHA256 | JavaChecker.exe |
 
-### 4.2 Release v1.00.2 payloads (10 files)
-| File | Size | Downloads | Assessed role |
+### 4.2 Release v1.00.2 payloads (10 files — figures as of 2026-07-21)
+| File | Size | Downloads | Assessed role (from filename — not analyzed) |
 |------|------|-----------|----------------|
 | kikikmoralibrary.exe | 1.4MB | **11,984** | Most distributed payload |
 | JavaChecker.exe | 2.9MB | **4,515** | QatarRAT (this investigation's sample) |
@@ -113,10 +116,10 @@ This investigation began with a single URLhaus indicator ("QatarRAT") and evolve
 | SOLIDWORKS.Design.exe | 55MB | 21 | Cracked-software lure |
 | AVKiller.exe | 60KB | 9 | **AV/EDR disabling** |
 | Client.exe | 30KB | 16 | RAT client |
-| Kikimoraarch.exe | 30KB | 3 | Matches Client.exe (identical size) |
+| Kikimoraarch.exe | 30KB | 3 | Possibly identical to Client.exe (size match only — confirm via sha256sum on both files) |
 | SteamSetup.exe | 571KB | 3 | Gamer lure |
 
-**Total observed downloads: ~18,077**
+**Total observed downloads: ~18,067 (as of 2026-07-21)**
 
 ### 4.3 Sample-extracted domains (algorithmic naming pattern)
 AspectUtilYotta.com — BlockCore.com (active, AWS GA) — EngineFlex.com (active, same infra) — LogicIndexQuant.com — ManagerStella.com — SinkCoreYotta.com — UnitDelta.com — UnitSpanPolar.com
@@ -131,12 +134,12 @@ AspectUtilYotta.com — BlockCore.com (active, AWS GA) — EngineFlex.com (activ
 |------|-------|
 | SHA256 | 08d5960457d9cb6d825598adaa46586f42d08fd402bb2b75df44a9d12591971f |
 | Type | PE32 .NET — same template as JavaChecker (single builder) |
-| Function | **Token stealer** (Discord + browser sessions) — high density of Token-prefixed strings |
+| Function | Undetermined — high density of Token-prefixed strings (strings inference, not observed behavior; no confirmed infostealer classification) |
 | VirusTotal | 53/70 — notable label: MSIL.Trojan-Stealer.Penetrk.A (GData); CrowdStrike 100% confidence |
 | VT tags | invalid-signature (matches independent analysis), cryp (packed), detect-debug-environment (anti-analysis) |
 | Extracted domains | BaseUltra.com, HelperTerra.com, TokenKinet.com, **TokenMorph.com (active: 74.208.236.232 — IONOS)**, ValueQuark.com |
 
-**Methodology note:** the independent static findings (invalid signature, .NET, stealer) matched official VirusTotal tags before consulting them — validating the applied methodology.
+**Methodology note:** the independent static findings (invalid signature, .NET) matched official VirusTotal tags before consulting them — validating the applied methodology.
 
 ---
 
@@ -153,13 +156,13 @@ On the same monitoring day (2026-07-20), the pipeline captured **5,063 SmartLoad
 | Check | Result |
 |-------|--------|
 | Type | PE32 — .NET assembly (consistent with Stealc family) |
-| Digital signature | **Tampered DigiCert signature** — verification failed (message digest MISMATCH) + invalid PE checksum |
-| Assessment | Trust impersonation attempt: copied certificate or post-signing modification — fools superficial checks, fails real verification |
+| Digital signature | **Invalid Authenticode signature** — verification failed (message digest MISMATCH) + invalid PE checksum; issuer identity not verified |
+| Assessment | Signature block likely transplanted from a legitimately signed binary — fools superficial checks, fails real verification |
 | Extracted strings | Algorithmic-style domains + token names (TokenDelta, TokenSolar, TokenChainFlow) |
 
 ![GitHub release stats](screenshots/github_stats.png)
 
-![Tampered DigiCert signature](screenshots/fake_signature.png)
+![Invalid Authenticode signature (MISMATCH)](screenshots/fake_signature.png)
 ---
 
 ## 6. Tactics & Techniques (MITRE ATT&CK)
@@ -169,7 +172,7 @@ On the same monitoring day (2026-07-20), the pipeline captured **5,063 SmartLoad
 | Resource Development | Acquire Infrastructure: Web Services | T1583.006 | Burner GitHub account; payloads hosted in releases |
 | Initial Access | Phishing: Spearphishing Link | T1566.002 | Cracked-software lures (FL Studio, SOLIDWORKS, Steam) |
 | Execution | User Execution: Malicious File | T1204.002 | Victims run trojanized .NET installers |
-| Defense Evasion | Subvert Trust Controls: Code Signing | T1553.002 | Tampered signature impersonating a DigiCert certificate |
+| Defense Evasion | Subvert Trust Controls: Code Signing | T1553.002 | Invalid Authenticode signature (likely transplanted block) |
 | Defense Evasion | Impair Defenses: Disable or Modify Tools | T1562.001 | AVKiller.exe component |
 | Command and Control | Application Layer Protocol: Web Protocols | T1071.001 | RAT client beaconing |
 | Command and Control | Dynamic Resolution: DGA | T1568.002 | Algorithmically-styled standby domains |
@@ -177,7 +180,9 @@ On the same monitoring day (2026-07-20), the pipeline captured **5,063 SmartLoad
 
 ---
 
-## 7. Gulf Context
+## 7. Gulf Context (separate incidents — no established link to the Kikimora campaign)
+
+> These incidents belong to Investigations 003 and 004 and are included for regional context only — the Qatar naming does not imply exclusive targeting (see Key Judgments).
 
 | Indicator | Country | Status |
 |-----------|---------|--------|
@@ -191,7 +196,7 @@ On the same monitoring day (2026-07-20), the pipeline captured **5,063 SmartLoad
 
 ## 8. Defensive Recommendations
 
-- **Immediate blocking:** the SHA256 hash and all eight domains
+- **Immediate blocking:** both sample SHA256 hashes. **Monitor only, do not block:** the 13 extracted domains (low confidence — 6 dormant with generic business names that may belong to legitimate parties)
 - **Policy:** block executable downloads from untrusted GitHub Releases — cracked software is the primary infection vector
 - **Detection:** alert on processes terminating security services (AVKiller behavior)
 - **Signature validation:** a signature's mere presence means nothing — verify its validity
