@@ -2,7 +2,7 @@
 Report ID:        CTI-2026-001
 Title:            ClearFake on Compromised Iranian Infrastructure
 Analyst:          Mijlad Al-Subaie (@screem500)
-Published:        2026-07-20
+Published:        2026-07-21
 Last Updated:     2026-07-26
 Classification:   TLP:CLEAR
 Confidence:       High
@@ -14,7 +14,7 @@ Redactions:       UAE-HOST-01 (compromised third-party site) redacted pending re
 
 | Tactic | Technique | ID | Observation |
 |--------|-----------|----|-------------|
-| Initial Access | Drive-by Compromise | T1189 | 58 malicious URLs on 35 compromised .ir domains |
+| Initial Access | Drive-by Compromise | T1189 | 58 malicious URLs on 37 compromised .ir domains |
 | Execution | User Execution: Malicious File | T1204.002 | Fake update lure (ClickFix) |
 | Defense Evasion | Obfuscated Files or Information | T1027 | Obfuscated JS loader |
 | Command and Control | Web Protocols | T1071.001 | ClearFake C2 over HTTP(S) |
@@ -89,7 +89,7 @@ Redactions:       UAE-HOST-01 (compromised third-party site) redacted pending re
 ## 6. مؤشرات الاختراق (IOCs)
 
 ### 6.1 النطاقات الإيرانية المخترقة (القائمة الكاملة في ملف domains_ir.txt)
-توزيع الإصابات حسب النطاق (إجمالي 35 نطاقاً، 58 رابطاً):
+توزيع الإصابات حسب النطاق (إجمالي 37 نطاقاً، 58 رابطاً):
 
 | النطاق | عدد النطاقات الفرعية الخبيثة | التصنيف |
 |--------|------------------------------|---------|
@@ -101,9 +101,9 @@ Redactions:       UAE-HOST-01 (compromised third-party site) redacted pending re
 | footbalpersian.ir | 2 | رياضة |
 | fiorentini.ir | 2 | عام |
 | 20sport.ir | 2 | رياضة |
-| 27 نطاقاً آخر | 1 لكل منها | متنوعة (صحة، تعليم، تجارة) |
+| 29 نطاقاً آخر | 1 لكل منها | متنوعة (صحة، تعليم، تجارة) |
 
-**ملاحظة تحليلية:** تركّز 19% من الروابط على نطاق واحد (varzeshlife.ir) يشير إلى اختراق عميق بصلاحيات واسعة، بينما يعكس الذيل الطويل (26 نطاقاً بإصابة واحدة) نمط الاختراق الآلي بالجملة — غالباً عبر إضافات WordPress غير المحدثة.
+**ملاحظة تحليلية:** تركّز 19% من الروابط على نطاق واحد (varzeshlife.ir) يشير إلى اختراق عميق بصلاحيات واسعة، بينما يعكس الذيل الطويل (29 نطاقاً بإصابة واحدة) نمط الاختراق الآلي بالجملة — غالباً عبر إضافات WordPress غير المحدثة.
 
 ### 6.2 مؤشرات بارزة
 | المؤشر | النوع | الوصف | الحالة |
@@ -111,9 +111,8 @@ Redactions:       UAE-HOST-01 (compromised third-party site) redacted pending re
 | ns1.newchatsits.ir | domain | Cobalt Strike C2 | نشط (آخر رصد 2026-07-21) |
 | UAE-HOST-01 | URL | توزيع Vidar (ClickFix/EtherHiding) | مخترق |
 | *.varzeshlife.ir (عشوائية) | domain | توزيع ClearFake | متجددة |
-| 45.138.16.162:4321 | ip:port | AdaptixC2 | نشط |
 
-### 6.3 عينات مرتبطة (MalwareBazaar)
+### 6.3 مشاهدات متزامنة من الفيد (MalwareBazaar — لا صلة مثبتة)
 - AgentTesla باسم "Purchase Order No. MP.S.006025-08524.js" (تصيد تجاري)
 - RemcosRAT باسم "Invoice_details_for_confirmation_scan_0715202600.vbe"
 - عينات Mirai متعددة المعماريات (mips, sh4, i686, m68k, x86_64) — بوتنت IoT نشط
@@ -141,7 +140,7 @@ Redactions:       UAE-HOST-01 (compromised third-party site) redacted pending re
 **للمدافعين (SOC):**
 - حجب النطاقات المذكورة في قسم IOCs على مستوى DNS/Proxy
 - مراقبة إنشاء نطاقات فرعية عشوائية النمط على النطاقات المُدارة (مؤشر اختراق)
-- تنبيه على أي اتصال صادر نحو نطاقات .ir غير مبرر عملياً في هذه الفترة
+- تنبيه على المؤشرات المدرجة (قسم 6)، وعلى إنشاء نطاقات فرعية عشوائية على النطاقات المُدارة
 - فحص أجهزة macOS أيضاً — الحملة لا تستهدف Windows وحده
 
 **لأصحاب المواقع (دروس مستفادة):**

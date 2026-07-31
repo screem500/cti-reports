@@ -3,7 +3,7 @@ Report ID:        CTI-2026-001
 Title:            ClearFake on Compromised Iranian Infrastructure
 Analyst:          Mijlad Al-Subaie (@screem500)
 Published:        2026-07-21
-Last Updated:     2026-07-26
+Last Updated:     2026-08-01 (v1.1 — figure consistency corrections)
 Classification:   TLP:CLEAR
 Confidence:       High on the ClearFake attribution; see Key Judgments for per-judgment confidence
 Status:           Published - infrastructure monitoring ongoing
@@ -20,14 +20,14 @@ Status: Defensive analysis — cleared for publication
 
 ## Key Judgments
 
-- An active ClearFake campaign is distributing fake browser-update lures from 35 compromised Iranian (.ir) domains serving 58 malicious URLs.
+- An active ClearFake campaign is distributing fake browser-update lures from 37 compromised Iranian (.ir) domains serving 58 malicious URLs.
   Confidence: **High**. Basis: ThreatFox classification at 100% confidence, corroborated by URLhaus feed data.
 
 - The Iranian domains are compromised victims, not willing participants.
   Confidence: **High**. Basis: all are legitimate civilian sites (sports, health, education) with unrelated primary content.
 
 - The compromise pattern is automated mass exploitation, most likely of outdated WordPress installations.
-  Confidence: **Moderate**. Basis: long-tail distribution (26 domains with a single URL each) and subdomain-generation pattern; no server-side artifacts were obtained to confirm the entry vector.
+  Confidence: **Moderate**. Basis: long-tail distribution (29 domains with a single URL each) and subdomain-generation pattern; no server-side artifacts were obtained to confirm the entry vector.
 
 - The degraded defensive posture of Iranian civilian web assets is linked to current conflict conditions and the extended internet shutdown.
   Confidence: **Low to Moderate**. Basis: circumstantial timing only; stated as a hypothesis, not a finding.
@@ -45,7 +45,7 @@ Low — Single source or circumstantial; stated as hypothesis only.
 
 ## 1. Executive Summary
 
-This analysis documents an active ClearFake campaign (fake browser update lures) hosted on 35 compromised Iranian (.ir) domains serving 58 malicious distribution URLs, alongside indicators of a broader criminal infrastructure including an active Cobalt Strike C2 on an Iranian domain and a compromised UAE-based website distributing the Vidar stealer. Notably, the abused Iranian infrastructure is entirely civilian (sports, health, and education websites), indicating a degraded defensive posture of Iranian civilian web assets amid the ongoing conflict and the country's extended internet shutdown.
+This analysis documents an active ClearFake campaign (fake browser update lures) hosted on 37 compromised Iranian (.ir) domains serving 58 malicious distribution URLs, alongside indicators of a broader criminal infrastructure including an active Cobalt Strike C2 on an Iranian domain and a compromised UAE-based website distributing the Vidar stealer. Notably, the abused Iranian infrastructure is entirely civilian (sports, health, and education websites), indicating a degraded defensive posture of Iranian civilian web assets amid the ongoing conflict and the country's extended internet shutdown.
 
 **Update (2026-07-24):** Campaign remains active on the same infrastructure (59 active URLs), now with UUID tracking parameters (`?ublib=`) appended to links — likely per-victim tracking, confirming active campaign management.
 
@@ -109,7 +109,7 @@ Attacker-controlled infrastructure is published in full. Compromised third-party
 
 ### 6.1 Compromised Iranian domains
 
-Distribution by parent domain (35 domains total, 58 URLs):
+Distribution by parent domain (37 domains total, 58 URLs):
 
 | Domain | Malicious subdomains | Category |
 |--------|---------------------|----------|
@@ -121,9 +121,9 @@ Distribution by parent domain (35 domains total, 58 URLs):
 | footbalpersian.ir | 2 | Sports |
 | fiorentini.ir | 2 | General |
 | 20sport.ir | 2 | Sports |
-| 27 other domains | 1 each | Mixed (health, education, commerce) |
+| 29 other domains | 1 each | Mixed (health, education, commerce) |
 
-**Analytic note:** 19% of URLs concentrate on a single domain (varzeshlife.ir), suggesting deep compromise with broad access, while the long tail (26 domains with a single hit) reflects automated mass exploitation — most likely via outdated WordPress plugins.
+**Analytic note:** 19% of URLs concentrate on a single domain (varzeshlife.ir), suggesting deep compromise with broad access, while the long tail (29 domains with a single hit) reflects automated mass exploitation — most likely via outdated WordPress plugins.
 
 ### 6.2 High-value indicators
 
@@ -132,9 +132,8 @@ Distribution by parent domain (35 domains total, 58 URLs):
 | ns1.newchatsits.ir | domain | Cobalt Strike C2 | Active (last seen 2026-07-21) |
 | UAE-HOST-01 | domain | Vidar distribution (ClickFix/EtherHiding) | Compromised — REDACTED pending remediation |
 | `*.<random>.varzeshlife.ir` | domain | ClearFake distribution | Rotating |
-| 45.138.16.162:4321 | ip:port | AdaptixC2 | Active |
 
-### 6.3 Related samples (MalwareBazaar)
+### 6.3 Contemporaneous feed observations (MalwareBazaar — no established link)
 
 - AgentTesla as `Purchase Order No. MP.S.006025-08524.js` (business phishing)
 - RemcosRAT as `Invoice_details_for_confirmation_scan_0715202600.vbe`
@@ -163,7 +162,7 @@ Distribution by parent domain (35 domains total, 58 URLs):
 **For defenders (SOC):**
 - Block listed IOCs at DNS/proxy level
 - Monitor for random-pattern subdomain creation on managed domains (compromise indicator)
-- Alert on unexpected outbound connections to .ir domains during this period
+- Alert on the listed indicators (see §6), and on random-pattern subdomain creation on managed domains
 - Include macOS endpoints in scope — this campaign is not Windows-only
 
 **For website owners (lessons learned):**
