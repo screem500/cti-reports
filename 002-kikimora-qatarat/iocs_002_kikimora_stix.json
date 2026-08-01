@@ -439,52 +439,6 @@
       "description": "phishing lure domain"
     },
     {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--a0303b16-c2d6-5a4f-93d2-7bf3e1269ca1",
-      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
-      "created": "2026-07-21T00:00:00.000Z",
-      "modified": "2026-07-21T00:00:00.000Z",
-      "name": "AdaptixC2",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[network-traffic:dst_ref.type = 'ipv4-addr' AND network-traffic:dst_ref.value = '45.138.16.162' AND network-traffic:dst_port = 4321]",
-      "pattern_type": "stix",
-      "valid_from": "2026-07-21T00:00:00.000Z",
-      "labels": [
-        "gulf-related indicators (same-day monitoring)",
-        "network-traffic"
-      ],
-      "object_marking_refs": [
-        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
-      ],
-      "description": "AdaptixC2"
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--069666fb-b4d7-5eba-97ea-69f05708df5f",
-      "created_by_ref": "identity--dc7c10ff-8f1c-5c95-85da-317d54481532",
-      "created": "2026-07-21T00:00:00.000Z",
-      "modified": "2026-07-21T00:00:00.000Z",
-      "name": "AdaptixC2",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[ipv4-addr:value = '45.138.16.162']",
-      "pattern_type": "stix",
-      "valid_from": "2026-07-21T00:00:00.000Z",
-      "labels": [
-        "gulf-related indicators (same-day monitoring)",
-        "ipv4-addr"
-      ],
-      "object_marking_refs": [
-        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
-      ],
-      "description": "AdaptixC2"
-    },
-    {
       "type": "grouping",
       "spec_version": "2.1",
       "id": "grouping--cfe93b8e-b39e-5044-835a-0a85dafe9485",
@@ -512,9 +466,7 @@
         "indicator--ddff2837-88ad-54c5-a1df-0b5b0e22c33c",
         "indicator--66dba0d8-307b-5089-80e3-f9dc60e89efb",
         "indicator--58ea768e-aa98-547e-b61a-91b62e8a4090",
-        "indicator--66b31d8e-190e-527a-bc03-15c358864d0e",
-        "indicator--a0303b16-c2d6-5a4f-93d2-7bf3e1269ca1",
-        "indicator--069666fb-b4d7-5eba-97ea-69f05708df5f"
+        "indicator--66b31d8e-190e-527a-bc03-15c358864d0e"
       ],
       "object_marking_refs": [
         "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"

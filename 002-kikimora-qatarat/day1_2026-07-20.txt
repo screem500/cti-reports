@@ -1,8 +1,8 @@
 ===== Gulf Cyber Digest - 2026-07-20 =====
 
 --- [1] Malicious URLs on Gulf domains (URLhaus) ---
-"ID-REDACTED","2026-07-14 14:37:09","https://QA-HOST-01-REDACTED/sonic.exe","offline","","malware_download","exe,PureLogsStealer","https://urlhaus.abuse.ch/url/ID-REDACTED/","abuse_ch"
-"ID-REDACTED","2026-07-14 14:30:09","https://QA-HOST-01-REDACTED/fallacy001.exe","offline","","malware_download","exe,PureLogsStealer","https://urlhaus.abuse.ch/url/ID-REDACTED/","abuse_ch"
+"[ID REDACTED]","2026-07-14 14:37:09","https://QA-HOST-01[REDACTED]/sonic.exe","offline","","malware_download","exe,PureLogsStealer","[LINK REDACTED]","abuse_ch"
+"[ID REDACTED]","2026-07-14 14:30:09","https://QA-HOST-01[REDACTED]/fallacy001.exe","offline","","malware_download","exe,PureLogsStealer","[LINK REDACTED]","abuse_ch"
 "3885940","2026-07-13 18:13:18","https://nswofmyl.site-shartbandi-50toman.com/1d4f406e-85a9-4e87-9be4-99ae4b016b79","offline","","malware_download","ClearFake,win-0x4679,windows","https://urlhaus.abuse.ch/url/3885940/","anonymous"
 "3885928","2026-07-13 17:18:15","https://etomskuk.site-shartbandi5000toman.com/bb76e6aa-c5c8-4a03-b702-ac44a2ce14be","offline","","malware_download","ClearFake,win-0x4679,windows","https://urlhaus.abuse.ch/url/3885928/","anonymous"
 "3881315","2026-07-05 16:09:20","https://omani-disputes.com/txt/adkbjdd.txt","offline","2026-07-12 05:56:43","malware_download","omani-disputes-com,rev-base64-loader,reverse","https://urlhaus.abuse.ch/url/3881315/","BlinkzSec"

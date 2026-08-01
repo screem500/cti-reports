@@ -23,7 +23,7 @@ Active ClearFake loader discovered in-the-wild on a compromised UAE site, using 
 - [IOCs (STIX 2.1)](003-uae-clearfake-live/iocs_003_uae_clearfake_stix.json)
 
 ### 🔴 Investigation 002: Kikimora / QatarRAT Campaign (July 2026)
-Deep-dive from a single feed indicator to a full distribution campaign: ~18,000 downloads, tampered DigiCert signature, AVKiller component, Russian-speaking operator fingerprints.
+Deep-dive from a single feed indicator to a full distribution campaign: ~18,000 downloads (as of 2026-07-21), invalid Authenticode signatures (likely transplanted blocks; issuer identity not verified), AVKiller component, Russian-speaking operator fingerprints.
 
 - [Arabic report | التقرير العربي](002-kikimora-qatarat/report_ar.md)
 - [English report | التقرير الإنجليزي](002-kikimora-qatarat/report_en.md)
@@ -31,7 +31,7 @@ Deep-dive from a single feed indicator to a full distribution campaign: ~18,000 
 - [IOCs (TXT)](002-kikimora-qatarat/iocs_002_kikimora.txt) · [IOCs (STIX 2.1)](002-kikimora-qatarat/iocs_002_kikimora_stix.json)
 
 ### 🟠 Investigation 001: ClearFake on Compromised Iranian Infrastructure (July 2026)
-35 compromised Iranian (.ir) civilian domains serving 58 malicious URLs amid the Iran–US conflict - plus a Cobalt Strike C2 and a compromised UAE site distributing Vidar.
+37 compromised Iranian (.ir) civilian domains serving 58 malicious URLs amid the Iran–US conflict - plus a Cobalt Strike C2 and a compromised UAE site distributing Vidar.
 
 - [Arabic report | التقرير العربي](001-clearfake-iran/report_ar.md)
 - [English report | التقرير الإنجليزي](001-clearfake-iran/report_en.md)
