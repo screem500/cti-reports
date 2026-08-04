@@ -1,0 +1,8 @@
+date_utc,group,claim_type,target_codename,sector,country,claim_source,status,verification_method,evidence_link,notes
+2026-03,DieNet,DDoS target list,SA-BANK-01,banking,Saudi Arabia,public reporting (SOCRadar/Unit42),CLAIMED,,,Target list included a major Saudi bank; no confirmed outage
+2026-03,DieNet,DDoS target list,QA-TRANS-01,aviation,Qatar,public reporting (SOCRadar/Unit42),CLAIMED,,,Airport and government portals listed
+2026-03,DieNet,DDoS target list,BH-GOV-01,government,Bahrain,public reporting (SOCRadar/Unit42),CLAIMED,,,Government portals listed
+2026-03,DieNet,DDoS target list,AE-GOV-01,government,UAE,public reporting (SOCRadar/Unit42),CLAIMED,,,Government portals listed
+2026-03,DieNet,DDoS target list,KW-GOV-01,government,Kuwait,public reporting (SOCRadar/Unit42),CLAIMED,,,Government portals listed
+2026-03,313 Team,DDoS/defacement,KW-GOV-02,government,Kuwait,public reporting (SOCRadar),CLAIMED,,,Claims against Kuwaiti government sites
+2026-04,Handala,breach claim,SA-ENERGY-01,energy,Saudi Arabia,public reporting (SOCRadar),CLAIMED,,,Claimed breach of a major Saudi energy firm; unverified per reporting
