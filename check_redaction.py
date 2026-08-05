@@ -20,8 +20,8 @@ BANNED = [
     "agilemtech",
     # 004/002 — QA-HOST-01 victim identity + its de-anonymizing artifacts
     "blueweqatar",
-    "ID-REDACTED",
-    "ID-REDACTED",
+    "3886420",
+    "3886411",
     "5.9.143.30",
     # policy wording that must stay generic
     "Admin By Request",
